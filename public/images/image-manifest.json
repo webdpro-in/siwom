@@ -1,0 +1,857 @@
+{
+ "version": 1,
+ "verifiedOn": "2026-10-18",
+ "note": "All assets were visually inspected against source descriptions. Retain source and licence information (Pexels, NASA, Wikimedia Commons). Photographed brands, agencies and people do not endorse SIWOM.",
+ "assets": [
+  {
+   "file": "port-hero.webp",
+   "url": "/images/port-hero.webp",
+   "width": 2200,
+   "height": 1451,
+   "bytes": 452130,
+   "subject": "Container terminal and gantry cranes at sunset in Indonesia.",
+   "location": "Indonesia",
+   "focalPosition": "50% 68%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 3057960,
+    "url": "https://www.pexels.com/photo/seaport-during-golden-hour-3057960/",
+    "downloadUrl": "https://images.pexels.com/photos/3057960/pexels-photo-3057960.jpeg",
+    "author": "Tom Fisk",
+    "authorUrl": "https://www.pexels.com/@tomfisk/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "port-hero-mobile.webp",
+   "url": "/images/port-hero-mobile.webp",
+   "width": 900,
+   "height": 1200,
+   "bytes": 109100,
+   "subject": "Portrait crop of a container terminal at sunset in Indonesia.",
+   "location": "Indonesia",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 3057960,
+    "url": "https://www.pexels.com/photo/seaport-during-golden-hour-3057960/",
+    "downloadUrl": "https://images.pexels.com/photos/3057960/pexels-photo-3057960.jpeg",
+    "author": "Tom Fisk",
+    "authorUrl": "https://www.pexels.com/@tomfisk/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Portrait crop, resize, WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "water-container.webp",
+   "url": "/images/water-container.webp",
+   "width": 1400,
+   "height": 933,
+   "bytes": 306684,
+   "subject": "Overhead photograph of a container ship alongside gantry cranes at a Jakarta terminal.",
+   "location": "Jakarta, Indonesia",
+   "focalPosition": "50% 45%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 3057963,
+    "url": "https://www.pexels.com/photo/top-view-photography-of-cargo-ship-with-intermodal-containers-3057963/",
+    "downloadUrl": "https://images.pexels.com/photos/3057963/pexels-photo-3057963.jpeg",
+    "author": "Tom Fisk",
+    "authorUrl": "https://www.pexels.com/@tomfisk/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "air-cargo.webp",
+   "url": "/images/air-cargo.webp",
+   "width": 1400,
+   "height": 770,
+   "bytes": 113096,
+   "subject": "China Airlines Cargo Boeing 747 on a night airport apron with cargo handling equipment.",
+   "location": "Hanoi, Vietnam",
+   "focalPosition": "50% 58%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 35424560,
+    "url": "https://www.pexels.com/photo/cargo-airplane-loading-at-night-at-airport-35424560/",
+    "downloadUrl": "https://images.pexels.com/photos/35424560/pexels-photo-35424560.jpeg",
+    "author": "Pexels User",
+    "authorUrl": "https://www.pexels.com/@pexels-user-2158509317/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "air-belly-cargo.webp",
+   "url": "/images/air-belly-cargo.webp",
+   "width": 1400,
+   "height": 1050,
+   "bytes": 224332,
+   "subject": "Palletized freight being loaded into the lower cargo hold of a Philippine Airlines passenger aircraft.",
+   "location": "Ho Chi Minh City, Vietnam",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 9749472,
+    "url": "https://www.pexels.com/photo/boxes-being-loaded-onto-an-airplane-9749472/",
+    "downloadUrl": "https://images.pexels.com/photos/9749472/pexels-photo-9749472.jpeg",
+    "author": "Ethan Nguyen",
+    "authorUrl": "https://www.pexels.com/@ethan-nguyen-63327081/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "road-freight.webp",
+   "url": "/images/road-freight.webp",
+   "width": 1400,
+   "height": 933,
+   "bytes": 117174,
+   "subject": "Red semitrailer freight truck on a mountain highway.",
+   "location": "United States",
+   "focalPosition": "46% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 11087837,
+    "url": "https://www.pexels.com/photo/red-truck-on-the-road-11087837/",
+    "downloadUrl": "https://images.pexels.com/photos/11087837/pexels-photo-11087837.jpeg",
+    "author": "CARLOSCRUZ ARTEGRAFIA",
+    "authorUrl": "https://www.pexels.com/@carloscruz-artegrafia-172084181/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "road-sunset.webp",
+   "url": "/images/road-sunset.webp",
+   "width": 1280,
+   "height": 1600,
+   "bytes": 290330,
+   "subject": "Semitrailer freight truck on a road at sunset.",
+   "location": "Not specified by source",
+   "focalPosition": "50% 42%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 5410923,
+    "url": "https://www.pexels.com/photo/a-trailer-truck-on-the-road-5410923/",
+    "downloadUrl": "https://images.pexels.com/photos/5410923/pexels-photo-5410923.jpeg",
+    "author": "Ahmet Polat",
+    "authorUrl": "https://www.pexels.com/@ibnulharezmi/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "rail-containers.webp",
+   "url": "/images/rail-containers.webp",
+   "width": 1400,
+   "height": 933,
+   "bytes": 182206,
+   "subject": "Intermodal containers carried on freight railway wagons beside a rural track.",
+   "location": "Not specified by source; do not label as India",
+   "focalPosition": "50% 58%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 12196578,
+    "url": "https://www.pexels.com/photo/train-with-cargo-containers-under-blue-sky-12196578/",
+    "downloadUrl": "https://images.pexels.com/photos/12196578/pexels-photo-12196578.jpeg",
+    "author": "Robert So",
+    "authorUrl": "https://www.pexels.com/@robertkso/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "pipeline-valves.webp",
+   "url": "/images/pipeline-valves.webp",
+   "width": 1400,
+   "height": 933,
+   "bytes": 70186,
+   "subject": "Close view of industrial piping, flanges and a valve assembly.",
+   "location": "Guadalajara, Spain",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 5658852,
+    "url": "https://www.pexels.com/photo/close-up-shot-of-pipes-5658852/",
+    "downloadUrl": "https://images.pexels.com/photos/5658852/pexels-photo-5658852.jpeg",
+    "author": "Marina Agrelo",
+    "authorUrl": "https://www.pexels.com/@marina-agrelo-3547441/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "safety-team.webp",
+   "url": "/images/safety-team.webp",
+   "width": 1400,
+   "height": 931,
+   "bytes": 142372,
+   "subject": "Steel factory team wearing helmets, safety glasses, gloves and protective workwear.",
+   "location": "Russia",
+   "focalPosition": "50% 60%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 32845683,
+    "url": "https://www.pexels.com/photo/industrial-workers-in-safety-gear-at-steel-factory-32845683/",
+    "downloadUrl": "https://images.pexels.com/photos/32845683/pexels-photo-32845683.jpeg",
+    "author": "Sergey Sergeev",
+    "authorUrl": "https://www.pexels.com/@sergey-sergeev-2153675005/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "manufacturing.webp",
+   "url": "/images/manufacturing.webp",
+   "width": 1400,
+   "height": 931,
+   "bytes": 92638,
+   "subject": "Industrial operators wearing helmets and safety glasses beside control equipment.",
+   "location": "Russia",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 32845681,
+    "url": "https://www.pexels.com/photo/industrial-workers-operating-machinery-indoors-32845681/",
+    "downloadUrl": "https://images.pexels.com/photos/32845681/pexels-photo-32845681.jpeg",
+    "author": "Sergey Sergeev",
+    "authorUrl": "https://www.pexels.com/@sergey-sergeev-2153675005/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "bulk-carrier.webp",
+   "url": "/images/bulk-carrier.webp",
+   "width": 1400,
+   "height": 933,
+   "bytes": 205494,
+   "subject": "Geared bulk carrier at a quay at dusk, with large cargo holds and deck cranes.",
+   "location": "Not specified by source",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 16678062,
+    "url": "https://www.pexels.com/photo/cargo-ship-docked-in-port-in-dusk-16678062/",
+    "downloadUrl": "https://images.pexels.com/photos/16678062/pexels-photo-16678062.jpeg",
+    "author": "Mark Stebnicki",
+    "authorUrl": "https://www.pexels.com/@nc-farm-bureau-mark/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "oil-tanker.webp",
+   "url": "/images/oil-tanker.webp",
+   "width": 1400,
+   "height": 933,
+   "bytes": 245616,
+   "subject": "Tanker in an industrial port alongside dock infrastructure.",
+   "location": "Not specified by source",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 19704439,
+    "url": "https://www.pexels.com/photo/view-of-an-oil-tanker-in-a-port-19704439/",
+    "downloadUrl": "https://images.pexels.com/photos/19704439/pexels-photo-19704439.jpeg",
+    "author": "Rasmus Andersen",
+    "authorUrl": "https://www.pexels.com/@rasmus-andersen-759275282/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "inland-barge.webp",
+   "url": "/images/inland-barge.webp",
+   "width": 1400,
+   "height": 933,
+   "bytes": 294228,
+   "subject": "Tow of covered cargo barges on the Mississippi River with a bridge in the distance.",
+   "location": "Wabasha, Minnesota, United States",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 12442355,
+    "url": "https://www.pexels.com/photo/barge-on-river-12442355/",
+    "downloadUrl": "https://images.pexels.com/photos/12442355/pexels-photo-12442355.jpeg",
+    "author": "Tom Fisk",
+    "authorUrl": "https://www.pexels.com/@tomfisk/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "warehouse.webp",
+   "url": "/images/warehouse.webp",
+   "width": 1067,
+   "height": 1600,
+   "bytes": 278722,
+   "subject": "Warehouse aisle with pallet racks and packaged inventory.",
+   "location": "Not specified by source",
+   "focalPosition": "50% 63%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 4483608,
+    "url": "https://www.pexels.com/photo/shelves-on-a-warehouse-4483608/",
+    "downloadUrl": "https://images.pexels.com/photos/4483608/pexels-photo-4483608.jpeg",
+    "author": "Tiger Lily",
+    "authorUrl": "https://www.pexels.com/@tiger-lily/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "robotics.webp",
+   "url": "/images/robotics.webp",
+   "width": 1600,
+   "height": 1200,
+   "bytes": 269218,
+   "subject": "Yellow industrial robot arms inside a guarded automation cell with conveyors and controllers.",
+   "location": "Not specified by source",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 18471441,
+    "url": "https://www.pexels.com/photo/robots-are-working-in-a-factory-with-a-machine-18471441/",
+    "downloadUrl": "https://images.pexels.com/photos/18471441/pexels-photo-18471441.jpeg",
+    "author": "Ludovic Delot",
+    "authorUrl": "https://www.pexels.com/@delot/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "electric-mobility.webp",
+   "url": "/images/electric-mobility.webp",
+   "width": 1350,
+   "height": 1800,
+   "bytes": 114272,
+   "subject": "Close view of an electric vehicle with charging connector attached outdoors.",
+   "location": "Not specified by source",
+   "focalPosition": "50% 45%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 9799996,
+    "url": "https://www.pexels.com/photo/an-electric-car-charging-9799996/",
+    "downloadUrl": "https://images.pexels.com/photos/9799996/pexels-photo-9799996.jpeg",
+    "author": "Kindel Media",
+    "authorUrl": "https://www.pexels.com/@kindelmedia/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "industrial-control.webp",
+   "url": "/images/industrial-control.webp",
+   "width": 1600,
+   "height": 1065,
+   "bytes": 135946,
+   "subject": "Blue-lit rack-mounted server hardware in a data centre.",
+   "location": "Not specified by source",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 17489150,
+    "url": "https://www.pexels.com/photo/light-on-computer-hardware-17489150/",
+    "downloadUrl": "https://images.pexels.com/photos/17489150/pexels-photo-17489150.jpeg",
+    "author": "panumas nikhomkhai",
+    "authorUrl": "https://www.pexels.com/@cookiecutter/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Resize and WebP compression; no generated elements.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership."
+  },
+  {
+   "file": "safety-container-photo.webp",
+   "url": "/images/safety-container-photo.webp",
+   "width": 1600,
+   "height": 900,
+   "bytes": 219334,
+   "subject": "Weathered orange container doors with flaking paint, metal bars and latch hardware.",
+   "location": "Not specified by source",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 29533762,
+    "url": "https://www.pexels.com/photo/close-up-of-rusty-shipping-container-doors-29533762/",
+    "downloadUrl": "https://images.pexels.com/photos/29533762/pexels-photo-29533762.jpeg",
+    "author": "David Underland",
+    "authorUrl": "https://www.pexels.com/@david-underland/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Cropped to 16:9 (1600 × 900), resized and WebP compressed. No generated objects or hazards.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership.",
+   "referenceRegions": {
+    "coordinateSystem": "Percentages of the complete 1600 × 900 frame; x/y are top-left.",
+    "note": "Illustrative review regions only, manually aligned to visible objects. They are not model predictions, verified safety detections or evidence of a violation.",
+    "regions": [
+     {
+      "label": "Latch hardware",
+      "x": 21,
+      "y": 33,
+      "width": 65,
+      "height": 22
+     },
+     {
+      "label": "Weathered paint area",
+      "x": 8,
+      "y": 62,
+      "width": 32,
+      "height": 34
+     }
+    ]
+   }
+  },
+  {
+   "file": "safety-ppe-photo.webp",
+   "url": "/images/safety-ppe-photo.webp",
+   "width": 1600,
+   "height": 900,
+   "bytes": 157822,
+   "subject": "Three steel-factory workers wearing helmets, safety glasses, gloves and protective workwear.",
+   "location": "Russia",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 32845683,
+    "url": "https://www.pexels.com/photo/industrial-workers-in-safety-gear-at-steel-factory-32845683/",
+    "downloadUrl": "https://images.pexels.com/photos/32845683/pexels-photo-32845683.jpeg",
+    "author": "Sergey Sergeev",
+    "authorUrl": "https://www.pexels.com/@sergey-sergeev-2153675005/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Cropped to 16:9 (1600 × 900), resized and WebP compressed. No generated objects or hazards.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership.",
+   "referenceRegions": {
+    "coordinateSystem": "Percentages of the complete 1600 × 900 frame; x/y are top-left.",
+    "note": "Illustrative review regions only, manually aligned to visible objects. They are not model predictions, verified safety detections or evidence of a violation.",
+    "regions": [
+     {
+      "label": "Helmet visible — left worker",
+      "x": 24.2,
+      "y": 31.5,
+      "width": 11.5,
+      "height": 13.5
+     },
+     {
+      "label": "Helmet visible — centre worker",
+      "x": 40,
+      "y": 24,
+      "width": 8.7,
+      "height": 12.4
+     },
+     {
+      "label": "Helmet visible — right worker",
+      "x": 60.8,
+      "y": 34.4,
+      "width": 8.5,
+      "height": 12
+     }
+    ]
+   }
+  },
+  {
+   "file": "safety-zone-photo.webp",
+   "url": "/images/safety-zone-photo.webp",
+   "width": 1600,
+   "height": 900,
+   "bytes": 108174,
+   "subject": "Overhead freight yard with numbered truck bays, yellow road markings and a semitrailer.",
+   "location": "Not specified by source",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Pexels",
+    "id": 35501714,
+    "url": "https://www.pexels.com/photo/aerial-view-of-truck-and-trailer-parking-lot-35501714/",
+    "downloadUrl": "https://images.pexels.com/photos/35501714/pexels-photo-35501714.jpeg",
+    "author": "Giant Asparagus",
+    "authorUrl": "https://www.pexels.com/@giantasparagus/"
+   },
+   "license": {
+    "name": "Pexels License",
+    "url": "https://www.pexels.com/license/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": false
+   },
+   "adaptations": "Cropped to 16:9 (1600 × 900), resized and WebP compressed. No generated objects or hazards.",
+   "usageNote": "Representative industry photograph. Does not depict SIWOM-owned assets, SIWOM employees, a SIWOM deployment, a customer endorsement or a partnership.",
+   "referenceRegions": {
+    "coordinateSystem": "Percentages of the complete 1600 × 900 frame; x/y are top-left.",
+    "note": "Illustrative review regions only, manually aligned to visible objects. They are not model predictions, verified safety detections or evidence of a violation.",
+    "regions": [
+     {
+      "label": "Vehicle review area",
+      "x": 31.5,
+      "y": 55.5,
+      "width": 29,
+      "height": 10
+     },
+     {
+      "label": "Road marking review",
+      "x": 62,
+      "y": 55,
+      "width": 36,
+      "height": 8
+     }
+    ]
+   }
+  },
+  {
+   "file": "space-satellite-airfreight.webp",
+   "url": "/images/space-satellite-airfreight.webp",
+   "width": 1600,
+   "height": 1013,
+   "bytes": 100210,
+   "subject": "Sentinel-6 Michael Freilich satellite in its shipping container, transported by truck after arriving by Antonov cargo aircraft from Germany. Vandenberg, California, United States.",
+   "location": "Vandenberg, California, United States",
+   "focalPosition": "45% 60%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "NASA Image and Video Library",
+    "id": "PIA24104",
+    "url": "https://images.nasa.gov/details/PIA24104",
+    "downloadUrl": "http://images-assets.nasa.gov/image/PIA24104/PIA24104~orig.jpg",
+    "author": "NASA",
+    "authorUrl": ""
+   },
+   "license": {
+    "name": "NASA media usage guidelines (generally not subject to copyright in the United States)",
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": true
+   },
+   "adaptations": "Resize and WebP compression; no other changes.",
+   "usageNote": "Representative photograph used for information. Does not imply NASA endorsement, SIWOM involvement, or affiliation with any agency, company or person shown."
+  },
+  {
+   "file": "space-core-stage-barge.webp",
+   "url": "/images/space-core-stage-barge.webp",
+   "width": 1600,
+   "height": 1067,
+   "bytes": 107916,
+   "subject": "SLS rocket core stage pathfinder departing Kennedy Space Center aboard the Pegasus barge.",
+   "location": "Kennedy Space Center, Florida, United States",
+   "focalPosition": "50% 60%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "NASA Image and Video Library",
+    "id": "KSC-20191031-PH-CSH01_0002",
+    "url": "https://images.nasa.gov/details/KSC-20191031-PH-CSH01_0002",
+    "downloadUrl": "http://images-assets.nasa.gov/image/KSC-20191031-PH-CSH01_0002/KSC-20191031-PH-CSH01_0002~large.jpg",
+    "author": "NASA/Cory Huston",
+    "authorUrl": ""
+   },
+   "license": {
+    "name": "NASA media usage guidelines (generally not subject to copyright in the United States)",
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": true
+   },
+   "adaptations": "Resize and WebP compression; no other changes.",
+   "usageNote": "Representative photograph used for information. Does not imply NASA endorsement, SIWOM involvement, or affiliation with any agency, company or person shown."
+  },
+  {
+   "file": "space-rocket-stage-factory.webp",
+   "url": "/images/space-rocket-stage-factory.webp",
+   "width": 1600,
+   "height": 1067,
+   "bytes": 222468,
+   "subject": "Rocket core stage lifted onto its transportation system inside Michoud Assembly Facility.",
+   "location": "New Orleans, Louisiana, United States",
+   "focalPosition": "50% 40%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "NASA Image and Video Library",
+    "id": "MAF_20240711_CS2_MPTSlift_MD_12",
+    "url": "https://images.nasa.gov/details/MAF_20240711_CS2_MPTSlift_MD_12",
+    "downloadUrl": "http://images-assets.nasa.gov/image/MAF_20240711_CS2_MPTSlift_MD_12/MAF_20240711_CS2_MPTSlift_MD_12~large.jpg",
+    "author": "NASA/Michael DeMocker",
+    "authorUrl": ""
+   },
+   "license": {
+    "name": "NASA media usage guidelines (generally not subject to copyright in the United States)",
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": true
+   },
+   "adaptations": "Resize and WebP compression; no other changes.",
+   "usageNote": "Representative photograph used for information. Does not imply NASA endorsement, SIWOM involvement, or affiliation with any agency, company or person shown."
+  },
+  {
+   "file": "space-satellite-cleanroom.webp",
+   "url": "/images/space-satellite-cleanroom.webp",
+   "width": 1280,
+   "height": 1920,
+   "bytes": 142322,
+   "subject": "Technicians in cleanroom suits beside the GOES-S weather satellite during payload processing.",
+   "location": "Titusville, Florida, United States",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "NASA Image and Video Library",
+    "id": "KSC-20180205-PH_SWW01_0031",
+    "url": "https://images.nasa.gov/details/KSC-20180205-PH_SWW01_0031",
+    "downloadUrl": "http://images-assets.nasa.gov/image/KSC-20180205-PH_SWW01_0031/KSC-20180205-PH_SWW01_0031~large.jpg",
+    "author": "NASA/Bill White",
+    "authorUrl": ""
+   },
+   "license": {
+    "name": "NASA media usage guidelines (generally not subject to copyright in the United States)",
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": true
+   },
+   "adaptations": "Resize and WebP compression; no other changes.",
+   "usageNote": "Representative photograph used for information. Does not imply NASA endorsement, SIWOM involvement, or affiliation with any agency, company or person shown."
+  },
+  {
+   "file": "space-robotics-canadarm.webp",
+   "url": "/images/space-robotics-canadarm.webp",
+   "width": 1600,
+   "height": 1067,
+   "bytes": 139602,
+   "subject": "Cygnus cargo spacecraft held by the Canadarm2 robotic arm, photographed from the ISS above the Arabian Sea coast of India.",
+   "location": "Low Earth orbit above the Arabian Sea coast of India",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "NASA Image and Video Library",
+    "id": "iss069e004909",
+    "url": "https://images.nasa.gov/details/iss069e004909",
+    "downloadUrl": "http://images-assets.nasa.gov/image/iss069e004909/iss069e004909~large.jpg",
+    "author": "NASA",
+    "authorUrl": ""
+   },
+   "license": {
+    "name": "NASA media usage guidelines (generally not subject to copyright in the United States)",
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": true
+   },
+   "adaptations": "Resize and WebP compression; no other changes.",
+   "usageNote": "Representative photograph used for information. Does not imply NASA endorsement, SIWOM involvement, or affiliation with any agency, company or person shown."
+  },
+  {
+   "file": "space-launch.webp",
+   "url": "/images/space-launch.webp",
+   "width": 1400,
+   "height": 1164,
+   "bytes": 54070,
+   "subject": "Artemis I launch at night from Launch Complex 39B.",
+   "location": "Kennedy Space Center, Florida, United States",
+   "focalPosition": "50% 50%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "NASA Image and Video Library",
+    "id": "NHQ202211160200",
+    "url": "https://images.nasa.gov/details/NHQ202211160200",
+    "downloadUrl": "http://images-assets.nasa.gov/image/NHQ202211160200/NHQ202211160200~large.jpg",
+    "author": "NASA/Bill Ingalls",
+    "authorUrl": ""
+   },
+   "license": {
+    "name": "NASA media usage guidelines (generally not subject to copyright in the United States)",
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": true
+   },
+   "adaptations": "Resize and WebP compression; no other changes.",
+   "usageNote": "Representative photograph used for information. Does not imply NASA endorsement, SIWOM involvement, or affiliation with any agency, company or person shown."
+  },
+  {
+   "file": "evtol-air-taxi.webp",
+   "url": "/images/evtol-air-taxi.webp",
+   "width": 1600,
+   "height": 1067,
+   "bytes": 56442,
+   "subject": "Experimental electric air taxi (Joby Aviation) hovering during NASA research, with a NASA sensing node in the foreground.",
+   "location": "Edwards, California, United States",
+   "focalPosition": "50% 40%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "NASA Image and Video Library",
+    "id": "AFRC2025-0051-52",
+    "url": "https://images.nasa.gov/details/AFRC2025-0051-52",
+    "downloadUrl": "http://images-assets.nasa.gov/image/AFRC2025-0051-52/AFRC2025-0051-52~large.jpg",
+    "author": "NASA/Genaro Vavuris",
+    "authorUrl": ""
+   },
+   "license": {
+    "name": "NASA media usage guidelines (generally not subject to copyright in the United States)",
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": true
+   },
+   "adaptations": "Resize and WebP compression; no other changes.",
+   "usageNote": "Representative photograph used for information. Does not imply NASA endorsement, SIWOM involvement, or affiliation with any agency, company or person shown."
+  },
+  {
+   "file": "green-energy-solar.webp",
+   "url": "/images/green-energy-solar.webp",
+   "width": 1600,
+   "height": 900,
+   "bytes": 301800,
+   "subject": "Aerial view of the AMP Energy solar power plant at Bhadla, Rajasthan.",
+   "location": "Bhadla, Rajasthan, India",
+   "focalPosition": "50% 55%",
+   "kind": "real photograph",
+   "source": {
+    "provider": "Wikimedia Commons",
+    "id": "File:AMP_Energy_Bhadla_Solar_Power_Plant.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File:AMP_Energy_Bhadla_Solar_Power_Plant.jpg",
+    "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/AMP_Energy_Bhadla_Solar_Power_Plant.jpg",
+    "author": "Sarvajanik Puralekh",
+    "authorUrl": "https://www.flickr.com/photos/8001066@N07/53700152969/"
+   },
+   "license": {
+    "name": "CC BY-SA 2.0",
+    "url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "verifiedOn": "2026-10-18",
+    "attributionRequired": true
+   },
+   "adaptations": "Resized from 4000 × 2250 and compressed to WebP. The adapted file is shared under CC BY-SA 2.0.",
+   "usageNote": "Representative photograph. Does not imply endorsement by, or any relationship with, the plant operator or photographer."
+  }
+ ]
+}

@@ -1,0 +1,509 @@
+@import "tailwindcss";
+
+/*
+ * SIWOM design tokens — Section 3 of the build prompt.
+ * Components may only use these tokens. Tailwind's default palette, type
+ * scale, radii, shadows, easings and containers are cleared on purpose so a
+ * stray `text-red-500` or `rounded-2xl` does not compile to anything.
+ * `@theme static` emits every token as a CSS custom property on :root.
+ */
+@theme static {
+  /* Colour */
+  --color-*: initial;
+  --color-bg: #0a0d12;
+  --color-surface-1: #121820;
+  --color-surface-2: #18202a;
+  --color-surface-3: #1f2833;
+  --color-border: #28313b;
+  --color-border-strong: #3a4552;
+  /* Form-control boundaries need 3:1 against their surroundings (WCAG 1.4.11);
+     border-strong is ~1.5:1, so inputs, checkboxes and radios use this. */
+  --color-border-control: #6e7681;
+  --color-text: #ffffff;
+  --color-text-muted: #a1a8b3;
+  --color-text-subtle: #6e7681;
+  --color-accent: #c8f169;
+  --color-accent-text: #c8f169;
+  --color-focus: #c8f169;
+  --color-accent-ink: #0a0d12;
+  --color-severity-ink: #0a0d12;
+  --color-sev-critical: #ff5a5f;
+  --color-sev-high: #ff9f43;
+  --color-sev-medium: #f5d04a;
+  --color-sev-low: #7cc4ff;
+  /* Texture and overlay tokens derived from the palette */
+  --color-grid-line: rgb(255 255 255 / 0.04);
+  --color-scrim: rgb(10 13 18 / 0.85);
+  --color-scrim-heavy: rgb(10 13 18 / 0.7);
+
+  /* Typography */
+  --font-*: initial;
+  --font-display: var(--font-space-grotesk), "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --text-*: initial;
+  --text-display: clamp(2.75rem, 1.6rem + 5vw, 6rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.03em;
+  --text-h1: clamp(2.25rem, 1.5rem + 3vw, 4rem);
+  --text-h1--line-height: 1.05;
+  --text-h1--letter-spacing: -0.025em;
+  --text-h2: clamp(1.875rem, 1.3rem + 2.2vw, 3rem);
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.02em;
+  --text-h3: 1.5rem;
+  --text-h3--line-height: 1.25;
+  --text-h3--letter-spacing: -0.01em;
+  --text-body-l: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+  --text-body-l--line-height: 1.6;
+  --text-body: 1rem;
+  --text-body--line-height: 1.65;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.12em;
+  --text-pill: 0.75rem;
+  --text-pill--line-height: 1;
+  --text-pill--letter-spacing: 0.08em;
+
+  --tracking-*: initial;
+  --tracking-eyebrow: 0.12em;
+  --tracking-pill: 0.08em;
+  --tracking-wordmark: 0.04em;
+  --tracking-normal: 0em;
+
+  --leading-*: initial;
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* Breakpoints: 360, 640, 768, 1024, 1280, 1536 */
+  --breakpoint-xs: 22.5rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+
+  /* Containers */
+  --container-*: initial;
+  --container-content: 80rem;
+  --container-wide: 90rem;
+  --container-reading: 68ch;
+  --container-narrow: 46rem;
+  --container-headline: 22ch;
+  --container-xs: 20rem;
+  --container-sm: 24rem;
+  --container-md: 28rem;
+  --container-xl: 36rem;
+  --container-tooltip: 16rem;
+
+  /* Art-directed crops */
+  --aspect-*: initial;
+  --aspect-video: 16 / 9;
+  --aspect-card: 4 / 3;
+  --aspect-tile: 3 / 4;
+  --aspect-tall: 4 / 5;
+  --aspect-square: 1 / 1;
+
+  /* Shape */
+  --radius-*: initial;
+  --radius-xs: 3px;
+  --radius-control: 6px;
+  --radius-card: 10px;
+  --radius-panel: 14px;
+
+  /* Depth: surface steps and borders; one shadow for floating UI, one glow */
+  --shadow-*: initial;
+  --shadow-float: 0 16px 40px -12px rgb(0 0 0 / 0.65);
+  --shadow-glow: 0 0 24px rgb(200 241 105 / 0.25);
+  --drop-shadow-*: initial;
+  --inset-shadow-*: initial;
+  --text-shadow-*: initial;
+  --blur-*: initial;
+  --blur-header: 12px;
+
+  /* Motion */
+  --ease-*: initial;
+  --ease-micro: ease-out;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasis: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-micro: 120ms;
+  --motion-hover: 200ms;
+  --motion-ui: 320ms;
+  --motion-reveal: 600ms;
+  --motion-hero: 900ms;
+  --motion-reduced: 150ms;
+  --motion-pulse: 1200ms;
+  --motion-stagger: 60ms;
+  --motion-pulse-stagger: 260ms;
+  --motion-hero-stagger: 80ms;
+  --motion-hero-cta: 150ms;
+  --default-transition-duration: var(--motion-hover);
+  --default-transition-timing-function: var(--ease-standard);
+
+  --animate-*: initial;
+  --animate-spin: spin 0.9s linear infinite;
+  --animate-hero-rise: hero-rise var(--motion-hero) var(--ease-emphasis) both;
+  --animate-fade: fade var(--motion-reduced) linear both;
+  --animate-skeleton: skeleton 1.6s var(--ease-standard) infinite;
+
+  /* Layout rhythm */
+  --space-section-sm: 4.5rem;
+  --space-section-md: 6rem;
+  --space-section-lg: 8rem;
+  --space-gutter: 1rem;
+  --header-h: 72px;
+  --header-h-compact: 60px;
+  --grid-size: 64px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes skeleton {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes pulse-travel {
+  0% {
+    stroke-dashoffset: 18;
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -100;
+    opacity: 0;
+  }
+}
+
+/* Duration and easing utilities mapped to the motion tokens */
+@utility duration-micro {
+  --tw-duration: var(--motion-micro);
+  transition-duration: var(--motion-micro);
+  --tw-ease: var(--ease-micro);
+  transition-timing-function: var(--ease-micro);
+}
+@utility duration-hover {
+  --tw-duration: var(--motion-hover);
+  transition-duration: var(--motion-hover);
+}
+@utility duration-ui {
+  --tw-duration: var(--motion-ui);
+  transition-duration: var(--motion-ui);
+}
+@utility hero-delay-1 {
+  animation-delay: var(--motion-hero-stagger);
+}
+@utility hero-delay-2 {
+  animation-delay: var(--motion-hero-cta);
+}
+@utility duration-reveal {
+  --tw-duration: var(--motion-reveal);
+  transition-duration: var(--motion-reveal);
+}
+
+/* Section vertical rhythm: 72 / 96 / 128 px */
+@utility section-y {
+  padding-block: var(--space-section-sm);
+  @media (width >= 48rem) {
+    padding-block: var(--space-section-md);
+  }
+  @media (width >= 64rem) {
+    padding-block: var(--space-section-lg);
+  }
+}
+
+/* Page gutter that matches the 4 / 8 / 12 column grid gutters */
+@utility gutter-x {
+  padding-inline: 1rem;
+  @media (width >= 48rem) {
+    padding-inline: 1.25rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* 4 / 8 / 12 column layout grid with 16 / 20 / 24 px gutters */
+@utility layout-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 1rem;
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    column-gap: 1.25rem;
+  }
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
+}
+
+/* 64 px grid texture at 4% white, faded toward the edges */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--color-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-grid-line) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  background-position: center;
+  mask-image: radial-gradient(ellipse at center, #000 35%, transparent 78%);
+}
+
+/* Legibility overlays: the only gradients allowed (bg at 85% → transparent) */
+@utility scrim-b {
+  background-image: linear-gradient(to top, var(--color-scrim) 0%, var(--color-scrim) 22%, transparent 78%);
+}
+/* Mobile hero: taller copy needs a stronger scrim behind it */
+@utility scrim-hero {
+  background-image: linear-gradient(to top, var(--color-scrim) 0%, var(--color-scrim) 55%, transparent 92%);
+}
+@utility scrim-l {
+  background-image: linear-gradient(to right, var(--color-scrim) 0%, var(--color-scrim) 18%, transparent 72%);
+}
+@utility scrim-t {
+  background-image: linear-gradient(to bottom, var(--color-scrim) 0%, transparent 100%);
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  html {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    min-height: 100svh;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Anchors and focused elements never land under the sticky header */
+  [id] {
+    scroll-margin-top: calc(var(--header-h) + 1.5rem);
+  }
+  :focus {
+    scroll-margin-top: calc(var(--header-h) + 1rem);
+    scroll-margin-bottom: 5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  dd,
+  figcaption {
+    text-wrap: pretty;
+  }
+
+  /* Universal focus style: 2 px lime outline, 2 px offset */
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-accent-ink);
+  }
+
+  /* Data, coordinates and pills use tabular figures everywhere */
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+}
+
+/*
+ * Section reveals: fade + 16 px rise, once per element, 60 ms stagger.
+ * The reveal controller sets data-reveal-ready on <html> after hydration and
+ * marks anything already on screen as revealed, so content is never hidden
+ * before JavaScript runs and nothing above the fold flashes.
+ */
+@layer components {
+  [data-reveal] {
+    transition:
+      opacity var(--motion-reveal) var(--ease-emphasis),
+      transform var(--motion-reveal) var(--ease-emphasis);
+    transition-delay: calc(min(var(--reveal-i, 0), 5) * var(--motion-stagger));
+  }
+  :root[data-reveal-ready] [data-reveal]:not([data-revealed]) {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  .hero-rise {
+    animation: var(--animate-hero-rise);
+  }
+
+  /*
+   * Map labels are in SVG user units (viewBox 1000 wide). The sizes are
+   * chosen so labels render at ≥12 px on screen: ~0.7× scale on desktop,
+   * ~0.35× on a 360 px phone.
+   */
+  .map-label {
+    font-size: 22px;
+    @media (width < 48rem) {
+      font-size: 36px;
+    }
+  }
+  /* Architecture connectors: one lime pulse, left to right, once on reveal */
+  .arch-pulse {
+    stroke-dasharray: 18 200;
+    stroke-dashoffset: 18;
+    opacity: 0;
+  }
+  [data-revealed] .arch-pulse {
+    animation: pulse-travel var(--motion-pulse) var(--ease-standard) calc(var(--i, 0) * var(--motion-pulse-stagger)) 1 both;
+  }
+
+  .map-label-minor {
+    font-size: 18px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      transition: opacity var(--motion-reduced) linear;
+      transition-delay: 0ms;
+    }
+    :root[data-reveal-ready] [data-reveal]:not([data-revealed]) {
+      transform: none;
+    }
+    .hero-rise {
+      animation: var(--animate-fade);
+    }
+  }
+}
+
+/* Light is a distinct paper-and-ink palette; lime remains the brand colour. */
+@layer base {
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --color-bg: #f6f7f4;
+    --color-surface-1: #ffffff;
+    --color-surface-2: #eef1eb;
+    --color-surface-3: #e4e9df;
+    --color-border: #d5dcd1;
+    --color-border-strong: #b9c3b3;
+    --color-border-control: #75816d;
+    --color-text: #172019;
+    --color-text-muted: #53604f;
+    --color-text-subtle: #5e6958;
+    --color-accent-text: #3b5c11;
+    --color-focus: #456d13;
+    --color-severity-ink: #ffffff;
+    --color-sev-critical: #b52632;
+    --color-sev-high: #934407;
+    --color-sev-medium: #735900;
+    --color-sev-low: #21618a;
+    --color-grid-line: rgb(23 32 25 / 0.035);
+    --shadow-float: 0 16px 40px -12px rgb(23 32 25 / 0.18);
+  }
+}
+
+@layer components {
+  .theme-moon { display: none; }
+  :root[data-theme="light"] .theme-moon { display: block; }
+  :root[data-theme="light"] .theme-sun { display: none; }
+  .photo-surface, .site-header[data-photo-header] {
+    --color-text: #ffffff;
+    --color-text-muted: #d3d9dd;
+    --color-accent-text: #c8f169;
+    --color-focus: #c8f169;
+    --color-border: #465157;
+    --color-border-strong: #758087;
+    --color-surface-2: #18202a;
+    color: var(--color-text);
+  }
+  .site-header[data-photo-header] { background: rgb(10 13 18 / 0.5); backdrop-filter: blur(12px); }
+  .hero-photo-overlay { background: linear-gradient(90deg, rgb(10 13 18 / .91), rgb(10 13 18 / .54) 48%, rgb(10 13 18 / .12)), linear-gradient(0deg, rgb(10 13 18 / .85), transparent 50%); }
+  .hero-heading { font-size: clamp(3.5rem, 2.1rem + 5.1vw, 7rem); line-height: 1.01; letter-spacing: -.055em; }
+  .hero-photo { object-position: 62% center; }
+  .transport-tablist { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 0; overflow: visible; }
+  .transport-tablist button { justify-content: center; padding-block: 1.2rem; height: auto; gap: .65rem; }
+  .transport-tablist button[aria-selected="true"] { color: var(--color-accent-text); }
+  .transport-photo { min-height: 28rem; }
+  .mode-photo-card img { transition: transform var(--motion-reveal) var(--ease-standard); }
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) { .mode-photo-card:hover img { transform: scale(1.045); } }
+  @media (width < 48rem) {
+    .hero-photo-overlay { background: linear-gradient(0deg, rgb(10 13 18 / .94), rgb(10 13 18 / .62) 65%, rgb(10 13 18 / .28)); }
+    .hero-heading { font-size: clamp(3.2rem, 12.9vw, 5rem); }
+    .transport-tablist button { flex-direction: column; gap: .5rem; font-size: var(--text-small); }
+    .transport-photo { min-height: 19rem; }
+  }
+}
+
+@layer components {
+  .step-future h3 { color: var(--color-text-muted); }
+}
+
+@layer components {
+  .global-hero-heading { font-size: clamp(2.75rem, 1.6rem + 4vw, 5.6rem); line-height: 1.06; letter-spacing: -.045em; }
+  @media (width < 48rem) { .global-hero-heading { font-size: clamp(1.65rem, 7.4vw, 2rem); line-height: 1.1; } }
+}
