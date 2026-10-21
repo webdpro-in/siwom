@@ -44,7 +44,7 @@ export const divisions: Record<DivisionId, Division> = {
     product: "SIWOM Safety",
     short: "Safety",
     firstMention: "SIWOM Safety",
-    area: "AI safety and inspection",
+    area: "Safety and inspection",
     status: "research",
     href: "/safety",
     summary:

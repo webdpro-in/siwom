@@ -67,7 +67,7 @@ export async function renderOg({ eyebrow, title, status }: { eyebrow: string; ti
           <div style={{ fontFamily: "Space Grotesk", fontSize: 76, lineHeight: 1.04, letterSpacing: -2, maxWidth: 980 }}>{title}</div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 24, color: colors.textMuted }}>
-          <div>Shipment coordination software for logistics companies.</div>
+          <div>Intelligence for the physical world.</div>
           <div style={{ fontFamily: "JetBrains Mono", fontSize: 20 }}>Built from India</div>
         </div>
       </div>

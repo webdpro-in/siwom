@@ -21,24 +21,23 @@ export function Hero() {
       <div className="mx-auto w-full max-w-content gutter-x pt-36 pb-12 md:pt-48 md:pb-16">
         <div className="flex max-w-[60rem] flex-col items-start gap-7">
           <p className="hero-rise flex items-center gap-3 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">
-            <span aria-hidden className="h-px w-8 bg-accent" /> SIWOM Logistics · Shipment coordination software
+            <span aria-hidden className="h-px w-8 bg-accent" /> SIWOM · Industrial technology, built in India
           </p>
           <h1 id="hero-title" className="hero-heading global-hero-heading font-display font-medium text-text">
             {/* Lines flow together on phones (three lines max) and split from 768 px. */}
-            <span className="hero-rise md:block">Coordinate every shipment, </span>
-            <span className="hero-rise hero-delay-1 text-accent-text md:block">from port to delivery.</span>
+            <span className="hero-rise md:block">Intelligence for </span>
+            <span className="hero-rise hero-delay-1 text-accent-text md:block">the physical world.</span>
           </h1>
           <p className="hero-rise hero-delay-1 max-w-[40rem] text-body-l text-text-muted">
-            SIWOM Logistics gives freight forwarders, transporters and warehouse teams one shared record of every shipment:
-            where it is, which vehicle has it, which documents are due and what is late. It is built to replace the
-            calls, chat groups and spreadsheets that coordination runs on today.
+            SIWOM builds the intelligence layer for industrial systems, starting with SIWOM Logistics: one shared record
+            of every international shipment, from the supplier&apos;s door to final delivery.
           </p>
           <div className="hero-rise hero-delay-2 flex flex-wrap gap-3 pt-2">
             <Button href={contactHref({ interest: "logistics", pilot: true })} size="lg" icon="arrow" trackAs="hero_discuss_pilot">
               Discuss a pilot
             </Button>
-            <Button href="#demo" size="lg" variant="secondary" trackAs="hero_try_demo">
-              Try the demo
+            <Button href="#platform" size="lg" variant="secondary" trackAs="hero_see_platform">
+              See the platform
             </Button>
           </div>
         </div>
@@ -47,9 +46,9 @@ export function Hero() {
         <p className="flex items-center gap-3 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">
           <span className="size-2 rounded-full bg-accent" aria-hidden /> Built in India
         </p>
-        <p className="text-small text-text">Pilots open for logistics companies</p>
-        <a href="#how-it-works" className="hidden items-center justify-end gap-4 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted hover:text-text sm:flex">
-          How it works
+        <p className="text-small text-text">Logistics · Space · Mobility · Robotics · Energy · Industrial AI</p>
+        <a href="#journey" className="hidden items-center justify-end gap-4 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted hover:text-text sm:flex">
+          How a shipment moves
           <ArrowDownRight aria-hidden className="size-5" />
         </a>
       </div>

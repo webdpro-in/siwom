@@ -43,18 +43,19 @@ This covers the website itself. SIWOM's products are separately labelled In deve
 | Cloudflare Turnstile | Implemented, off by default | Enabled by the Turnstile keys |
 | Storing submissions in a database | Planned | Not needed: email delivery only |
 
-## Logistics OS demo
+## International shipment workspace (SIWOM Logistics)
 
 | Feature | Status | Notes |
 | --- | --- | --- |
-| Static server-rendered poster, lazy interactive chunk, load-error retry | Implemented | |
-| Schematic map, exceptions panel, summary cards, shipments table, dispatch queue | Mocked | `data/demo/*` |
-| Filters (status, mode, search) synced to the URL | Mocked | |
-| Selection synced across map, table and exceptions; detail drawer / bottom sheet | Mocked | |
-| Acknowledge exceptions; assign vehicles; reset | Mocked | Local state only |
-| Rail views: Overview, Shipments, Fleet, Dispatch, Exceptions, Sites | Mocked | |
-| Live data, GPS tracking, TMS/WMS/telematics integrations | Planned | Shown on the site as Research / planned |
-| Geographic basemap (MapLibre) | Planned | Needs a provider that depicts India's official boundaries |
+| Six illustrative international shipments (import and export; ocean, air, rail legs) | Mocked | `data/demo/international.ts`; dates relative to today |
+| Globe with great-circle sea lanes, ports and labels; keyboard rotation; pause | Implemented | Canvas 2D, Natural Earth land dots, lazy loaded |
+| Filters: industry (space, automotive, robotics, energy), mode, needs attention | Mocked | Local state only |
+| Summary: ETA, status, open exception with SI suggestion, documents | Mocked | "Suggested by SI · your team decides" |
+| Journey: every handoff with the responsible party and date | Mocked | |
+| Acknowledge exception, announced through aria-live | Mocked | Local state only |
+| Live data, GPS tracking, TMS/WMS/telematics integrations | Planned | Described as approach, not as shipped |
+
+The earlier domestic dispatch demo (fleet, dispatch queue, local hub names) was removed in October 2026.
 
 ## Safety AI demo
 

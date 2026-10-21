@@ -1,192 +1,138 @@
 import type { StaticImageData } from "next/image";
-import type { Status } from "./status";
-import portsImg from "@/public/images/water-container.webp";
-import warehousingImg from "@/public/images/warehouse.webp";
-import freightImg from "@/public/images/road-freight.webp";
-import manufacturingImg from "@/public/images/manufacturing.webp";
-import infrastructureImg from "@/public/images/pipeline-valves.webp";
-import mobilityImg from "@/public/images/evtol-air-taxi.webp";
-import spaceImg from "@/public/images/space-core-stage-barge.webp";
-import greenEnergyImg from "@/public/images/green-energy-solar.webp";
+import aiImg from "@/public/images/industrial-control.webp";
+import logisticsImg from "@/public/images/water-container.webp";
+import spaceImg from "@/public/images/space-satellite-cleanroom.webp";
+import automotiveImg from "@/public/images/electric-mobility.webp";
 import roboticsImg from "@/public/images/robotics.webp";
+import energyImg from "@/public/images/green-energy-solar.webp";
+
+export type IndustryId = "ai" | "logistics" | "space" | "automotive" | "robotics" | "energy";
 
 export type Industry = {
-  id: "ports" | "warehousing" | "freight" | "manufacturing" | "infrastructure" | "space" | "green-energy" | "robotics" | "mobility";
+  id: IndustryId;
   name: string;
   image: StaticImageData;
   alt: string;
-  /** Required for photos that need attribution or a source note. */
+  /** Required for photos that need attribution. */
   credit?: string;
-  /** Highlighted emerging industries, shown in their own band on /industries. */
-  featured?: boolean;
-  /** What moves through this industry's supply chain. */
-  moves?: string[];
-  /** One practical use case for the homepage list. */
+  /** One line for the homepage card. */
   useCase: string;
+  /** Who it is for, in this industry. */
+  segments: string[];
   problem: string;
-  couldHelp: string[];
-  product: { name: string; href: string; status: Status };
-  onHomepage: boolean;
+  howSiwomHelps: string[];
+  /** Typical cargo or capabilities, shown as "In practice". */
+  examples: string[];
+  product: { name: string; href: string };
 };
 
 /*
- * No signed customers or deployments are implied. Copy uses "could" and
- * "help", never "we power".
+ * The six industries SIWOM works across. No customers or deployments are
+ * implied; copy describes the problems SIWOM is built to solve.
  */
 export const industries: Industry[] = [
   {
-    id: "ports",
-    name: "Ports and maritime",
-    image: portsImg,
-    alt: "Container ship moored alongside terminal cranes.",
-    useCase: "Follow containers from vessel and yard, through the gate, to the next transporter.",
+    id: "ai",
+    name: "AI & Industrial Intelligence",
+    image: aiImg,
+    alt: "Blue-lit rack-mounted server hardware in a data centre.",
+    useCase: "SIWOM Intelligence (SI) turns operational data into suggestions people can check and act on.",
+    segments: ["Operations and control-room teams", "Supply chain planners", "Safety and EHS teams"],
     problem:
-      "Vessel, yard, gate and inland legs often sit in separate systems. Teams chase status by phone, and a missed berth window ripples into every truck and rake waiting on it.",
-    couldHelp: [
-      "One view of shipments moving through berth, yard, gate and inland legs",
-      "Early flags when a berth window or rail cut-off is at risk",
-      "Safety flags for lifting zones and vehicle–pedestrian conflicts",
+      "Industrial operations generate data in dozens of systems, but decisions still depend on someone noticing the right signal in time, often too late to act.",
+    howSiwomHelps: [
+      "ETA prediction and exception ranking from the data that arrives",
+      "Document checks before every handoff",
+      "Every SI suggestion shows its reasoning; people decide, and every decision is recorded",
     ],
-    product: { name: "Logistics", href: "/logistics", status: "in-development" },
-    onHomepage: true,
+    examples: ["ETA prediction", "Exception ranking", "Document checks", "Computer vision"],
+    product: { name: "Technology and SIWOM Intelligence", href: "/technology#intelligence" },
   },
   {
-    id: "freight",
-    name: "Road freight and fleets",
-    image: freightImg,
-    alt: "Freight truck and trailer on a road.",
-    useCase: "Dispatch and delay alerts for transporters and the fleets they manage.",
+    id: "logistics",
+    name: "Global Logistics & Autonomous Supply Chains",
+    image: logisticsImg,
+    alt: "Container ship moored alongside terminal gantry cranes, seen from above.",
+    useCase: "One shared record for international shipments, from origin pickup to final delivery.",
+    segments: ["Freight forwarders", "Transporters and fleet operators", "Port, CFS and terminal operators", "Warehouse and 3PL operators"],
     problem:
-      "Dispatchers juggle calls, chat groups and spreadsheets to match loads, vehicles and drivers. Delays surface late, often after a customer asks.",
-    couldHelp: [
-      "Fleet availability and dispatch in one queue",
-      "Exceptions such as unplanned halts, e-way bill validity and duty hours, sorted by severity",
-      "Suggested next steps, with the dispatcher always deciding",
+      "An international shipment passes through a supplier, carriers, terminals, customs brokers and local partners. Each keeps its own records, so status lives in calls and spreadsheets, and delays surface after the customer asks.",
+    howSiwomHelps: [
+      "Every leg and handoff in one record, with the responsible party at each step",
+      "Exceptions ranked by urgency, with a suggested next step from SI",
+      "Document readiness checked before cargo reaches the port",
     ],
-    product: { name: "Logistics", href: "/logistics", status: "in-development" },
-    onHomepage: true,
-  },
-  {
-    id: "warehousing",
-    name: "Warehousing and distribution",
-    image: warehousingImg,
-    alt: "Storage racks and goods inside a warehouse.",
-    useCase: "Inbound and outbound movements linked to the shipments they belong to.",
-    problem:
-      "Inbound and outbound movements are often logged after the fact. Dock schedules, storage and dispatch rarely share one live picture.",
-    couldHelp: [
-      "Inbound and outbound movements linked to the shipments they belong to",
-      "Dock and dispatch timelines in the same view as the fleet",
-      "Integration with your existing WMS through APIs",
-    ],
-    product: { name: "Logistics", href: "/logistics", status: "in-development" },
-    onHomepage: true,
-  },
-  {
-    id: "manufacturing",
-    name: "Manufacturing supply chains",
-    image: manufacturingImg,
-    alt: "Industrial manufacturing facility and production equipment.",
-    useCase: "Know when inbound supplier shipments will really arrive, before the line stops.",
-    problem:
-      "A late inbound truck can stop a line, yet plant teams often learn about it from the supplier's phone call rather than a system.",
-    couldHelp: [
-      "Inbound supplier shipments with realistic ETAs",
-      "Outbound dispatch planning against plant schedules",
-      "Exception alerts routed to the people who can act",
-    ],
-    product: { name: "Logistics", href: "/logistics", status: "in-development" },
-    onHomepage: true,
-  },
-  {
-    id: "infrastructure",
-    name: "Infrastructure and facilities",
-    image: infrastructureImg,
-    alt: "Industrial steel pipework, valves and infrastructure.",
-    useCase: "Inspection records and hazard flagging, with people accountable for every decision.",
-    problem:
-      "Inspections are often on paper, inconsistent between shifts and hard to audit. Hazards noticed on camera may never reach the right person.",
-    couldHelp: [
-      "Consistent inspection records with photos and corrective actions",
-      "AI-assisted flags for visible damage, PPE and restricted zones",
-      "Human review and escalation, with an audit trail",
-    ],
-    product: { name: "Safety", href: "/safety", status: "research" },
-    onHomepage: false,
+    examples: ["Containers", "Air cargo", "Project cargo", "Palletised freight"],
+    product: { name: "SIWOM Logistics", href: "/logistics" },
   },
   {
     id: "space",
-    name: "Space and aerospace logistics",
+    name: "Space & Aerospace",
     image: spaceImg,
-    alt: "A barge carrying a full-size rocket core stage crosses calm water at dusk.",
-    credit: "NASA/Cory Huston. Representative image; no NASA endorsement or SIWOM involvement implied.",
-    featured: true,
-    useCase: "Planning satellite, rocket and aerospace moves where every handoff is high-stakes.",
+    alt: "Technicians in cleanroom suits work beside a large satellite in a clean room.",
+    credit: "NASA/Bill White. No endorsement implied.",
+    useCase: "Satellites, rocket parts and aerospace components, moved with every handling limit recorded.",
+    segments: ["Satellite and subsystem makers", "Launch vehicle suppliers", "Aerospace parts and MRO suppliers"],
     problem:
-      "Satellites, rocket stages and aerospace parts are high-value, often one of a kind, and sensitive to shock, humidity and contamination. A single move can run from clean room to aircraft to truck to barge, with export licences, customs and insurance at every handoff.",
-    couldHelp: [
-      "One plan per move, with shock, humidity and cleanliness limits recorded before anyone quotes",
-      "Document and licence checklists that travel with the shipment through every handoff",
-      "Connecting Indian space suppliers with buyers abroad, and international suppliers with Indian makers",
+      "Space and aerospace hardware is high-value, often one of a kind, and sensitive to shock, humidity and contamination. One move can run from clean room to aircraft to truck, with export licences, customs and insurance at every handoff.",
+    howSiwomHelps: [
+      "Handling limits for shock, humidity and cleanliness captured before the first quote",
+      "Licence and document checklists that travel with the shipment",
+      "Supplier discovery and sourcing through SIWOM Global Trade",
     ],
-    moves: ["Satellites and subsystems", "Rocket stages and engines", "Space robotics", "Aircraft parts and spares"],
-    product: { name: "Global Trade", href: "/global-trade#space", status: "research" },
-    onHomepage: true,
+    examples: ["Satellites and subsystems", "Rocket stages and engines", "Avionics and spares"],
+    product: { name: "SIWOM Global Trade", href: "/global-trade#space" },
   },
   {
-    id: "green-energy",
-    name: "Green energy",
-    image: greenEnergyImg,
-    alt: "Aerial view of rows of solar panels stretching across desert land.",
-    credit: "Sarvajanik Puralekh, CC BY-SA 2.0. Solar plant at Bhadla, Rajasthan. Representative image; no endorsement implied.",
-    featured: true,
-    useCase: "Moving solar, wind, storage and hydrogen equipment to remote project sites.",
+    id: "automotive",
+    name: "Automotive & Autonomous Mobility",
+    image: automotiveImg,
+    alt: "An electric vehicle connected to a charging plug.",
+    useCase: "Battery packs, drive units and autonomy sensors, imported and exported on schedule.",
+    segments: ["Electric vehicle makers", "Component and tier-one suppliers", "Autonomous-vehicle and sensor developers"],
     problem:
-      "India's clean-energy build-out moves huge volumes of solar modules and oversized wind components to remote sites, while battery systems travel as dangerous goods. Many components are still imported, and delays on one shipment can hold up a whole project.",
-    couldHelp: [
-      "Project cargo planning for oversized loads such as wind blades, nacelles and transformers",
-      "Dangerous-goods requirements for battery storage kept with every shipment",
-      "Finding domestic manufacturers for components imported today",
+      "Vehicle programmes depend on cells, motors, lidar and compute sourced across borders. Batteries ship as dangerous goods with their own rules, and one late container can stop an assembly line.",
+    howSiwomHelps: [
+      "Inbound parts tracked against production dates, with delays flagged early",
+      "Dangerous-goods documents for batteries kept with every shipment",
+      "Export coordination for Indian component makers selling abroad",
     ],
-    moves: ["Solar modules and inverters", "Wind blades and nacelles", "Battery storage", "Electrolysers"],
-    product: { name: "Global Trade", href: "/global-trade#sectors", status: "research" },
-    onHomepage: false,
+    examples: ["Battery cells and packs", "Electric drive units", "Lidar, radar and compute"],
+    product: { name: "SIWOM Logistics", href: "/logistics" },
   },
   {
     id: "robotics",
-    name: "Robotics and automation",
+    name: "Robotics & Autonomous Systems",
     image: roboticsImg,
     alt: "Yellow industrial robot arms inside a guarded automation cell.",
-    featured: true,
-    useCase: "Bringing robots, automation cells and spares from supplier to installation.",
+    useCase: "Robots, automation cells and their spares, delivered ready to install.",
+    segments: ["Robotics and automation integrators", "Warehouse automation providers", "Drone and AMR manufacturers"],
     problem:
-      "Industrial robots, mobile robots and space robotics parts are precision machinery. They need careful crating, delivery ready for installation, and fast spares when a production line stops.",
-    couldHelp: [
+      "Robots and automation cells are precision machinery shipped from overseas factories. They need careful crating, delivery ready for installation, and fast spares when a line stops.",
+    howSiwomHelps: [
       "Machinery imports coordinated from the supplier's factory to the installation site",
       "Spares visibility, so a stopped line gets its part sooner",
-      "Connecting Indian integrators and component makers with global buyers",
+      "Finding Indian suppliers for imported components through SIWOM Global Trade",
     ],
-    moves: ["Robot arms and controllers", "AMRs and conveyors", "Space robotics parts", "Spares and end effectors"],
-    product: { name: "Global Trade", href: "/global-trade#sectors", status: "research" },
-    onHomepage: false,
+    examples: ["Robot arms and controllers", "AMRs and conveyors", "Spares and end effectors"],
+    product: { name: "SIWOM Logistics", href: "/logistics" },
   },
   {
-    id: "mobility",
-    name: "Advanced mobility",
-    image: mobilityImg,
-    alt: "An electric air taxi hovers over an airfield, with a sensor on a tripod in the foreground.",
-    credit: "NASA/Genaro Vavuris. Representative image; no NASA or manufacturer endorsement implied.",
-    featured: true,
-    useCase: "Supply chains for electric and autonomous vehicles, drones and future air taxis.",
+    id: "energy",
+    name: "Energy & Infrastructure",
+    image: energyImg,
+    alt: "Aerial view of rows of solar panels stretching across desert land.",
+    credit: "Sarvajanik Puralekh, CC BY-SA 2.0. Bhadla, Rajasthan.",
+    useCase: "Solar, wind, storage and grid equipment, moved to remote project sites on time.",
+    segments: ["Solar and wind developers", "Battery storage integrators", "EPC and infrastructure contractors"],
     problem:
-      "Electric cars, autonomous vehicles, drones and air taxis depend on battery cells, motors, sensors and electronics sourced across borders, under rules that differ by country and change often. Air taxis are still in testing and certification.",
-    couldHelp: [
-      "Battery and electronics shipments planned with dangerous-goods and classification needs up front",
-      "Discovering Indian suppliers for imported vehicle and drone components",
-      "Vehicle software and diagnostics connected to logistics operations",
+      "India's clean-energy and infrastructure build-out moves huge volumes of imported modules and oversized components to remote sites. One delayed shipment can hold up a whole project.",
+    howSiwomHelps: [
+      "Project cargo planning for oversized loads such as blades and transformers",
+      "Battery storage shipped with its dangerous-goods documents in order",
+      "Domestic alternatives for components imported today, through SIWOM Global Trade",
     ],
-    moves: ["Battery cells and packs", "Motors and inverters", "Lidar, radar and cameras", "Drone airframes"],
-    product: { name: "Global Trade", href: "/global-trade#sectors", status: "research" },
-    onHomepage: false,
+    examples: ["Solar modules and inverters", "Wind blades and nacelles", "Battery storage", "Transformers"],
+    product: { name: "SIWOM Logistics", href: "/logistics" },
   },
 ];

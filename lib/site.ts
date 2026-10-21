@@ -18,10 +18,10 @@ export const isIndexable = !process.env.VERCEL_ENV || process.env.VERCEL_ENV ===
 
 export const site = {
   name: "SIWOM",
-  tagline: "Shipment coordination software for logistics companies.",
+  tagline: "Intelligence for the physical world.",
   principle: "Safety First. Intelligence Everywhere.",
   description:
-    "SIWOM is building SIWOM Logistics, shipment coordination software for Indian logistics companies: shipments, vehicles, documents and delays in one shared view, from port or airport to final delivery. Built in India.",
+    "SIWOM builds the intelligence layer for industrial systems, starting with SIWOM Logistics: one shared record of every international shipment, from supplier to delivery. Built in India.",
   url: rawSiteUrl.replace(/\/$/, ""),
   locale: "en_IN",
   /**

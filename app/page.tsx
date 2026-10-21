@@ -2,22 +2,25 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { Challenge } from "@/components/sections/Challenge";
 import { LogisticsSection } from "@/components/sections/LogisticsSection";
-import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
-import { IndustriesSection } from "@/components/sections/IndustriesSection";
-import { MoreSection } from "@/components/sections/MoreSection";
+import { JourneySection } from "@/components/sections/JourneySection";
+import { FoundationSection } from "@/components/sections/FoundationSection";
+import { FocusIndustriesSection } from "@/components/sections/FocusIndustriesSection";
+import { HomeRoadmapSection } from "@/components/sections/HomeRoadmapSection";
 import { HowWeWorkSection } from "@/components/sections/HowWeWorkSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 
 export const metadata: Metadata = {
-  title: { absolute: "SIWOM — Shipment coordination software for logistics in India" },
+  title: { absolute: "SIWOM — Intelligence for the physical world" },
   description:
-    "Shipment coordination software for Indian logistics companies: shipments, vehicles, documents and delays in one shared record, from port to delivery.",
+    "SIWOM builds the intelligence layer for industrial systems, starting with SIWOM Logistics: one shared record of every international shipment, from supplier to delivery.",
   alternates: { canonical: "/" },
 };
 
 /**
- * Homepage narrative: problem → what SIWOM Logistics does (with the demo) → how a
- * pilot works → who it is for → more from SIWOM → how we work → next step.
+ * Homepage narrative: hero → 01 current product → 02 the platform (shipment
+ * workspace) → 03 how an international shipment moves → 04 technology
+ * foundation → 05 focus industries → 06 roadmap → 07 operating principles →
+ * 08 next step.
  */
 export default function HomePage() {
   return (
@@ -25,9 +28,10 @@ export default function HomePage() {
       <Hero />
       <Challenge />
       <LogisticsSection />
-      <HowItWorksSection />
-      <IndustriesSection />
-      <MoreSection />
+      <JourneySection />
+      <FoundationSection />
+      <FocusIndustriesSection />
+      <HomeRoadmapSection />
       <HowWeWorkSection />
       <CtaSection />
     </>

@@ -16,7 +16,7 @@ import { SafetyDisclaimer, SafetyLimitations, SafetyWorkflow } from "@/component
 export const metadata: Metadata = pageMetadata({
   title: "Safety: hazard flagging and inspection",
   description:
-    "SIWOM Safety brings AI-assisted inspection and hazard flagging to industrial sites. AI flags potential hazards; qualified people review and decide.",
+    "SIWOM Safety: human-reviewed computer vision for industrial sites. SIWOM Intelligence (SI) flags potential hazards; qualified people review and decide.",
   path: "/safety",
 });
 
@@ -83,10 +83,9 @@ export default function SafetyAiPage() {
     <>
       <PageHero
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Safety" }]}
-        eyebrow="SIWOM Safety"
-        status="research"
+        eyebrow="SIWOM Safety · Research and development"
         title="Hazard flags, reviewed by people."
-        summary="SIWOM Safety brings camera-assisted inspection and hazard flagging to ports, yards and industrial sites. AI flags possible hazards; a qualified person reviews every flag and decides."
+        summary="SIWOM Safety is human-reviewed computer vision for ports, yards and industrial sites. SIWOM Intelligence (SI) flags possible hazards; a qualified person reviews every flag and decides."
         cta={{ label: "Discuss Safety", href: contactHref({ interest: "safety" }) }}
         media={
           <Figure
@@ -100,15 +99,14 @@ export default function SafetyAiPage() {
       />
 
       <LongPage toc={toc}>
-        <PageSection id="philosophy" eyebrow="Safety-first philosophy" title="AI assists. People decide.">
+        <PageSection id="philosophy" eyebrow="Safety-first philosophy" title="SI assists. People decide.">
           <Prose>
             <p>
-              Industrial safety depends on trained people, good procedures and proper inspections. SIWOM Safety explores
-              whether AI can help those people notice potential hazards sooner and record what they find more
-              consistently.
+              Industrial safety depends on trained people, good procedures and proper inspections. SIWOM Safety helps
+              those people notice potential hazards sooner and record what they find more consistently.
             </p>
             <p>
-              <strong>It is never a replacement for them.</strong> AI flags potential hazards for qualified human
+              <strong>It is never a replacement for them.</strong> SI flags potential hazards for qualified human
               review. It does not certify a site as safe, and SIWOM does not control cranes, vehicles or dangerous
               machinery.
             </p>
@@ -214,7 +212,7 @@ export default function SafetyAiPage() {
               defects. Those need engineering inspections, specialised sensors and non-destructive testing.
             </Callout>
             <Callout variant="warning" title="No guarantees">
-              AI flags potential hazards for qualified human review. It never guarantees a site is safe, and detection
+              SI flags potential hazards for qualified human review. It never guarantees a site is safe, and detection
               performance depends on cameras, coverage, environment and validation.
             </Callout>
             <Callout variant="warning" title="No control of machinery">

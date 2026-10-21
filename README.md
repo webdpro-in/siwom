@@ -106,7 +106,7 @@ Decisions where the brief was silent, or where meeting WCAG 2.2 AA needed a smal
 Both demos are typed, frontend-only prototypes over the data in `data/demo/`. They carry the non-dismissable "Illustrative demo data — not connected to live operations" banner and use a fixed snapshot (18 Oct 2026, 14:30 IST), with no live counters.
 
 - **Loading**: each page server-renders a poster that is the demo's own view in its starting state. The markup is identical, so nothing shifts. The interactive chunk loads when the demo is within one viewport, or on the visitor's first keyboard, pointer or wheel input. A failed chunk load shows an error state with a retry.
-- **Logistics OS**: filters (synced to `?status=&mode=&q=`), selection synced across map, table and exceptions, detail drawer (bottom sheet on mobile), acknowledge, dispatch assignment, rail views (Overview, Shipments, Fleet, Dispatch, Exceptions, Sites), empty states and reset.
+- **International shipment workspace** (SIWOM Logistics; homepage section 02, `/logistics#demo`, `/global-trade#journeys`): filters by industry, mode and "needs attention", a globe with the selected route, a summary with the open exception and SI's suggestion, documents, and the full journey with who performs each step. See `components/globe/`.
 - **Safety AI**: three scenarios, focusable detection boxes with a text list equivalent, a show-detections switch, and reviewer actions that change status, append to the incident log and are announced through `aria-live`.
 - **Map**: a schematic network of real hub names, deliberately **without national boundaries**. Any boundary on an Indian company's site must follow the Survey of India's official depiction. The optional MapLibre basemap from the brief is therefore *Planned*, to be added with a provider that meets that requirement.
 
@@ -203,5 +203,13 @@ At the owner's request the site no longer shows product-status wording ("in deve
 - **Badges**: the In development, Research and Long-term vision badges are hidden sitewide by one switch, `showProductStatus` in `data/status.ts`. Set it to `true` to bring them back. "Demo data" labels always show.
 - **Copy**: status phrases were rewritten in plain, confident language across the homepage, Logistics, Global Trade, Safety, Technology, Industries, About, Vision, legal pages and social cards.
 - **Still stated, because they are true and protect customers**: demo data is labelled "Illustrative demo data — not connected to live operations"; people review every safety flag; SIWOM does not broker goods or issue export licences.
-- **Homepage section 02** ("What SIWOM Logistics does") now leads with the globe shipment workspace (international shipments), followed by the dispatch and exceptions demo. The globe also stays on Global Trade (`#journeys`). Both load when within one viewport (`components/globe/ShipmentWorkspaceLazy.tsx`).
+- **Homepage section 02** ("What SIWOM Logistics does") now leads with the globe shipment workspace (international shipments). The dispatch and exceptions demo has since been removed. The globe also stays on Global Trade (`#journeys`). Both load when within one viewport (`components/globe/ShipmentWorkspaceLazy.tsx`).
 - **Owner to confirm**: the Logistics page now describes integrations (APIs and webhooks, TMS/WMS, telematics) and the Technology page describes handling profiles and logger data without a "planned" label. Be ready to deliver these, or adjust the wording, before a customer relies on them.
+
+## Platform update (21 October 2026)
+
+- **Positioning**: "Intelligence for the physical world." SIWOM Logistics is the current product; Global Trade and Safety are presented as research and development; space, robotics, autonomous mobility and energy are long-term directions on the roadmap.
+- **SI**: SIWOM Intelligence is called SI throughout. Every SI suggestion is labelled "Suggested by SI · your team decides".
+- **Homepage narrative**: 01 SIWOM Logistics, 02 the platform (international shipment workspace), 03 international logistics journey, 04 technology foundation, 05 industries, 06 roadmap, 07 operating principles, 08 next step.
+- **Industries** (`data/industries.ts`): six industries — AI & Industrial Intelligence; Global Logistics & Autonomous Supply Chains; Space & Aerospace; Automotive & Autonomous Mobility; Robotics & Autonomous Systems; Energy & Infrastructure. They drive the homepage cards, the Industries page, the contact form options and the workspace filters.
+- **Removed**: the domestic dispatch and exceptions demo and its local hub names.

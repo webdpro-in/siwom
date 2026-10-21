@@ -11,7 +11,7 @@
     "brand": "node scripts/generate-brand.mjs",
     "qa": "node scripts/qa/run-qa.mjs --base http://localhost:3100",
     "qa:responsive": "node scripts/qa/responsive.mjs --base http://localhost:3100",
-    "qa:budget": "node scripts/qa/js-budget.mjs --base http://localhost:3100 / /logistics-os /safety-ai /contact",
+    "qa:budget": "node scripts/qa/js-budget.mjs --base http://localhost:3100 / /logistics /industries /safety /contact",
     "qa:tokens": "node scripts/qa/tokens.mjs",
     "qa:contrast": "node scripts/qa/contrast.mjs",
     "typecheck": "tsc --noEmit"

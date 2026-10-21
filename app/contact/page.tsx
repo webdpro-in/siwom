@@ -17,7 +17,13 @@ export const metadata: Metadata = pageMetadata({
 async function PrefilledForm({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   // Older links used ?interest=logistics-os and ?interest=safety-ai.
-  const legacy: Record<string, string> = { "logistics-os": "logistics", "safety-ai": "safety" };
+  const legacy: Record<string, string> = {
+    "logistics-os": "logistics",
+    "safety-ai": "safety",
+    mobility: "automotive",
+    autonomy: "robotics",
+    "green-energy": "energy",
+  };
   const given = typeof params.interest === "string" ? params.interest : undefined;
   const raw = given ? (legacy[given] ?? given) : undefined;
   const interest = interestOptions.some((o) => o.value === raw) ? (raw as Interest) : undefined;

@@ -18,6 +18,7 @@ export const metadata: Metadata = pageMetadata({
 
 const toc = [
   { id: "architecture", label: "Architecture" },
+  { id: "intelligence", label: "SIWOM Intelligence (SI)" },
   { id: "data", label: "Data integration" },
   { id: "trade-intelligence", label: "Trade intelligence" },
   { id: "trade-compliance", label: "Trade compliance" },
@@ -59,6 +60,36 @@ export default function TechnologyPage() {
           intro="Data flows from the systems and sensors a site already has, through the SIWOM platform and an intelligence layer, to people who make the decisions."
         >
           <ArchitectureDiagram headingLevel="h3" />
+        </PageSection>
+
+        <PageSection
+          id="intelligence"
+          eyebrow="SIWOM Intelligence (SI)"
+          title="SI finds what needs attention. People decide."
+          intro="SIWOM Intelligence (SI) is the intelligence layer across SIWOM Logistics, Global Trade and Safety. It turns operational data into suggestions that a person can check."
+        >
+          <div className="grid gap-10 xl:grid-cols-2">
+            <Prose>
+              <p>
+                SI works on the shipment record: it predicts ETAs from the data that arrives, ranks exceptions by urgency
+                and checks that the right documents are ready before each handoff. In SIWOM Safety it flags possible
+                hazards in camera images; in SIWOM Global Trade it matches what buyers need with who can make it.
+              </p>
+              <p>
+                <strong>Every output is a suggestion.</strong> SI shows its reasoning and its uncertainty, a person
+                accepts, changes or ignores it, and the decision is recorded.
+              </p>
+            </Prose>
+            <CheckList
+              items={[
+                "ETA prediction when data arrives late, partial or from several sources",
+                "Exception ranking, with a suggested next step for each",
+                "Document checks before every handoff",
+                "Computer vision for SIWOM Safety, always reviewed by a qualified person",
+                "Supplier matching for SIWOM Global Trade",
+              ]}
+            />
+          </div>
         </PageSection>
 
         <PageSection id="data" eyebrow="Data integration" status="in-development" title="Use the data that already exists.">
@@ -138,9 +169,9 @@ export default function TechnologyPage() {
           <div className="grid gap-10 xl:grid-cols-2">
             <Prose>
               <p>
-                Satellites, rocket stages and precision robotics need more than a tracking number. Handling profiles record
-                shock, temperature, humidity and cleanliness limits, and data from shipment loggers confirms those limits
-                were kept from clean room to launch site.
+                Satellites, rocket stages and precision robotics need more than a tracking number. Handling profiles are
+                designed to record shock, temperature, humidity and cleanliness limits, and to use data from shipment
+                loggers to confirm those limits were kept from clean room to launch site.
               </p>
             </Prose>
             <CheckList
@@ -157,9 +188,10 @@ export default function TechnologyPage() {
         <PageSection id="geospatial" eyebrow="Mapping and geospatial" status="in-development" title="Maps that respect what we know.">
           <Prose>
             <p>
-              Operational views use schematic network maps that show hubs, routes and snapshot positions without
-              implying GPS precision the data cannot support. Geographic basemaps use providers that depict
-              India&apos;s official boundaries.
+              The shipment globe uses a true orthographic projection and real port and airport positions, with ocean
+              routes along the main sea lanes. Positions come from milestone data, without implying GPS precision the
+              data cannot support. The shipment globe draws land outlines only, from
+              public-domain Natural Earth data, with no national boundaries.
             </p>
           </Prose>
         </PageSection>

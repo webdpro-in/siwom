@@ -48,7 +48,7 @@ export function Footer() {
               <Lockup />
             </Link>
             <p className="max-w-xs text-body text-text-muted">
-              Shipment coordination software for logistics companies.{" "}
+              Intelligence for the physical world, starting with international shipment coordination.{" "}
               <span className="text-text">Built in India.</span>
             </p>
             <p className="text-small text-text-muted">
@@ -69,8 +69,9 @@ export function Footer() {
               </ul>
             ) : null}
           </div>
-          <nav aria-label="Footer" className="col-span-4 grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-8 lg:col-span-6 lg:col-start-7">
-            <FooterColumn title="Solutions" links={footerNav.solutions} />
+          <nav aria-label="Footer" className="col-span-4 grid grid-cols-2 gap-8 sm:grid-cols-4 md:col-span-8 lg:col-span-8 lg:col-start-5">
+            <FooterColumn title="Product" links={footerNav.product} />
+            <FooterColumn title="R&D" links={footerNav.research} />
             <FooterColumn title="Company" links={footerNav.company} />
             <FooterColumn title="Legal" links={footerNav.legal} />
           </nav>

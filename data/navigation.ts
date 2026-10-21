@@ -5,54 +5,34 @@ export type NavItem = {
 };
 
 /**
- * Primary navigation, in order. The product comes first, then who it is for,
- * then the other solutions. Labels must match page headings.
+ * Primary navigation, in order: the current product, where it applies, the
+ * research and development programmes, then the company. Labels must match
+ * page headings.
  */
 export const mainNav: NavItem[] = [
-  {
-    label: "Logistics",
-    href: "/logistics",
-    description: "SIWOM Logistics: shipments, vehicles and delays in one place",
-  },
-  {
-    label: "Industries",
-    href: "/industries",
-    description: "Ports, freight, warehousing and manufacturing",
-  },
-  {
-    label: "Global Trade",
-    href: "/global-trade",
-    description: "Space and advanced-technology cargo, imports and exports",
-  },
-  {
-    label: "Safety",
-    href: "/safety",
-    description: "Hazard flagging with people accountable",
-  },
-  {
-    label: "Technology",
-    href: "/technology",
-    description: "How the platform works",
-  },
-  {
-    label: "About",
-    href: "/about",
-    description: "Who we are and how we work",
-  },
+  { label: "Logistics", href: "/logistics", description: "SIWOM Logistics: international shipment coordination" },
+  { label: "Industries", href: "/industries", description: "Six industries, from logistics to space and energy" },
+  { label: "Global Trade", href: "/global-trade", description: "Research and development: sourcing and trade intelligence" },
+  { label: "Safety", href: "/safety", description: "Research and development: human-reviewed hazard flagging" },
+  { label: "Technology", href: "/technology", description: "The platform and SIWOM Intelligence (SI)" },
+  { label: "Vision", href: "/vision", description: "Roadmap and long-term directions" },
+  { label: "About", href: "/about", description: "Who we are and how we work" },
 ];
 
 export const footerNav = {
-  solutions: [
-    { label: "Logistics", href: "/logistics" },
-    { label: "Global Trade", href: "/global-trade" },
-    { label: "Safety", href: "/safety" },
-    { label: "Try the demo", href: "/logistics#demo" },
+  product: [
+    { label: "SIWOM Logistics", href: "/logistics" },
+    { label: "The workspace", href: "/logistics#demo" },
+    { label: "Industries", href: "/industries" },
+  ],
+  research: [
+    { label: "SIWOM Global Trade", href: "/global-trade" },
+    { label: "SIWOM Safety", href: "/safety" },
+    { label: "Vision and roadmap", href: "/vision" },
   ],
   company: [
     { label: "About", href: "/about" },
-    { label: "Industries", href: "/industries" },
     { label: "Technology", href: "/technology" },
-    { label: "Our Vision", href: "/vision" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [
@@ -64,11 +44,13 @@ export const footerNav = {
 /** Values accepted by the contact form's ?interest= parameter. */
 export const interestOptions = [
   { value: "logistics", label: "Logistics" },
-  { value: "global-trade", label: "Global trade" },
-  { value: "space", label: "Space logistics" },
-  { value: "safety", label: "Safety" },
+  { value: "ai", label: "AI & industrial intelligence" },
+  { value: "space", label: "Space & aerospace" },
+  { value: "automotive", label: "Automotive & mobility" },
   { value: "robotics", label: "Robotics" },
-  { value: "mobility", label: "Mobility" },
+  { value: "energy", label: "Energy & infrastructure" },
+  { value: "global-trade", label: "Global trade" },
+  { value: "safety", label: "Safety" },
   { value: "partnership", label: "Partnership" },
   { value: "other", label: "Other" },
 ] as const;

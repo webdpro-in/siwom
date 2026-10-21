@@ -17,10 +17,10 @@ function isActive(pathname: string, href: string) {
 }
 
 /**
- * Fixed header: 72 px, compacting to 60 px after 24 px of scroll. Always uses
+ * Fixed header: 72 px, compacting to 60 px after 24 px of scroll. Transparent
+ * over the homepage photo (with the photo's light-on-dark tokens); otherwise
  * the page background with a 12 px backdrop blur, so the logo and navigation
- * keep full contrast in both themes; a bottom border appears after scrolling.
- * Never hides on scroll.
+ * keep full contrast in both themes. Never hides on scroll.
  */
 export function Header() {
   const pathname = usePathname();
@@ -34,6 +34,9 @@ export function Header() {
     if (menuOpen) setMenuOpen(false);
   }
 
+  // The homepage opens on a full-bleed photo; the header sits on it until the visitor scrolls.
+  const overPhoto = pathname === "/" && !scrolled;
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > layout.headerCompactAfter);
     onScroll();
@@ -46,8 +49,14 @@ export function Header() {
       <header
         data-scrolled={scrolled || undefined}
         className={cn(
-          "site-header fixed inset-x-0 top-0 z-40 border-b bg-bg/90 backdrop-blur-header transition-[height,border-color] duration-ui ease-standard",
-          scrolled ? "h-(--header-h-compact) border-border" : "h-(--header-h) border-transparent",
+          "site-header fixed inset-x-0 top-0 z-40 border-b transition-[height,background-color,border-color] duration-ui ease-standard",
+          scrolled ? "h-(--header-h-compact)" : "h-(--header-h)",
+          // Over the homepage photo the header is transparent and uses the photo's light-on-dark
+          // tokens, so no light bar sits on the photo in light theme. Elsewhere, and after scrolling,
+          // it uses the page background.
+          overPhoto
+            ? "photo-surface border-transparent bg-transparent"
+            : cn("bg-bg/90 backdrop-blur-header", scrolled ? "border-border" : "border-transparent"),
         )}
       >
         <div className="mx-auto flex h-full max-w-wide items-center justify-between gap-3 gutter-x">

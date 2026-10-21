@@ -9,7 +9,7 @@ export function SafetyDisclaimer({ className }: { className?: string }) {
   return (
     <Callout variant="safety" title="About these detections" className={className}>
       Real photographs with manually authored sample review areas; no AI has analysed these images and no actual violation is asserted. Real-world performance depends on camera quality, sensor coverage,
-      lighting, weather and validation. AI flags potential hazards for qualified human review; it does not certify a
+      lighting, weather and validation. SI flags potential hazards for qualified human review; it does not certify a
       site as safe or assess hidden structural, electrical or material defects.
     </Callout>
   );
@@ -53,7 +53,7 @@ export const limitations: AccordionItem[] = [
   },
   {
     id: "decide",
-    title: "Does the AI make safety decisions?",
+    title: "Does SI make safety decisions?",
     content: (
       <p>
         No. It flags potential hazards for qualified human review. People decide what happens next and remain

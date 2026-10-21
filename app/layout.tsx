@@ -37,7 +37,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "SIWOM — Shipment coordination software for logistics",
+    default: "SIWOM — Intelligence for the physical world",
     template: "%s · SIWOM",
   },
   description: site.description,

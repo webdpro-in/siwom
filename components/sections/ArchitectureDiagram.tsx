@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { cn } from "@/lib/cn";
 
-type Item = { label: string; planned?: boolean };
+type Item = { label: string };
 type Column = { title: string; items: Item[] };
 
 /** The four layers of the SIWOM platform, from data sources to people. */
@@ -9,40 +9,39 @@ export const architecture: Column[] = [
   {
     title: "Data sources",
     items: [
-      { label: "Fleet and shipment systems" },
-      { label: "Cameras and inspection images", planned: true },
-      { label: "Sensors and telemetry", planned: true },
-      { label: "Warehouse and port systems", planned: true },
-      { label: "Supplier catalogues and trade documents", planned: true },
-      { label: "External APIs" },
+      { label: "Carrier and forwarder systems" },
+      { label: "Port, airport and terminal milestones" },
+      { label: "Customs and trade documents" },
+      { label: "Telematics and sensors" },
+      { label: "Cameras and inspection images" },
     ],
   },
   {
     title: "SIWOM platform",
     items: [
-      { label: "Operational data" },
-      { label: "Maps and asset tracking" },
+      { label: "One shipment record" },
+      { label: "Maps, routes and positions" },
       { label: "Event processing" },
-      { label: "Workflow and permissions", planned: true },
+      { label: "Workflow and permissions" },
     ],
   },
   {
-    title: "Intelligence layer",
+    title: "SIWOM Intelligence (SI)",
     items: [
-      { label: "Route and dispatch optimisation" },
-      { label: "Supplier matching and domestic alternatives", planned: true },
-      { label: "Computer vision", planned: true },
-      { label: "Anomaly and exception detection" },
-      { label: "Predictive analytics where data supports it", planned: true },
+      { label: "ETA prediction and route options" },
+      { label: "Exception ranking and next steps" },
+      { label: "Document checks" },
+      { label: "Computer vision for safety" },
+      { label: "Supplier matching" },
     ],
   },
   {
-    title: "Human decisions and connected systems",
+    title: "People and connected systems",
     items: [
-      { label: "Operator dashboards" },
-      { label: "Alerts and inspection queues" },
-      { label: "Reports and audit trails", planned: true },
-      { label: "Approved integrations", planned: true },
+      { label: "Operator workspace" },
+      { label: "Alerts and exception queues" },
+      { label: "Reports and audit trails" },
+      { label: "Updates to partners" },
     ],
   },
 ];

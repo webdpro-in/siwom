@@ -1,63 +1,79 @@
 import type { Metadata } from "next";
+import spaceLaunch from "@/public/images/space-launch.webp";
+import spaceWide from "@/public/images/space-core-stage-barge.webp";
 import autonomyWide from "@/public/images/robotics.webp";
-import nightPort from "@/public/images/port-hero.webp";
 import mobilityWide from "@/public/images/electric-mobility.webp";
-import intelligenceWide from "@/public/images/industrial-control.webp";
+import energyWide from "@/public/images/green-energy-solar.webp";
 import { pageMetadata } from "@/lib/metadata";
 import { contactHref } from "@/data/navigation";
-import { divisions } from "@/data/divisions";
 import { PageHero } from "@/components/layout/PageHero";
 import { NextBlock } from "@/components/layout/NextBlock";
 import { CheckList, PageSection, Prose } from "@/components/layout/PageSection";
 import { Callout } from "@/components/ui/Callout";
 import { Eyebrow } from "@/components/ui/Container";
 import { Figure } from "@/components/ui/Figure";
-import { StatusPill } from "@/components/ui/StatusPill";
 import { RoadmapStepper } from "@/components/sections/RoadmapSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Our Vision",
+  title: "Vision and roadmap",
   description:
-    "Where SIWOM is headed: robotics and autonomous systems, electric mobility and industrial intelligence, built step by step from a logistics-first start.",
+    "Where SIWOM is headed: from shipment coordination today toward space, robotics, autonomous mobility and energy, built on one intelligence layer.",
   path: "/vision",
 });
 
-const visions = [
+const directions = [
   {
-    division: divisions.autonomy,
+    id: "space",
+    name: "Space and aerospace",
+    title: "Supply chains for the space economy.",
+    image: spaceWide,
+    alt: "A barge carrying a full-size rocket core stage crosses calm water at dusk.",
+    caption: "NASA/Cory Huston. Representative image; no NASA endorsement or SIWOM involvement implied.",
+    body: "Satellites, rocket stages and ground equipment are among the most demanding cargo there is. The direction: logistics and intelligence built for clean rooms, oversized moves and export-controlled components.",
+    points: [
+      "Handling limits recorded and checked from clean room to launch site",
+      "Licences and documents tied to every handoff",
+      "Starts with SIWOM Global Trade, which is in research and development",
+    ],
+  },
+  {
     id: "autonomy",
+    name: "Robotics and automation",
     title: "Robots that work safely alongside people.",
     image: autonomyWide,
     alt: "Industrial robotic arms inside a guarded manufacturing cell.",
-    body: "SIWOM Autonomy covers warehouse robots and AMRs, robotic facility inspection, machine perception, robot fleet coordination, sensor integration and digital twins for ports, warehouses, factories and logistics hubs.",
+    caption: "Representative photograph (Pexels).",
+    body: "Warehouse robots and AMRs, robotic inspection, machine perception and robot fleet coordination for ports, warehouses and factories.",
     points: [
       "Starts with integrations and controlled pilots with partners who operate the equipment",
       "People and robots separated by design, under each site's safety processes",
-      "No robots are built or deployed by SIWOM today",
+      "SIWOM Intelligence (SI) coordinates; people stay accountable",
     ],
   },
   {
-    division: divisions.mobility,
     id: "mobility",
-    title: "Future electric mobility, engineered properly.",
+    name: "Autonomous mobility",
+    title: "Vehicles that know the whole journey.",
     image: mobilityWide,
-    alt: "Electric vehicle connected to a charging plug.",
-    body: "SIWOM Mobility covers electric passenger and commercial vehicles, vehicle software, connected systems, diagnostics, predictive maintenance and driver assistance.",
+    alt: "An electric vehicle connected to a charging plug.",
+    caption: "Representative photograph (Pexels).",
+    body: "Vehicle software, connected systems, diagnostics, predictive maintenance and driver assistance for electric and autonomous vehicles, linked to the logistics operations they serve.",
     points: [
-      "Any vehicle needs dedicated engineering, prototyping, testing and safety validation",
-      "It also needs regulatory approval and manufacturing capability, which SIWOM does not have today",
-      "Software and diagnostics come first, connected to logistics operations",
+      "Software and diagnostics first, connected to logistics operations",
+      "Any vehicle requires dedicated engineering, testing, safety validation and regulatory approval",
+      "Built with manufacturers, not around them",
     ],
   },
   {
-    division: divisions.intelligence,
-    id: "industrial-intelligence",
-    title: "Digital twins that earn their keep.",
-    image: intelligenceWide,
-    alt: "Server hardware and cabling inside a data centre.",
-    body: "SIWOM Industrial Intelligence brings digital twins, simulation, sensor networks and predictive maintenance, used where the data supports it.",
+    id: "energy",
+    name: "Energy and infrastructure",
+    title: "Intelligence for the energy transition.",
+    image: energyWide,
+    alt: "Aerial view of rows of solar panels stretching across desert land.",
+    caption: "Sarvajanik Puralekh, CC BY-SA 2.0. Bhadla, Rajasthan. No endorsement implied.",
+    body: "Digital twins, sensor networks and predictive maintenance for solar, wind, storage and the infrastructure that connects them, used where the data supports it.",
     points: [
-      "Start small: one yard, one warehouse, one asset class",
+      "Starts with the logistics of project cargo to remote sites",
       "Sensors chosen for the question, not the other way round",
       "Predictions shown with their uncertainty, for people to judge",
     ],
@@ -68,84 +84,71 @@ export default function VisionPage() {
   return (
     <>
       <PageHero
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Our Vision" }]}
-        eyebrow="Our Vision"
-        title="Where SIWOM is headed."
-        summary="We start with shipment coordination software for logistics companies, because that problem is real today. Robotics, electric mobility and industrial intelligence are long-term ambitions; none has started as a product."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Vision" }]}
+        eyebrow="Vision and roadmap"
+        title="Intelligence for the physical world, built step by step."
+        summary="SIWOM starts with logistics, where the problem is real and the data already exists. Space, robotics, autonomous mobility and energy are long-term directions for the same intelligence layer."
         cta={{ label: "Partner with us", href: contactHref({ interest: "partnership" }) }}
         media={
           <Figure
-            src={nightPort}
-            alt="Container port cranes and vessels at sunset."
+            src={spaceLaunch}
+            alt="A large rocket lifts off at night between lightning towers."
             preload
             sizes="(min-width: 1440px) 1392px, 100vw"
-            caption="Representative photography of real infrastructure. These images do not depict SIWOM products or deployments."
+            caption="NASA/Bill Ingalls. Artemis I launch, 2022. Representative image; no NASA endorsement or SIWOM involvement implied."
           />
         }
       />
 
-
       <div className="mx-auto max-w-content gutter-x pt-12 md:pt-20">
-        <PageSection id="mission" eyebrow="Mission" title="Make industrial work safer and more connected.">
+        <PageSection id="mission" eyebrow="Mission" title="Connect data, decisions and physical operations.">
           <Prose>
             <p>
-              SIWOM&apos;s mission is to help industries move goods and operate assets more safely and more
-              predictably, with software that people trust because it is honest about what it knows.
+              Goods, energy and machines move through systems that rarely share a record. SIWOM builds the intelligence
+              layer that connects them, so the people who run them can see further ahead and decide better.
             </p>
           </Prose>
         </PageSection>
 
-        <PageSection id="principles" eyebrow="Safety-first principles" title="Principles we will not trade away.">
+        <PageSection id="strategy" eyebrow="Logistics first" title="Why we start with logistics.">
+          <Prose>
+            <p>
+              Logistics delivers value now, with data that already exists. It gives SIWOM the operational model, the
+              integrations and the trust that every later direction depends on. India&apos;s ports, corridors and
+              warehouses are among the most demanding operating environments anywhere; building for them first is how we
+              build technology that holds up globally.
+            </p>
+          </Prose>
+        </PageSection>
+
+        <PageSection id="principles" eyebrow="Principles" title="Principles we will not trade away.">
           <CheckList
             items={[
               "Safety comes before speed of delivery or cost",
-              "AI assists; qualified people remain accountable for critical safety actions",
-              "Every product and roadmap item is labelled with its real status",
+              "SIWOM Intelligence (SI) assists; qualified people remain accountable for critical actions",
+              "We say clearly what exists today and what is still being built",
               "We never imply control of cranes, vehicles or dangerous machinery",
             ]}
           />
         </PageSection>
-
-        <PageSection id="india" eyebrow="Indian engineering ambition" title="Built for Indian operations first.">
-          <Prose>
-            <p>
-              India&apos;s ports, freight corridors, warehouses and factories are among the most demanding operating
-              environments anywhere. Building for them first is how we intend to build technology that holds up
-              globally.
-            </p>
-          </Prose>
-        </PageSection>
-
-        <PageSection id="strategy" eyebrow="Logistics-first strategy" title="Why we start with logistics.">
-          <Prose>
-            <p>
-              Logistics software can deliver value now, with data that already exists. It gives us the operational
-              model, the integrations and the trust that safety intelligence, automation and mobility will later depend
-              on.
-            </p>
-          </Prose>
-        </PageSection>
       </div>
 
-      {visions.map((v) => (
-        <section key={v.id} id={v.id} aria-labelledby={`${v.id}-title`} className="border-t border-border py-16 md:py-24">
+      {directions.map((d) => (
+        <section key={d.id} id={d.id} aria-labelledby={`${d.id}-title`} className="border-t border-border py-16 md:py-24">
           <div className="mx-auto max-w-wide gutter-x">
-            <Figure src={v.image} alt={v.alt} caption="Representative industry photography. This is not a SIWOM product or deployment." sizes="(min-width: 1440px) 1392px, 100vw" />
+            <Figure src={d.image} alt={d.alt} caption={d.caption} sizes="(min-width: 1440px) 1392px, 100vw" />
           </div>
           <div className="mx-auto mt-10 max-w-content gutter-x">
             <div className="layout-grid gap-y-8">
               <div data-reveal className="col-span-4 flex flex-col gap-5 md:col-span-8 lg:col-span-6">
-                <div className="flex flex-wrap items-center gap-3">
-                  <Eyebrow>{v.division.product}</Eyebrow>
-                  <StatusPill status={v.division.status} />
-                </div>
-                <h2 id={`${v.id}-title`} className="text-h2 text-text">
-                  {v.title}
+                <Eyebrow>{d.name} · Long-term direction</Eyebrow>
+                <h2 id={`${d.id}-title`} className="text-h2 text-text">
+                  {d.title}
                 </h2>
-                <p className="max-w-reading text-body-l text-text-muted">{v.body}</p>
+                <p className="max-w-reading text-body-l text-text-muted">{d.body}</p>
               </div>
               <div className="col-span-4 md:col-span-8 lg:col-span-5 lg:col-start-8 lg:self-end">
-                <CheckList items={v.points} />
+                <CheckList items={d.points} />
               </div>
             </div>
           </div>
@@ -157,18 +160,18 @@ export default function VisionPage() {
           <div data-reveal className="mb-12 flex flex-col gap-4">
             <Eyebrow>Roadmap</Eyebrow>
             <h2 id="vision-roadmap-title" className="max-w-headline text-h2 text-text">
-              Start with a real problem. Build toward a bigger future.
+              Start with logistics. Build the intelligence layer.
             </h2>
           </div>
           <RoadmapStepper />
           <Callout variant="info" title="On future vehicles" className="mt-10">
             Future vehicles require dedicated engineering, prototyping, testing, safety validation, regulatory approval
-            and manufacturing capability. SIWOM does not manufacture vehicles or hold road approval.
+            and manufacturing capability.
           </Callout>
         </div>
       </section>
 
-      <NextBlock title="About SIWOM" description="Who we are, how we engineer and how we like to work with partners." href="/about" />
+      <NextBlock title="About SIWOM" description="Who we are, how we engineer and how we work with partners." href="/about" />
     </>
   );
 }

@@ -105,10 +105,9 @@ export default function GlobalTradePage() {
     <>
       <PageHero
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Global Trade" }]}
-        eyebrow="SIWOM Global Trade"
-        status="research"
+        eyebrow="SIWOM Global Trade · Research and development"
         title="Logistics for space and technology cargo."
-        summary="SIWOM Global Trade plans and coordinates the movement of high-value technology cargo, such as satellites and rocket parts, and helps Indian manufacturers source and export components, materials and machinery."
+        summary="SIWOM Global Trade brings supplier discovery, international sourcing and trade intelligence together with shipment coordination, starting with high-value technology cargo such as satellites and rocket parts."
         cta={{ label: "Discuss space logistics", href: contactHref({ interest: "space" }) }}
         secondary={{ label: "Discuss global trade", href: contactHref({ interest: "global-trade" }) }}
         media={

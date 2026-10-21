@@ -6,8 +6,7 @@ import { useNearViewport } from "@/lib/hooks";
 
 type DemoComponent = ComponentType<{ idBase?: string }>;
 
-const loaders: Record<"logistics" | "safety", () => Promise<{ default: DemoComponent }>> = {
-  logistics: () => import("./logistics/LogisticsDemo"),
+const loaders: Record<"safety", () => Promise<{ default: DemoComponent }>> = {
   safety: () => import("./safety/SafetyDemo"),
 };
 

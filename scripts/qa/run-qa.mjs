@@ -159,49 +159,39 @@ for (const width of [390, 1440]) {
   await context.close();
 }
 
-// ---------------------------------------------------------------- Logistics demo
+// ---------------------------------------------------------------- shipment workspace (Logistics)
 for (const width of [1440, 390]) {
   const { context, page } = await newPage(width);
   await page.goto(base + "/logistics", { waitUntil: "networkidle" });
   const demo = page.locator("#demo");
   await demo.scrollIntoViewIfNeeded();
-  await page.waitForFunction(() => !document.querySelector("#demo [inert]"), null, { timeout: 15000 });
-  check(`logistics demo loads @${width}`, true);
-  // Filter: Delayed → URL + summary update
-  await demo.getByRole("button", { name: "Delayed", exact: true }).first().click();
+  await page.waitForSelector('#demo [aria-roledescription="globe"]', { timeout: 15000 });
+  check(`shipment workspace loads @${width}`, true);
+  // Industry filter narrows the list
+  await demo.getByRole("button", { name: "Space", exact: true }).click();
   await page.waitForTimeout(200);
-  check(`filter reflected in URL @${width}`, page.url().includes("status=delayed"), page.url());
-  const inTransit = await demo.locator("dl dd").first().innerText();
-  check(`summary cards follow filters @${width}`, inTransit.trim() === "3", `in transit = ${inTransit}`);
-  // Select a shipment from the table/cards → drawer opens
-  if (width < 768) await demo.getByRole("tab", { name: "Shipments" }).click();
-  const row = demo.getByRole("button", { name: "SHP-24-0918" }).first();
-  await row.click();
-  const drawer = page.getByRole("dialog");
-  await drawer.waitFor({ state: "visible" });
-  check(`selecting a shipment opens the drawer @${width}`, await drawer.getByText("Suggestion only — the operator decides").isVisible());
-  await drawer.getByRole("button", { name: "Acknowledge exception" }).click();
-  check(`acknowledge from drawer @${width}`, await drawer.getByText("Acknowledged").isVisible());
-  await page.keyboard.press("Escape");
-  await drawer.waitFor({ state: "hidden" });
-  check(`Esc closes drawer @${width}`, true);
-  // Empty state
-  await demo.getByRole("button", { name: "Clear all status filters" }).click().catch(() => {});
-  await demo.getByRole("searchbox").fill("no-such-shipment");
+  check(`industry filter narrows the list @${width}`, (await demo.getByRole("heading", { name: "Shipments · 2" }).count()) === 1);
+  await demo.getByRole("button", { name: "INT-24-0437" }).click();
+  await page.waitForTimeout(300);
+  check(`selecting a shipment updates the summary @${width}`, await demo.getByRole("heading", { name: "INT-24-0437" }).isVisible());
+  check(`journey shows each handoff @${width}`, await demo.getByRole("list", { name: "Journey of INT-24-0437" }).getByText("Customs broker").isVisible());
+  // Empty state and clear
+  await demo.getByRole("button", { name: "Rail", exact: true }).click();
   await page.waitForTimeout(200);
-  check(`empty filter state @${width}`, await demo.getByText("No shipments match these filters").first().isVisible().catch(() => false) || (await demo.getByText("No routes match these filters").first().isVisible().catch(() => false)));
-  await demo.getByRole("searchbox").fill("");
-  // Assign a vehicle
-  if (width < 768) await demo.getByRole("tab", { name: "Dispatch" }).click();
-  await demo.locator('select[id$="assign-DSP-1041"]').selectOption("TRK-0175");
-  await demo.getByRole("button", { name: "Assign vehicle to DSP-1041" }).click();
-  check(`assign moves row to Assigned @${width}`, await demo.getByText("Assigned · 1").isVisible());
-  // Reset
-  await demo.getByRole("button", { name: "Reset demo" }).click();
-  // Reset returns mobile to the Map tab, so open Dispatch to check the queue.
-  if (width < 768) await demo.getByRole("tab", { name: "Dispatch" }).click();
-  check(`reset restores state @${width}`, await demo.getByText("Unassigned · 5").isVisible());
-  check(`no console errors in logistics demo @${width}`, page.consoleErrors.length === 0, page.consoleErrors.slice(0, 3).join(" | "));
+  check(`empty filter state @${width}`, await demo.getByText("No shipments match these filters").isVisible());
+  await demo.getByRole("button", { name: "Clear filters" }).first().click();
+  await page.waitForTimeout(200);
+  check(`clear filters restores the list @${width}`, (await demo.getByRole("heading", { name: "Shipments · 6" }).count()) === 1);
+  // Exceptions: needs attention, acknowledge
+  await demo.getByRole("button", { name: /Needs attention · 3/ }).click();
+  await page.waitForTimeout(200);
+  check(`needs-attention filter @${width}`, (await demo.getByRole("heading", { name: "Shipments · 3" }).count()) === 1);
+  await demo.getByRole("button", { name: /INT-24-0425/ }).click();
+  await demo.getByRole("button", { name: "Acknowledge" }).click();
+  await page.waitForTimeout(200);
+  check(`acknowledge updates the count @${width}`, await demo.getByRole("button", { name: /Needs attention · 2/ }).isVisible());
+  check(`acknowledgement is announced @${width}`, (await demo.getByRole("status").last().innerText()).includes("acknowledged"));
+  check(`no console errors in shipment workspace @${width}`, page.consoleErrors.length === 0, page.consoleErrors.slice(0, 3).join(" | "));
   await context.close();
 }
 
@@ -291,6 +281,7 @@ for (const width of [1440, 390]) {
   const { context, page } = await newPage(width);
   await page.goto(base + "/global-trade#journeys", { waitUntil: "networkidle" });
   await page.locator("#journeys").scrollIntoViewIfNeeded();
+  await page.waitForSelector('#journeys [aria-roledescription="globe"]', { timeout: 15000 });
   await page.waitForTimeout(1200);
   const globe = page.locator('[aria-roledescription="globe"]');
   const painted = await page.evaluate(() => {

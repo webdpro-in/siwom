@@ -1,4 +1,4 @@
-import { Anchor, CalendarCheck, ClockAlert, Navigation, Plane, Ship, TrainFront, Truck, type LucideIcon } from "lucide-react";
+import { Anchor, CalendarCheck, ClockAlert, FileCheck2, Navigation, Plane, Ship, TrainFront, Truck, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/cn";
 import {
   modeLabels,
@@ -17,6 +17,7 @@ const statusIcons: Record<ShipmentStatus, LucideIcon> = {
   booked: CalendarCheck,
   "in-transit": Navigation,
   "at-port": Anchor,
+  customs: FileCheck2,
   delayed: ClockAlert,
 };
 
@@ -71,7 +72,7 @@ export function labelsFor(shipment: InternationalShipment): { id: PlaceId; role:
     } else if (leg.mode === "air") {
       out.set(leg.from, "Departure airport");
       out.set(leg.to, "Arrival airport");
-    } else if (leg.mode === "rail" && (places[leg.to] as Place).code) {
+    } else if (leg.mode === "rail" && (places[leg.to] as Place).kind === "depot") {
       out.set(leg.to, "Inland depot");
     }
   }

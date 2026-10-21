@@ -1,32 +1,30 @@
-import { Eye, ListOrdered, Route, Siren } from "lucide-react";
+import { Eye, FileCheck2, ListOrdered, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { StatusPill } from "@/components/ui/StatusPill";
-import { LogisticsDemoSection } from "@/components/demos/Demos";
 import { ShipmentWorkspaceLazy } from "@/components/globe/ShipmentWorkspaceLazy";
 
-/** Only what the demo below actually shows. */
+/** What the workspace below shows. */
 const callouts = [
-  { Icon: Eye, title: "Shipment visibility", text: "Every consignment with its current leg and its planned and current ETA, in one list and one map." },
-  { Icon: Siren, title: "Exceptions first", text: "Delays sorted by severity, each with its cause and a suggested next step. Your team decides." },
-  { Icon: Route, title: "Dispatch", text: "Match waiting loads with available vehicles from one queue. A person confirms every assignment." },
-  { Icon: ListOrdered, title: "Milestone timeline", text: "Booked, picked up, at hub, out for delivery: each handoff with its time, in one record." },
+  { Icon: Eye, title: "Every leg in one view", text: "Ocean, air, rail and road legs on one route, with the shipment's position and ETA." },
+  { Icon: Sparkles, title: "Exceptions first, with SI", text: "SIWOM Intelligence ranks delays by urgency and suggests a next step. Your team decides." },
+  { Icon: FileCheck2, title: "Documents and handoffs", text: "See which documents are ready, pending or need action before cargo reaches the port." },
+  { Icon: ListOrdered, title: "Who has the shipment", text: "Every milestone shows the responsible party, from origin forwarder to local partner." },
 ];
 
+/** Section 02: the product experience, led by the international shipment workspace. */
 export function LogisticsSection() {
   return (
-    <section id="demo" aria-labelledby="logistics-title" className="section-y">
+    <section id="platform" aria-labelledby="logistics-title" className="section-y">
       <div className="mx-auto max-w-content gutter-x">
         <div data-reveal className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             id="logistics-title"
-            eyebrow="02 — What SIWOM Logistics does"
-            badge={<StatusPill status="in-development" />}
-            title="One shared record for every shipment."
-            intro="SIWOM Logistics brings shipments, vehicles, documents and exceptions into one workspace, from pickup in the origin country to final delivery. Select a shipment below to follow its route."
+            eyebrow="02 — The platform"
+            title="Every leg, every handoff, one view."
+            intro="Select a shipment to follow its route, check its documents and act on its exceptions, from pickup in the origin country to delivery at the consignee."
           />
-          <Button href="/logistics" variant="secondary" icon="arrow" className="shrink-0" trackAs="home_logistics_os">
-            See all features
+          <Button href="/logistics" variant="secondary" icon="arrow" className="shrink-0" trackAs="home_logistics">
+            Explore SIWOM Logistics
           </Button>
         </div>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -41,17 +39,8 @@ export function LogisticsSection() {
           ))}
         </ul>
       </div>
-      <div className="mx-auto mt-10 max-w-wide gutter-x">
+      <div id="demo" className="mx-auto mt-10 max-w-wide gutter-x">
         <ShipmentWorkspaceLazy product="SIWOM Logistics" view="International shipments" />
-      </div>
-      <div className="mx-auto mt-16 max-w-content gutter-x">
-        <h3 className="text-h3 text-text">Dispatch and exceptions</h3>
-        <p className="mt-2 max-w-reading text-body text-text-muted">
-          Filter shipments, open a delayed one, acknowledge an exception or assign a vehicle.
-        </p>
-      </div>
-      <div className="mx-auto mt-6 max-w-wide gutter-x">
-        <LogisticsDemoSection idBase="home-lgx" />
       </div>
     </section>
   );

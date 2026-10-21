@@ -159,3 +159,16 @@ Not performed: a manual screen-reader pass, and verification of a live deploymen
 | First-load JS | ✅ `/` 164.3 KB, `/global-trade` 166.4 KB gzipped, both under 170 KB. The globe renderer and land data (12.6 KB gzipped) load after hydration. |
 | Lighthouse mobile (simulated / applied throttling) | `/` 95 / 99 (simulated LCP 2.9 s), `/global-trade` 93 / 99 (LCP 3.2 s). 100 for Accessibility, Best Practices and SEO; CLS 0–0.001. |
 | Visual review | ✅ Homepage header in light and dark themes; globe in light and dark at 1440 and 390 px; all five routes and their labels |
+
+## Addendum — platform update and six industries (21 October 2026)
+
+| Check | Result |
+| --- | --- |
+| `tsc --noEmit`, ESLint, `next build` | ✅ Clean |
+| `npm run qa` | ✅ 149 / 149. The dispatch checks were replaced by shipment workspace checks on `/logistics`: industry filter, mode filter with empty state and clear, "Needs attention", acknowledge with aria-live announcement. |
+| `npm run qa:responsive` | ✅ No issues: 11 pages × 7 widths, keyboard tab-through (the Logistics headline was shortened after it wrapped to four lines at 360 and 390 px) |
+| `npm run qa:tokens`, `qa:contrast` | ✅ No hard-coded values; text pairs pass AA |
+| First-load JS | ✅ `/` 163.7 KB, `/logistics` 162.2 KB, `/industries` 159.8 KB, `/contact` 154.3 KB gzipped (budget 170 KB) |
+| Lighthouse mobile (simulated) | `/` 96 (LCP 2.8 s), `/logistics` 93 (LCP 3.2 s). 100 for Accessibility, Best Practices and SEO; CLS 0. |
+| Visual review | ✅ Homepage industries section (light, dark, 390 px); Industries page hero and industry blocks (light, dark, 390 px) |
+

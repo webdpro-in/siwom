@@ -2,37 +2,44 @@ import type { Status } from "./status";
 
 export type RoadmapStage = {
   title: string;
+  /** Shown above the title: Now, Research and development, Long-term direction. */
+  phase: string;
   items: string[];
   status: Status;
 };
 
-/** Intended direction, not a schedule. No dates anywhere. */
+/** The product hierarchy, in order. No dates anywhere. */
 export const roadmap: RoadmapStage[] = [
   {
-    title: "Logistics software",
-    items: ["Shipment visibility", "Fleet coordination", "Dispatch", "Exception management"],
+    title: "SIWOM Logistics",
+    phase: "Now",
+    items: ["International shipment record", "Exceptions with SI", "Documents and handoffs", "Partner coordination"],
     status: "in-development",
   },
   {
-    title: "Global technology trade",
-    items: ["Space and aerospace logistics", "Supplier discovery", "Domestic alternatives", "Export readiness"],
+    title: "SIWOM Global Trade",
+    phase: "Research and development",
+    items: ["Supplier discovery and sourcing", "Trade intelligence", "Shipment-linked compliance"],
     status: "research",
   },
   {
-    title: "Safety intelligence",
-    items: ["AI-assisted inspection", "Hazard flagging", "Incident management with human oversight"],
+    title: "SIWOM Safety",
+    phase: "Research and development",
+    items: ["Human-reviewed computer vision", "Hazard flagging", "Incident records"],
     status: "research",
   },
   {
-    title: "Industrial automation",
-    items: ["Robotics integrations", "Sensor networks", "Digital twins", "Controlled pilots"],
+    title: "Space and energy",
+    phase: "Long-term direction",
+    items: ["Space and aerospace supply chains", "Energy and infrastructure intelligence"],
     status: "vision",
   },
   {
-    title: "Future mobility",
-    items: ["Vehicle software", "Prototyping", "Testing", "Safety validation", "Regulatory approval"],
+    title: "Robotics and autonomous mobility",
+    phase: "Long-term direction",
+    items: ["Robotics and automation", "Vehicle software and autonomy"],
     status: "vision",
   },
 ];
 
-export const roadmapNote = "The order in which we are building the SIWOM platform.";
+export const roadmapNote = "Each stage builds on the data, the platform and the trust earned by the one before it.";

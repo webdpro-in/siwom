@@ -1,16 +1,16 @@
-import { Blocks, Database, Gauge, HardHat, ListChecks, UserCheck } from "lucide-react";
+import { Activity, Database, Gauge, HardHat, ListChecks, UserCheck } from "lucide-react";
 import railImg from "@/public/images/rail-containers.webp";
 import { Figure } from "@/components/ui/Figure";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
-/** Commitments a buyer can check us against. No customer logos until they exist. */
+/** Operating principles a customer can hold us to. No customer logos until they exist. */
 const commitments = [
-  { Icon: ListChecks, title: "Clear scope", text: "What will be delivered, by when and how it is measured is agreed before work starts." },
-  { Icon: Gauge, title: "Small, measured pilots", text: "One lane, hub or exception type, with the measure of success agreed before we start." },
-  { Icon: UserCheck, title: "People decide", text: "Suggestions are only suggestions. Your team confirms every dispatch and every action." },
-  { Icon: Blocks, title: "Works with what you run", text: "Designed to sit alongside your TMS, WMS and spreadsheets, not to replace them." },
-  { Icon: Database, title: "Your data stays yours", text: "You own your operational data, and how long we keep it is agreed with you." },
   { Icon: HardHat, title: "Safety first", text: "Every feature is weighed for how it could fail and who it could affect." },
+  { Icon: Activity, title: "Reliability", text: "Built to keep working when data arrives late, partial or from several sources." },
+  { Icon: Gauge, title: "Measurable value", text: "Every pilot starts with an agreed measure of success, reviewed together." },
+  { Icon: ListChecks, title: "Transparent limitations", text: "We say clearly what each capability does, what it does not do, and what is still being built." },
+  { Icon: UserCheck, title: "Human accountability", text: "SIWOM Intelligence (SI) suggests. People decide, and every decision is recorded." },
+  { Icon: Database, title: "Your data stays yours", text: "You own your operational data, and how long we keep it is agreed with you." },
 ];
 
 export function HowWeWorkSection() {
@@ -31,9 +31,9 @@ export function HowWeWorkSection() {
             <div data-reveal>
               <SectionHeader
                 id="how-we-work-title"
-                eyebrow="06 — How we work"
-                title="How we work with you."
-                intro="SIWOM is a software company built in India. These are the commitments you can hold us to."
+                eyebrow="07 — Operating principles"
+                title="Principles we work by."
+                intro="SIWOM is an industrial technology company built in India. These are the commitments you can hold us to."
               />
             </div>
             <ul className="grid gap-x-8 gap-y-6 sm:grid-cols-2">

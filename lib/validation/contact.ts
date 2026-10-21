@@ -7,15 +7,15 @@ z.config({ jitless: true });
 /** One schema, used by the form (client) and the route handler (server). */
 
 export const industryOptions = [
-  { value: "ports", label: "Ports and maritime" },
   { value: "freight", label: "Logistics and freight" },
+  { value: "ports", label: "Ports and maritime" },
   { value: "warehousing", label: "Warehousing" },
   { value: "manufacturing", label: "Manufacturing" },
+  { value: "technology", label: "AI and industrial technology" },
   { value: "space", label: "Space and aerospace" },
-  { value: "robotics", label: "Robotics and automation" },
-  { value: "automotive", label: "Automotive and electric mobility" },
-  { value: "green-energy", label: "Green energy" },
-  { value: "infrastructure", label: "Industrial infrastructure" },
+  { value: "automotive", label: "Automotive and autonomous mobility" },
+  { value: "robotics", label: "Robotics and autonomous systems" },
+  { value: "green-energy", label: "Energy and infrastructure" },
   { value: "other", label: "Other" },
 ] as const;
 

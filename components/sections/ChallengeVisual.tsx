@@ -17,19 +17,19 @@ type Fragment = {
 
 const fragments: Fragment[] = [
   { id: "sheet", Icon: FileSpreadsheet, kind: "Spreadsheet", text: "fleet_status_v7_FINAL.xlsx", x: 2, y: 6, r: -4 },
-  { id: "call", Icon: PhoneMissed, kind: "Phone call", text: "3 missed calls · driver, TRK-0142", x: 60, y: 2, r: 3 },
-  { id: "chat", Icon: MessageSquare, kind: "Chat message", text: "Is the rake still at Palanpur? Need ETA", x: 70, y: 40, r: -2 },
+  { id: "call", Icon: PhoneMissed, kind: "Phone call", text: "3 missed calls · customs broker", x: 60, y: 2, r: 3 },
+  { id: "chat", Icon: MessageSquare, kind: "Chat message", text: "Has the vessel berthed yet? Need a new ETA", x: 70, y: 40, r: -2 },
   { id: "paper", Icon: NotebookPen, kind: "Paper log", text: "Gate register · handwritten, 18/10", x: 4, y: 58, r: 3 },
   { id: "portal", Icon: Globe, kind: "Carrier portal", text: "Login 3 of 4 · status last updated yesterday", x: 34, y: 72, r: -3 },
   { id: "email", Icon: Mail, kind: "Email", text: "RE: RE: FW: revised berth window", x: 30, y: 30, r: 2 },
 ];
 
 const rows = [
-  { id: "SHP-24-0933", text: "Berth window missed · Mundra → Nhava Sheva", tag: "Critical", tone: "text-sev-critical" },
-  { id: "SHP-24-0918", text: "Unplanned halt near Dhule · ETA +6 h 30 min", tag: "High", tone: "text-sev-high" },
-  { id: "RAKE-07", text: "Held for path near Palanpur · ICD informed", tag: "Medium", tone: "text-sev-medium" },
-  { id: "SHP-24-0927", text: "E-way bill expires before revised ETA", tag: "Medium", tone: "text-sev-medium" },
-  { id: "TRK-0175", text: "Available at Nhava Sheva for DSP-1041", tag: "Ready", tone: "text-text" },
+  { id: "INT-24-0425", text: "Berth delay at Mundra · rail cut-off at risk", tag: "High", tone: "text-sev-high" },
+  { id: "INT-24-0418", text: "Customs query on classification · Chennai", tag: "Medium", tone: "text-sev-medium" },
+  { id: "INT-24-0431", text: "Certificate of origin not yet issued", tag: "Low", tone: "text-sev-low" },
+  { id: "INT-24-0412", text: "Ocean leg on schedule · Red Sea", tag: "On track", tone: "text-text" },
+  { id: "INT-24-0437", text: "Air freight lands in Bengaluru tomorrow", tag: "On track", tone: "text-text" },
 ];
 
 function FragmentCard({ f, className }: { f: Fragment; className?: string }) {

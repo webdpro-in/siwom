@@ -1,16 +1,17 @@
-import { Clock, FileWarning, PhoneCall, Split, Truck, Users } from "lucide-react";
+import { Clock, FileWarning, PhoneCall, Split, Ship, Users } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ChallengeVisual } from "./ChallengeVisual";
 
 const challenges = [
   { Icon: PhoneCall, text: "Shipment status lives in calls, chat groups and spreadsheets" },
-  { Icon: Split, text: "Each handoff, from port to CFS to transporter to warehouse, loses information" },
+  { Icon: Split, text: "Every handoff, from carrier to terminal to customs broker to local partner, loses information" },
   { Icon: Clock, text: "Delays come to light after the customer asks" },
-  { Icon: FileWarning, text: "E-way bills and delivery orders expire unnoticed" },
-  { Icon: Truck, text: "Trucks sit idle at one hub while loads wait at another" },
+  { Icon: FileWarning, text: "Missing documents hold cargo at the port" },
+  { Icon: Ship, text: "Port, air, rail and road legs are tracked in different places" },
   { Icon: Users, text: "Customers and partners each get a different answer" },
 ];
 
+/** Section 01: the current product, who it serves and the problem it solves. */
 export function Challenge() {
   return (
     <section aria-labelledby="challenge-title" className="section-y">
@@ -19,9 +20,9 @@ export function Challenge() {
           <div data-reveal className="col-span-4 md:col-span-8 lg:col-span-5">
             <SectionHeader
               id="challenge-title"
-              eyebrow="01 — The problem"
-              title="Most delays are found too late."
-              intro="An import shipment can pass through a shipping line, terminal, customs broker, CFS, transporter and warehouse. Each keeps its own records, so the people coordinating it fill the gaps by phone."
+              eyebrow="01 — SIWOM Logistics"
+              title="One shared record for every international shipment."
+              intro="For freight forwarders, transporters and warehouse operators. A single shipment passes through a supplier, carriers, terminals, customs brokers and local partners. Each keeps its own records, so coordinators fill the gaps by phone."
             />
           </div>
           <ul className="col-span-4 grid gap-x-6 gap-y-4 self-end sm:grid-cols-2 md:col-span-8 lg:col-span-6 lg:col-start-7">
@@ -34,7 +35,7 @@ export function Challenge() {
           </ul>
         </div>
         <div className="mt-12 lg:mt-16">
-          <ChallengeVisual caption="Illustrative example: the same shipments, scattered across six tools today, and in one list sorted by what needs action first." />
+          <ChallengeVisual caption="Illustrative example: the same shipments scattered across six tools, and in one list sorted by what needs action first." />
         </div>
       </div>
     </section>
