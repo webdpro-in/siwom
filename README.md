@@ -1,6 +1,6 @@
 # SIWOM website
 
-Marketing site for SIWOM, an Indian industrial technology company: intelligent logistics software today, safety at the core, and a long-term vision for robotics, industrial intelligence and electric mobility.
+Website for SIWOM, an early-stage software company in India building **SIWOM Stream**: shipment coordination software for logistics companies (freight forwarders, transporters, CFS/ICD and warehouse operators). SIWOM Stream is in development, with an interactive demo that uses sample data. Global Trade (space-first) and Safety AI are research tracks; robotics and electric mobility are long-term vision. See **Positioning** below.
 
 Built with Next.js 16 (App Router, Cache Components), React 19, TypeScript (strict), Tailwind CSS 4, Motion, Lucide, React Hook Form and Zod.
 
@@ -44,7 +44,7 @@ These are placeholders on purpose. Nothing has been invented.
 1. **Web3Forms**: confirm the supplied key’s recipient in the Web3Forms account, verify inbox delivery, and configure production domain restrictions/spam protection if the plan supports them. No placeholder email is shown.
 2. **Legal pages**: `app/privacy` and `app/terms` are starter drafts with a visible "Draft — to be reviewed by qualified legal counsel" banner and `[bracketed]` gaps (legal entity, address, processors, retention, DPDP Act alignment).
 3. **Social links**: `site.social` in `lib/site.ts`. Empty links do not render.
-4. **Site URL**: set `NEXT_PUBLIC_SITE_URL`. Until then, metadata points at `http://localhost:3000`.
+4. **Site URL**: set `NEXT_PUBLIC_SITE_URL` to the production domain. On Vercel, the project's production domain (`VERCEL_PROJECT_PRODUCTION_URL`) is used automatically when it is not set. Anywhere else, metadata falls back to `http://localhost:3000`, so set it before launch.
 5. **Rate limiting**: `lib/rate-limit.ts` keeps its window in memory, which is fine on one server. On serverless hosting each instance has its own window, so move it to a shared store (for example Upstash Redis or Vercel KV).
 6. **Founder or team section**: deliberately absent. Add it only with real details.
 
@@ -124,7 +124,7 @@ Concept renders carry a "Concept render" caption. To swap in licensed photograph
 
 Deploy to Vercel or any Node host that supports Next.js 16.
 
-1. Set `NEXT_PUBLIC_SITE_URL` for production.
+1. Set `NEXT_PUBLIC_SITE_URL` for production. Vercel preview and development deployments are automatically `noindex` and their `robots.txt` disallows everything (`isIndexable` in `lib/site.ts`).
 2. Confirm the Web3Forms account recipient and inbox delivery.
 3. Deploy. Pages are prerendered; `/contact` is a partial prerender, with a static shell and the prefilled form streamed in; `/api/contact` is dynamic.
 4. After deploying, run `npm run qa` against the deployed URL by changing `--base`, and check Lighthouse on the real host.
@@ -143,7 +143,7 @@ The contact API validates and rate-limits requests and retains honeypot/time/opt
 
 ## International platform and geometric logo
 
-The homepage now leads with “Global Freight. Local Connections. One Intelligent Network.” The international workspace demonstrates fictional shipment lanes, ocean/air plus local-road options, document handoffs, quotation status, a filterable example provider directory and scripted planning recommendations. No carrier directory, quotations, routing service, customs integration or AI service is connected. The existing local logistics and safety interactions remain available.
+This homepage was replaced on 21 October 2026 (see Positioning). The international workspace, now a research section on `/logistics-os`, demonstrates fictional shipment lanes, ocean/air plus local-road options, document handoffs, quotation status, a filterable example provider directory and scripted planning recommendations. No carrier directory, quotations, routing service, customs integration or AI service is connected. The existing local logistics and safety interactions remain available.
 
 The geometric logo supplied by the owner is centred on a square canvas, with consistent stroke weight and layout sizing. `lib/brand.ts` is the path source; `npm run brand` regenerates SVG/PNG assets, favicon and Apple icon. The UI uses theme-aware SIWOM colours, and social previews use the same path.
 
@@ -158,7 +158,7 @@ SIWOM is now presented as a platform connecting global supply chains across logi
   - robotics, automotive (electric and autonomous vehicles), drones, flying cars and green energy;
   - a section for logistics companies (forwarders, customs brokers, carriers, warehouses);
   - how it is meant to work, compliance, and FAQ.
-- **Homepage**: updated hero line and a space-led "Global technology trade" section after the global network section.
+- **Homepage**: superseded on 21 October 2026. Global Trade now appears in the homepage research section (see Positioning).
 - **Industries**: a highlighted final band for space and aerospace logistics, green energy, robotics and automation, and advanced mobility.
 - **Technology**: trade intelligence and supplier matching, trade documents and compliance, space and specialised cargo.
 - **Content**: data lives in `data/trade.ts` and `data/industries.ts`; shared UI in `components/trade/TradeParts.tsx`.
@@ -168,3 +168,18 @@ SIWOM is now presented as a platform connecting global supply chains across logi
 ## Repository
 
 Source is on GitHub at `https://github.com/webdpro-in/siwom` (branch `main`). `.env*` files (except `.env.example`), `node_modules`, `.next` and QA output are ignored.
+
+## Positioning (21 October 2026)
+
+The copy across the site was rewritten around one defensible offer, because the earlier homepage pitched logistics, space, robotics and automotive as one service.
+
+- **What SIWOM is**: an early-stage software company in India. Its one product in development is **SIWOM Stream** (nav label "Logistics OS"): shipment coordination software for logistics companies. It gives shipments, vehicles, documents and delays one shared record from port or airport to delivery.
+- **Why this positioning**: it is the only product with a working prototype (the logistics demo), the original brief made logistics the starting point, and the owner identified logistics companies as the main visitors.
+- **What is not offered**: Global Trade (space-first technology cargo and sourcing) and Safety AI are **Research**; robotics and electric mobility are **Long-term vision**. They stay on the site, framed as research, never as services.
+- **Unverified facts, handled conservatively**: no legal entity, address, customers, partners, pilots or traffic numbers are stated. The site says SIWOM has no customers to announce yet.
+
+**Homepage narrative** (`app/page.tsx`): hero → 01 problem → 02 what SIWOM Stream does (with the demo, `#demo`) → 03 how a pilot works (`#how-it-works`) → 04 who it is for → 05 what we are researching → 06 how we work → 07 next step. These were removed from the homepage: the global network and technology-trade sections, the homepage Safety demo, "Beyond logistics", architecture, roadmap and the principles strip. Their content remains on `/global-trade`, `/safety-ai`, `/technology` and `/vision`.
+
+**Navigation**: Logistics OS · Industries · Global Trade · Safety AI · Technology · About, with "Talk to SIWOM". Our Vision moved to the footer, which is grouped as Product, Research, Company and Legal.
+
+**Logistics OS page**: eight deduplicated features, each with a real status. The demo now comes right after the features. A compact ocean/air/road/rail milestones section replaced the five-mode transport encyclopaedia (pipelines removed). The international workspace is labelled Research.

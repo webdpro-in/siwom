@@ -43,15 +43,13 @@ export function Footer() {
     <footer className="border-t border-border bg-bg pb-24 md:pb-0">
       <div className="mx-auto max-w-content gutter-x py-16">
         <div className="layout-grid gap-y-12">
-          <div className="col-span-4 flex flex-col gap-4 md:col-span-8 lg:col-span-5">
+          <div className="col-span-4 flex flex-col gap-4 md:col-span-8 lg:col-span-4">
             <Link href="/" className="inline-flex w-fit items-center gap-2.5 rounded-control" aria-label="SIWOM home">
               <Lockup />
             </Link>
             <p className="max-w-xs text-body text-text-muted">
-              Moving industries forward. <span className="text-text">Safety first.</span>
-            </p>
-            <p className="font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">
-              Indian industrial technology initiative
+              Shipment coordination software for logistics companies.{" "}
+              <span className="text-text">In development, built in India.</span>
             </p>
             <p className="text-small text-text-muted">
               <a href="/contact" className="underline underline-offset-4 hover:text-text">
@@ -71,8 +69,9 @@ export function Footer() {
               </ul>
             ) : null}
           </div>
-          <nav aria-label="Footer" className="col-span-4 grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-8 lg:col-span-6 lg:col-start-7">
-            <FooterColumn title="Products" links={footerNav.products} />
+          <nav aria-label="Footer" className="col-span-4 grid grid-cols-2 gap-8 sm:grid-cols-4 md:col-span-8 lg:col-span-7 lg:col-start-6">
+            <FooterColumn title="Product" links={footerNav.product} />
+            <FooterColumn title="Research" links={footerNav.research} />
             <FooterColumn title="Company" links={footerNav.company} />
             <FooterColumn title="Legal" links={footerNav.legal} />
           </nav>

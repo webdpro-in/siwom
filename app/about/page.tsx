@@ -12,7 +12,7 @@ import { Figure } from "@/components/ui/Figure";
 export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
-    "About SIWOM, an Indian industrial technology initiative building intelligent logistics software with safety at the core: our mission, engineering approach and how we work with partners.",
+    "SIWOM is an early-stage software company in India building SIWOM Stream for logistics companies. Our principles, and how we run pilots.",
   path: "/about",
 });
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About SIWOM"
         title="About SIWOM"
-        summary="An Indian industrial technology initiative building intelligent software for logistics and global technology trade, from freight to space, with safety at the core and a long-term view of where industry is going."
+        summary="SIWOM is an early-stage software company being built in India. We are building SIWOM Stream, shipment coordination software for logistics companies, and researching what comes after it."
         cta={{ label: "Contact SIWOM", href: "/contact" }}
         media={
           <Figure
@@ -36,12 +36,12 @@ export default function AboutPage() {
       />
 
       <div className="mx-auto max-w-content gutter-x pt-12 md:pt-20">
-        <PageSection id="mission" eyebrow="Mission and philosophy" title="Moving industries forward, safely.">
+        <PageSection id="mission" eyebrow="Mission and philosophy" title="More predictable logistics. Safer industry.">
           <Prose>
             <p>
-              SIWOM exists to make industrial operations more connected, more predictable and safer. We start with
-              logistics, because coordination problems there are real today and the data to address them already
-              exists.
+              SIWOM exists to make industrial operations more predictable and safer. We start with shipment
+              coordination for logistics companies, because the problem is real today and the data to address it
+              already exists.
             </p>
             <p>
               Our core principle is simple: <strong>Safety First. Intelligence Everywhere.</strong> Intelligence should
@@ -93,11 +93,8 @@ export default function AboutPage() {
         <PageSection id="contact" eyebrow="Contact" title="Start a conversation.">
           <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
             <p className="max-w-reading text-body text-text-muted">
-              Write to{" "}
-              <a href="/contact" className="text-text underline underline-offset-4 hover:text-accent-text">
-                contact form
-              </a>{" "}
-              or use the contact form. We read every message.
+              Use the contact form to tell us about your operation and where shipments get stuck. A person on our team
+              reads every message.
             </p>
             <Button href="/contact" icon="arrow" trackAs="about_contact">
               Contact SIWOM

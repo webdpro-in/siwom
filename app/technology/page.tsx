@@ -10,9 +10,9 @@ import { Figure } from "@/components/ui/Figure";
 import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Technology",
+  title: "Technology and architecture",
   description:
-    "SIWOM's platform and architecture: data integration, trade intelligence and supplier matching, compliance documents, space and specialised-cargo data, mapping, computer vision, optimisation and security.",
+    "How SIWOM Stream is built: data integration, mapping, exceptions and security, plus the research behind Global Trade and Safety AI.",
   path: "/technology",
 });
 
@@ -36,8 +36,8 @@ export default function TechnologyPage() {
       <PageHero
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Technology" }]}
         eyebrow="Technology · Platform and architecture"
-        title="Technology built for industrial reality."
-        summary="One data platform underneath logistics, global technology trade and safety, designed so each new capability builds on what is already proven."
+        title="How the SIWOM platform works."
+        summary="How SIWOM Stream is being built, and the research behind Global Trade and Safety AI. Every section carries its real status."
         cta={{ label: "Talk to our team", href: "/contact" }}
         media={
           <Figure

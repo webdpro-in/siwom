@@ -1,40 +1,34 @@
 import type { Metadata } from "next";
-import { GlobalNetwork } from "@/components/sections/GlobalNetwork";
-import { TechTradeSection } from "@/components/sections/TechTradeSection";
 import { Hero } from "@/components/sections/Hero";
-import { Principles } from "@/components/sections/Principles";
 import { Challenge } from "@/components/sections/Challenge";
 import { LogisticsSection } from "@/components/sections/LogisticsSection";
-import { SafetySection } from "@/components/sections/SafetySection";
+import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { IndustriesSection } from "@/components/sections/IndustriesSection";
-import { BeyondSection } from "@/components/sections/BeyondSection";
-import { ArchitectureSection } from "@/components/sections/ArchitectureSection";
-import { IndiaSection } from "@/components/sections/IndiaSection";
-import { RoadmapSection } from "@/components/sections/RoadmapSection";
+import { ResearchSection } from "@/components/sections/ResearchSection";
+import { HowWeWorkSection } from "@/components/sections/HowWeWorkSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 
 export const metadata: Metadata = {
-  title: { absolute: "SIWOM — Global freight. Local connections." },
+  title: { absolute: "SIWOM — Shipment coordination software for logistics in India" },
   description:
-    "SIWOM is building a platform connecting global supply chains across logistics, space, robotics and automotive: international suppliers, Indian manufacturers and buyers, and the logistics partners who move it all. Built from India, safety first.",
+    "Shipment coordination software for Indian logistics companies: shipments, vehicles, documents and delays in one shared record. In development; pilots welcome.",
   alternates: { canonical: "/" },
 };
 
+/**
+ * Homepage narrative: problem → what SIWOM Stream does (with the demo) → how a
+ * pilot works → who it is for → research tracks → how we work → next step.
+ */
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Principles />
-      <GlobalNetwork />
-      <TechTradeSection />
       <Challenge />
       <LogisticsSection />
-      <SafetySection />
+      <HowItWorksSection />
       <IndustriesSection />
-      <BeyondSection />
-      <ArchitectureSection />
-      <IndiaSection />
-      <RoadmapSection />
+      <ResearchSection />
+      <HowWeWorkSection />
       <CtaSection />
     </>
   );

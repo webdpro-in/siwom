@@ -39,7 +39,7 @@ export const industries: Industry[] = [
     name: "Ports and maritime",
     image: portsImg,
     alt: "Container ship moored alongside terminal cranes.",
-    useCase: "Coordinated shipment and yard visibility across berths, yards and gates.",
+    useCase: "Follow containers from vessel and yard, through the gate, to the next transporter.",
     problem:
       "Vessel, yard, gate and inland legs often sit in separate systems. Teams chase status by phone, and a missed berth window ripples into every truck and rake waiting on it.",
     couldHelp: [
@@ -55,7 +55,7 @@ export const industries: Industry[] = [
     name: "Road freight and fleets",
     image: freightImg,
     alt: "Freight truck and trailer on a road.",
-    useCase: "Dispatch coordination and delivery-exception monitoring for truck fleets.",
+    useCase: "Dispatch and delay alerts for transporters and the fleets they manage.",
     problem:
       "Dispatchers juggle calls, chat groups and spreadsheets to match loads, vehicles and drivers. Delays surface late, often after a customer asks.",
     couldHelp: [
@@ -71,7 +71,7 @@ export const industries: Industry[] = [
     name: "Warehousing and distribution",
     image: warehousingImg,
     alt: "Storage racks and goods inside a warehouse.",
-    useCase: "Inventory movement tracking between docks, storage and dispatch.",
+    useCase: "Inbound and outbound movements linked to the shipments they belong to.",
     problem:
       "Inbound and outbound movements are often logged after the fact. Dock schedules, storage and dispatch rarely share one live picture.",
     couldHelp: [
@@ -87,7 +87,7 @@ export const industries: Industry[] = [
     name: "Manufacturing supply chains",
     image: manufacturingImg,
     alt: "Industrial manufacturing facility and production equipment.",
-    useCase: "Inbound and outbound visibility for plants and their suppliers.",
+    useCase: "Know when inbound supplier shipments will really arrive, before the line stops.",
     problem:
       "A late inbound truck can stop a line, yet plant teams often learn about it from the supplier's phone call rather than a system.",
     couldHelp: [
@@ -112,7 +112,7 @@ export const industries: Industry[] = [
       "Human review and escalation, with an audit trail",
     ],
     product: { name: "Safety AI", href: "/safety-ai", status: "research" },
-    onHomepage: true,
+    onHomepage: false,
   },
   {
     id: "space",

@@ -20,8 +20,9 @@ export default function PrivacyPage() {
           title: "Who we are",
           body: (
             <p>
-              SIWOM is an Indian industrial technology initiative. [Legal entity name, registered address and contact
-              details to be added before publication.] You can reach us at <a href="/contact">contact form</a>.
+              SIWOM is an early-stage software company based in India. [Legal entity name, registered address and
+              contact details to be added before publication.] You can reach us through the{" "}
+              <a href="/contact">contact form</a>.
             </p>
           ),
         },
@@ -79,7 +80,7 @@ export default function PrivacyPage() {
           title: "Your choices and rights",
           body: (
             <p>
-              You can ask us to access, correct or delete the information you sent us by writing to{" "}
+              You can ask us to access, correct or delete the information you sent us through the{" "}
               <a href="/contact">contact form</a>. [Align this section with India&apos;s Digital Personal
               Data Protection Act, 2023 and any other applicable law before publication.]
             </p>

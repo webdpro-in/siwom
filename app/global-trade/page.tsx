@@ -25,9 +25,9 @@ import { Stepper } from "@/components/ui/Stepper";
 import { PhotoTile, flowIcons, sectorIcons } from "@/components/trade/TradeParts";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Global Trade",
+  title: "Global Trade research: space and technology cargo",
   description:
-    "SIWOM Global Trade is research into a platform connecting international suppliers with Indian manufacturers and buyers across space, aerospace, robotics, automotive and green energy, with logistics planned from the start.",
+    "Research, not a live service: planning and handing off space and advanced-technology cargo, and helping Indian manufacturers source and export it.",
   path: "/global-trade",
 });
 
@@ -105,10 +105,10 @@ export default function GlobalTradePage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Global Trade" }]}
         eyebrow="SIWOM Global Trade"
         status="research"
-        title="Global Trade for space, robotics and mobility."
-        summary="SIWOM Global Trade, our technology trade network, is research into connecting international suppliers with Indian manufacturers and buyers, and helping Indian companies reach global markets, with the logistics planned from the start."
-        cta={{ label: "Discuss global trade", href: contactHref({ interest: "global-trade" }) }}
-        secondary={{ label: "Discuss space logistics", href: contactHref({ interest: "space" }) }}
+        title="Logistics for space and technology cargo."
+        summary="SIWOM Global Trade, our research into technology supply chains, is not a live service. We are studying how to plan and hand off cargo such as satellites and rocket parts, and how to help Indian manufacturers source and export components, materials and machinery."
+        cta={{ label: "Discuss space logistics", href: contactHref({ interest: "space" }) }}
+        secondary={{ label: "Discuss global trade", href: contactHref({ interest: "global-trade" }) }}
         media={
           <Figure
             src={tradePhotos.satelliteAirfreight.src}
@@ -144,7 +144,7 @@ export default function GlobalTradePage() {
               <StatusPill status="research" />
             </div>
             <h2 id="space-title" className="max-w-headline text-h2 text-text">
-              Space is our lead focus.
+              Why space comes first.
             </h2>
             <p className="max-w-reading text-body-l text-text-muted">
               With India&apos;s space sector opening to private companies, satellite makers, launch providers and their
@@ -207,8 +207,8 @@ export default function GlobalTradePage() {
           id="flows"
           eyebrow="02 — Import and export"
           status="research"
-          title="Four ways goods should move."
-          intro="Connecting global supply chains means helping goods flow both ways, and helping buyers look closer to home."
+          title="Four trade flows we are studying."
+          intro="Trade runs in both directions, and some of what India imports today could be made in India instead."
         >
           <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {tradeFlows.map((f) => {
@@ -252,7 +252,7 @@ export default function GlobalTradePage() {
           id="sectors"
           eyebrow="04 — Robotics, mobility and energy"
           title="The industries that follow space."
-          intro="The same network is meant to serve robotics, automotive, drones, future air taxis and green energy, where the supply chains are just as global."
+          intro="The same research applies to robotics, electric and autonomous vehicles, drones, future air taxis and green energy, where supply chains are just as international."
         >
           <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[tradePhotos.robotics, tradePhotos.electricMobility, tradePhotos.evtol, tradePhotos.solar].map((photo) => (
@@ -288,8 +288,8 @@ export default function GlobalTradePage() {
         <PageSection
           id="logistics-companies"
           eyebrow="05 — For logistics companies"
-          title="Built for the companies that move it."
-          intro="Technology cargo needs specialist logistics. The network is designed so forwarders, brokers, carriers and warehouses see the work early, with the details they need to do it well."
+          title="Designed with logistics companies."
+          intro="Technology cargo needs specialist logistics. The aim is for forwarders, customs brokers, carriers and warehouses to see the work early, with the handling details they need already captured."
         >
           <ul className="grid gap-4 md:grid-cols-2">
             {logisticsRoles.map((r) => (
@@ -301,7 +301,7 @@ export default function GlobalTradePage() {
           </ul>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <div className="rounded-card border border-border p-6">
-              <p className="mb-3 font-medium text-text">What the network is meant to do</p>
+              <p className="mb-3 font-medium text-text">What the platform is meant to do</p>
               <ul className="flex flex-col gap-2">
                 {["Bring buyers, suppliers and logistics partners into one plan", "Capture handling limits and documents before the first quote", "Keep each handoff clear: who holds the goods, and what comes next"].map((t) => (
                   <li key={t} className="flex gap-2 text-small text-text-muted">

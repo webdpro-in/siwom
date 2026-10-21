@@ -1,5 +1,4 @@
 import { roadmap, roadmapNote } from "@/data/roadmap";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { StatusPill } from "@/components/ui/StatusPill";
 import { Stepper } from "@/components/ui/Stepper";
 
@@ -25,23 +24,5 @@ export function RoadmapStepper() {
       />
       <p className="max-w-reading border-t border-border pt-5 text-small text-text-muted">{roadmapNote}</p>
     </div>
-  );
-}
-
-export function RoadmapSection({ eyebrow = "08 — Roadmap" }: { eyebrow?: string }) {
-  return (
-    <section aria-labelledby="roadmap-title" className="section-y">
-      <div className="mx-auto max-w-content gutter-x">
-        <div data-reveal className="mb-12">
-          <SectionHeader
-            id="roadmap-title"
-            eyebrow={eyebrow}
-            title="Start with a real problem. Build toward a bigger future."
-            intro="Each stage builds on the data, trust and engineering of the one before it."
-          />
-        </div>
-        <RoadmapStepper />
-      </div>
-    </section>
   );
 }

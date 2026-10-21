@@ -85,3 +85,15 @@ This covers the website itself. SIWOM's products are separately labelled In deve
 | Supplier directory, marketplace, buyer–supplier matching, domestic-alternative search | Planned | Research only; nothing is live and no suppliers are listed |
 | Trade documents, licence checklists, landed-cost estimates, condition-logger data | Planned | Research only; SIWOM does not grant or replace licences |
 | Buying, selling or brokering goods | Not planned | SIWOM does not act as importer, exporter or broker |
+
+## Positioning and copy update (21 October 2026)
+
+| Change | Status | Notes |
+| --- | --- | --- |
+| Homepage rebuilt as one narrative around SIWOM Stream (problem → product and demo → pilot → who it is for → research → how we work → next step) | Implemented | Seven removed homepage sections; their content lives on subpages |
+| Hero CTA "Discuss a pilot" pre-fills Logistics OS and pilot; "Try the demo" jumps to the homepage demo | Implemented | Covered by `npm run qa` |
+| Logistics OS page: eight features with honest status; demo first; ocean/air/road/rail milestones; international workspace marked Research | Implemented | Pipeline and equipment encyclopaedia removed |
+| Global Trade, Safety AI, Vision, Technology, About, Industries and legal pages: clearer H1s and summaries; research clearly marked | Implemented | Broken "contact form" sentences fixed on About, Privacy and Terms |
+| Unique titles; meta descriptions of 160 characters or fewer; Organization and WebSite JSON-LD; OG cards rewritten | Implemented | |
+| Production URL from `NEXT_PUBLIC_SITE_URL`, else Vercel's production domain; preview deployments `noindex` and disallowed in robots.txt | Implemented | Verified with a simulated `VERCEL_ENV=preview` build |
+| Hosting and production domain | Planned | No SIWOM project exists on the connected Vercel account; see QA-REPORT.md |

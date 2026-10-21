@@ -43,7 +43,7 @@ const colours = [
 ] as const;
 
 const type = [
-  ["Display", "text-display", "Moving industries forward."],
+  ["Display", "text-display", "Coordinate every shipment."],
   ["H1", "text-h1", "SIWOM Stream, our Logistics OS"],
   ["H2", "text-h2", "Every movement. One operational picture."],
   ["H3", "text-h3", "Exceptions and delay management"],

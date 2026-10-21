@@ -1,8 +1,8 @@
-import InternationalWorkspace from "@/components/demos/logistics/InternationalWorkspace";
 import type { Metadata } from "next";
-import { BarChart3, Boxes, CalendarClock, Clock, Map as MapIcon, PlugZap, Route, Send, Siren, Truck, Warehouse } from "lucide-react";
+import { BarChart3, Boxes, Clock, FileCheck2, Map as MapIcon, PlugZap, Route, Siren, Truck, CalendarClock } from "lucide-react";
 import portsWide from "@/public/images/water-container.webp";
-import { TransportExplorer } from "@/components/sections/TransportExplorer";
+import InternationalWorkspace from "@/components/demos/logistics/InternationalWorkspace";
+import { TransportModes } from "@/components/sections/TransportModes";
 import { pageMetadata } from "@/lib/metadata";
 import { contactHref } from "@/data/navigation";
 import { PageHero } from "@/components/layout/PageHero";
@@ -16,30 +16,24 @@ import { Stepper } from "@/components/ui/Stepper";
 import { LogisticsDemoSection } from "@/components/demos/Demos";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Logistics OS",
+  title: "Logistics OS: shipment coordination software",
   description:
-    "SIWOM Stream, our Logistics OS, is in development: an international-to-local workspace for partner discovery, multimodal planning, shipment handoffs and logistics analysis.",
+    "SIWOM Stream is shipment coordination software for freight forwarders, transporters and warehouse teams in India. In development, with a sample-data demo.",
   path: "/logistics-os",
 });
 
 const pilotHref = contactHref({ interest: "logistics-os", pilot: true });
 
+/** In development = being built now (most are in the demo). Research = not started in code. */
 const capabilities = [
-  { icon: Boxes, title: "Global-to-local connections", text: "Bring international freight networks and local logistics providers into a shared coordination workspace.", status: "in-development" as const },
-  { icon: MapIcon, title: "Partner discovery", text: "Planned discovery by geography, transport mode, cargo requirements and service capabilities.", status: "in-development" as const },
-  { icon: Route, title: "Multimodal planning", text: "Compare transport combinations, service coverage, requested quotations and transit assumptions.", status: "research" as const },
-  { icon: BarChart3, title: "AI-assisted logistics analysis", text: "Research into route options, estimated costs, potential delays and provider suitability using available data. No live AI analysis is connected.", status: "research" as const },
-  { icon: Send, title: "Shipment handoffs", text: "Coordinate documents and milestones between international carriers, terminals and local partners. Providers execute their own services.", status: "in-development" as const },
-  { icon: Boxes, title: "One shared workspace", text: "A planned central view of shipment records, provider details, documents, quotations and coordination status.", status: "in-development" as const },
-  { icon: Boxes, title: "Shipment and order tracking", text: "Every consignment, its legs and its documents in one record.", status: "in-development" as const },
-  { icon: Truck, title: "Fleet availability", text: "Which vehicles are free, where, and for how long.", status: "in-development" as const },
-  { icon: Route, title: "Route planning", text: "Suggested routes that account for distance, cut-offs and rest stops.", status: "research" as const },
-  { icon: Send, title: "Dispatch coordination", text: "Match waiting loads to available vehicles from one queue.", status: "in-development" as const },
-  { icon: Clock, title: "ETAs and timelines", text: "Planned versus current ETA, with the full status timeline.", status: "in-development" as const },
-  { icon: Siren, title: "Exception and delay management", text: "Delays sorted by severity, each with a suggested next step.", status: "in-development" as const },
-  { icon: Warehouse, title: "Port and warehouse visibility", text: "Berth, yard, gate and dock milestones next to the road and rail legs.", status: "in-development" as const },
-  { icon: BarChart3, title: "Analytics and reporting", text: "On-time performance, dwell times and exception trends.", status: "research" as const },
-  { icon: PlugZap, title: "Integration-ready APIs", text: "Planned APIs to exchange data with existing systems.", status: "research" as const },
+  { icon: Boxes, title: "Shipment tracking", text: "Every consignment with its legs, current status and documents in one record.", status: "in-development" as const },
+  { icon: Siren, title: "Exceptions and delays", text: "Delays sorted by severity, each with its cause, its effect on the ETA and a suggested next step.", status: "in-development" as const },
+  { icon: Route, title: "Dispatch", text: "Match waiting loads with available vehicles from one queue. A person confirms every assignment.", status: "in-development" as const },
+  { icon: Truck, title: "Fleet availability", text: "Which vehicles are free, at which hub, and which are in maintenance.", status: "in-development" as const },
+  { icon: Clock, title: "Milestones and ETAs", text: "Planned and current ETA for every shipment, with the full timeline from booking to delivery.", status: "in-development" as const },
+  { icon: FileCheck2, title: "Handoffs and documents", text: "What the next partner needs, and which documents, such as e-way bills, are due or expiring.", status: "in-development" as const },
+  { icon: BarChart3, title: "Reporting", text: "On-time performance, dwell times and exception trends across lanes and partners.", status: "research" as const },
+  { icon: PlugZap, title: "Integrations", text: "Spreadsheet import first. APIs and connectors for TMS, WMS and telematics are planned per pilot.", status: "research" as const },
 ];
 
 const faq = [
@@ -48,8 +42,8 @@ const faq = [
     title: "Is this available today?",
     content: (
       <p>
-        Not as a general product. SIWOM Stream is in development, and the demo on this page uses illustrative data.
-        We are looking for pilot partners with a real coordination problem to shape it with us.
+        Not as a general product. SIWOM Stream is in development, and the demo on this page uses sample data. We are
+        looking for logistics companies with a real coordination problem to pilot it with us.
       </p>
     ),
   },
@@ -101,45 +95,23 @@ export default function LogisticsOsPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Logistics OS" }]}
         eyebrow="SIWOM Stream · Logistics OS"
         status="in-development"
-        title="The operational layer connecting logistics."
-        summary="Connect global freight to local logistics through one intelligent platform. SIWOM Stream is in development, with partner discovery, multimodal planning and coordinated shipment handoffs at its core."
+        title="Shipments, vehicles and delays in one workspace."
+        summary="SIWOM Stream, our Logistics OS, is shipment coordination software for freight forwarders, transporters and warehouse operators in India. It is in development: the demo on this page uses sample data, and we are looking for pilot partners."
         cta={{ label: "Discuss a pilot", href: pilotHref }}
+        secondary={{ label: "Try the demo", href: "#demo" }}
         media={
           <Figure
             src={portsWide}
             alt="Container vessel alongside terminal gantry cranes, seen from above."
             preload
             sizes="(min-width: 1440px) 1392px, 100vw"
-            caption="Real infrastructure. Representative photography; SIWOM does not own or operate this terminal."
+            caption="Representative photograph. SIWOM does not own or operate this terminal."
           />
         }
       />
 
-      <section id="international-demo" aria-labelledby="international-demo-title" className="mx-auto max-w-content gutter-x section-y">
-        <p className="mb-4 font-mono text-eyebrow uppercase tracking-eyebrow text-accent-text">Global to local · Product direction</p>
-        <h2 id="international-demo-title" className="mb-5 max-w-headline text-h2 text-text">One journey. Every connection.</h2>
-        <p className="mb-8 max-w-reading text-body-l text-text-muted">Explore how international shipments, local providers, document handoffs and planning decisions could come together. The workspace below is interactive and uses fictional demonstration data.</p>
-        <InternationalWorkspace />
-      </section>
-      <TransportExplorer />
-
       <div className="mx-auto max-w-content gutter-x pt-12 md:pt-20">
-        <PageSection
-          id="overview"
-          eyebrow="Overview"
-          title="Every movement in one place."
-          intro="SIWOM Stream is built to look and behave like an industrial control platform: dense, calm and fast to scan, not a generic analytics dashboard."
-        >
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {capabilities.map((c) => (
-              <li key={c.title}>
-                <FeatureCard icon={c.icon} title={c.title} description={c.text} status={c.status} className="h-full" />
-              </li>
-            ))}
-          </ul>
-        </PageSection>
-
-        <PageSection id="challenges" eyebrow="Operational challenges" title="Why coordination breaks down.">
+        <PageSection id="problem" eyebrow="The problem" title="Why coordination breaks down.">
           <div className="grid gap-10 lg:grid-cols-2">
             <Prose>
               <p>
@@ -162,78 +134,31 @@ export default function LogisticsOsPage() {
           </div>
         </PageSection>
 
-        <PageSection id="visibility" eyebrow="Shipment and fleet visibility" title="See shipments and vehicles together.">
-          <div className="grid gap-10 lg:grid-cols-2">
-            <Prose>
-              <p>
-                Shipments, the vehicles carrying them and the hubs they pass through share one schematic map, one table
-                and one timeline. Selecting a shipment anywhere highlights it everywhere.
-              </p>
-              <p>
-                The current demo uses fictional snapshots on a schematic map, not live GPS positions. Connections to
-                carrier systems, fleets and warehouses are planned and have not been implemented.
-              </p>
-            </Prose>
-            <CheckList
-              items={[
-                "Filter by status (on time, at risk, delayed, delivered) and mode (road, rail, port)",
-                "Fleet availability by hub, including vehicles in maintenance",
-                "Planned versus current ETA for every shipment",
-              ]}
-            />
-          </div>
-        </PageSection>
-
-        <PageSection id="dispatch" eyebrow="Dispatch workflows" title="Match loads and vehicles from one queue.">
-          <div className="grid gap-10 lg:grid-cols-2">
-            <Prose>
-              <p>
-                Waiting loads sit in a dispatch queue with pickup windows and load type. Available vehicles at the origin
-                hub are offered first. The dispatcher assigns; the load moves to Assigned and the fleet view updates.
-              </p>
-            </Prose>
-            <CheckList
-              items={[
-                "Vehicles at the origin hub listed first",
-                "Assignment history kept for audit",
-                "No automatic dispatch: a person confirms every assignment",
-              ]}
-            />
-          </div>
-        </PageSection>
-
-        <PageSection id="exceptions" eyebrow="Exceptions and delivery timelines" title="Deal with the urgent ones first.">
-          <Prose className="mb-10">
-            <p>
-              Exceptions are sorted by severity, from a missed berth window to a driver approaching duty-hour limits.
-              Each carries its reason, its effect on the ETA and a suggested next step. Suggestions are only
-              suggestions: the operator decides.
-            </p>
-          </Prose>
-          <Stepper
-            label="Shipment status timeline"
-            current={2}
-            steps={[
-              { title: "Booked", description: "Order and documents created." },
-              { title: "Picked up", description: "Load collected at origin." },
-              { title: "In transit", description: "Moving by road, rail or sea." },
-              { title: "At hub", description: "Port, ICD or warehouse." },
-              { title: "Out for delivery", description: "Final leg to the consignee." },
-              { title: "Delivered", description: "Proof of delivery recorded." },
-            ]}
-          />
+        <PageSection
+          id="features"
+          eyebrow="What SIWOM Stream does"
+          title="Built around the shipment, not the system."
+          intro="Each feature carries its real status. In development means we are building it now; most of these appear in the demo below."
+        >
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {capabilities.map((c) => (
+              <li key={c.title}>
+                <FeatureCard icon={c.icon} title={c.title} description={c.text} status={c.status} className="h-full" />
+              </li>
+            ))}
+          </ul>
         </PageSection>
       </div>
 
       <section id="demo" aria-labelledby="demo-title" className="border-t border-border py-14 md:py-20">
         <div className="mx-auto mb-8 flex max-w-content flex-col gap-4 gutter-x">
-          <p className="font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">Full demo</p>
+          <p className="font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">Interactive demo</p>
           <h2 id="demo-title" className="max-w-headline text-h2 text-text">
-            Try the Logistics OS demo.
+            Try SIWOM Stream with sample data.
           </h2>
           <p className="max-w-reading text-body-l text-text-muted">
-            Filter, select a delayed shipment, acknowledge an exception and assign a vehicle. Everything here is sample
-            data.
+            Filter by status or mode, open a delayed shipment, acknowledge an exception and assign a vehicle. Nothing here
+            is connected to live operations.
           </p>
         </div>
         <div className="mx-auto max-w-wide gutter-x">
@@ -241,19 +166,59 @@ export default function LogisticsOsPage() {
         </div>
         <div className="mx-auto mt-4 max-w-content gutter-x">
           <Callout variant="info" title="About the map">
-            The map is schematic and does not draw national boundaries. A geographic basemap is planned; it would use a
-            provider that depicts India&apos;s official boundaries.
+            The map is schematic and does not draw national boundaries. Positions are snapshot values, not live GPS. A
+            geographic basemap is planned; it would use a provider that depicts India&apos;s official boundaries.
           </Callout>
         </div>
       </section>
 
       <div className="mx-auto max-w-content gutter-x">
         <PageSection
+          id="modes"
+          eyebrow="Transport modes"
+          title="Ocean, air, road and rail in one plan."
+          intro="The milestones SIWOM Stream is designed to follow for each mode, so the next partner knows what is coming."
+        >
+          <TransportModes />
+        </PageSection>
+
+        <PageSection id="timeline" eyebrow="Milestones" title="From booking to delivery.">
+          <Prose className="mb-10">
+            <p>
+              Every shipment carries one timeline. Each milestone records when it happened and who handled it, and
+              exceptions attach to the milestone they put at risk.
+            </p>
+          </Prose>
+          <Stepper
+            label="Shipment milestone timeline"
+            current={2}
+            steps={[
+              { title: "Booked", description: "Order and documents created." },
+              { title: "Picked up", description: "Load collected at origin." },
+              { title: "In transit", description: "Moving by road, rail, sea or air." },
+              { title: "At hub", description: "Port, airport, CFS, ICD or warehouse." },
+              { title: "Out for delivery", description: "Final leg to the consignee." },
+              { title: "Delivered", description: "Proof of delivery recorded." },
+            ]}
+          />
+        </PageSection>
+
+        <PageSection
+          id="international"
+          eyebrow="International shipments"
+          status="research"
+          title="Planning the handoff at the port or airport."
+          intro="We are researching how to plan imports and exports end to end: compare ocean and air options, see which local partner takes over, and check documents before each handoff. The workspace below is a concept with fictional data."
+        >
+          <InternationalWorkspace />
+        </PageSection>
+
+        <PageSection
           id="integrations"
-          eyebrow="Integration approach"
+          eyebrow="Integrations"
           status="research"
           title="Work with the systems you already run."
-          intro="None of these integrations is built yet. They describe how we intend SIWOM Stream to connect, and are scoped with each pilot partner."
+          intro="None of these connections is built yet. They describe how we intend SIWOM Stream to connect, scoped with each pilot partner."
         >
           <ul className="grid gap-4 md:grid-cols-2">
             {[
@@ -275,9 +240,9 @@ export default function LogisticsOsPage() {
       </div>
 
       <NextBlock
-        title="Safety AI"
-        description="See how SIWOM Safety is exploring AI-assisted hazard flagging, with people accountable for every decision."
-        href="/safety-ai"
+        title="Industries"
+        description="The operations SIWOM Stream is designed for: ports, road freight, warehousing and manufacturing supply chains."
+        href="/industries"
       />
     </>
   );

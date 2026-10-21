@@ -71,8 +71,8 @@ export default function VisionPage() {
       <PageHero
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Our Vision" }]}
         eyebrow="Our Vision"
-        title="Our vision: a connected industrial future."
-        summary="Logistics, space, safety, robotics and mobility will increasingly work together. We start with software that solves real problems today and build toward the rest, step by step."
+        title="Where SIWOM is headed."
+        summary="We start with shipment coordination software for logistics companies, because that problem is real today. Robotics, electric mobility and industrial intelligence are long-term ambitions; none has started as a product."
         cta={{ label: "Partner with us", href: contactHref({ interest: "partnership" }) }}
         media={
           <Figure
@@ -102,7 +102,7 @@ export default function VisionPage() {
         <PageSection id="principles" eyebrow="Safety-first principles" title="Principles we will not trade away.">
           <CheckList
             items={[
-              "Safety gets equal or greater weight than any other product",
+              "Safety comes before speed of delivery or cost",
               "AI assists; qualified people remain accountable for critical safety actions",
               "Every product and roadmap item is labelled with its real status",
               "We never imply control of cranes, vehicles or dangerous machinery",
@@ -110,7 +110,7 @@ export default function VisionPage() {
           />
         </PageSection>
 
-        <PageSection id="india" eyebrow="Indian engineering ambition" title="From India, for the world's industry.">
+        <PageSection id="india" eyebrow="Indian engineering ambition" title="Built for Indian operations first.">
           <Prose>
             <p>
               India&apos;s ports, freight corridors, warehouses and factories are among the most demanding operating

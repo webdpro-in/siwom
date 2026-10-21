@@ -75,7 +75,7 @@ export default function TermsPage() {
           title: "Contact",
           body: (
             <p>
-              Questions about these terms: <a href="/contact">contact form</a>.
+              Questions about these terms? Write to us through the <a href="/contact">contact form</a>.
             </p>
           ),
         },

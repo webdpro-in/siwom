@@ -129,3 +129,21 @@ Re-run after adding `/global-trade`, the homepage trade section, the highlighted
 | First-load JS | ✅ `/` 169.3 KB, `/global-trade` 160.3 KB gzipped, under the 170 KB budget. The homepage is close to the limit. |
 | Header with seven nav items | ✅ Single line at 1024 and 1280 px |
 | Visual review | ✅ Dark and light themes, 1440 and 390 px: homepage, Global Trade, Industries, Technology |
+
+## Addendum — positioning and copy update (21 October 2026)
+
+Production build on macOS with Google Chrome 155, after the homepage, navigation, Logistics OS and copy rewrite:
+
+| Check | Result |
+| --- | --- |
+| `tsc --noEmit`, ESLint, `next build` | ✅ Clean, no warnings |
+| `npm run qa` | ✅ 135 / 135 checks pass. This includes axe on 12 routes at 390 and 1440 px, links, the mobile menu, the demos, contact validation, honeypot, rate limit and reduced motion. The new hero pilot CTA and the Safety AI CTA pre-fill checks pass. |
+| `npm run qa:responsive` | ✅ No issues: 11 pages × 7 widths, all headlines three lines or fewer on phones, keyboard tab-through |
+| `npm run qa:tokens` | ✅ No hard-coded colours, sizes or durations |
+| First-load JS | ✅ `/` 164.3 KB (was 169.3), `/logistics-os` 165.8 KB, `/global-trade` 160.3 KB, `/contact` 154.4 KB gzipped, all under the 170 KB budget |
+| SEO | ✅ One H1 per page; unique titles of 61 characters or fewer; descriptions of 160 or fewer; canonical on every page; 404 returns HTTP 404 |
+| Preview protection | ✅ A simulated `VERCEL_ENV=preview` build serves `Disallow: /` and `noindex, nofollow`; its canonical uses the production domain |
+| Lighthouse mobile (simulated / applied throttling) | `/` 91 / 99, `/logistics-os` 92 / 99, `/contact` 93 / 99 Performance. 100 for Accessibility, Best Practices and SEO everywhere; CLS 0. Simulated LCP is 3.3–3.4 s (applied 1.6–1.9 s); the cause is unchanged from the main report. |
+| Visual review | ✅ Homepage at 1440 and 390 px (dark); Logistics OS (dark); Global Trade, About and footer (light) |
+
+Not performed: a manual screen-reader pass, and verification of a live deployment (there is no hosting for SIWOM yet).

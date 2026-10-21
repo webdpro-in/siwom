@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "@/styles/globals.css";
-import { site, absoluteUrl } from "@/lib/site";
+import { site, absoluteUrl, isIndexable } from "@/lib/site";
 import { cn } from "@/lib/cn";
 import { colors } from "@/lib/tokens";
 import { Header } from "@/components/layout/Header";
@@ -37,7 +37,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "SIWOM — Moving industries forward",
+    default: "SIWOM — Shipment coordination software for logistics",
     template: "%s · SIWOM",
   },
   description: site.description,
@@ -50,6 +50,8 @@ export const metadata: Metadata = {
     url: "/",
   },
   twitter: { card: "summary_large_image" },
+  // Preview deployments are never indexed (see lib/site.ts).
+  robots: isIndexable ? undefined : { index: false, follow: false },
   formatDetection: { telephone: false, address: false, email: false },
 };
 
@@ -61,12 +63,27 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
+// Only facts that are true today: no address, phone or customers until they exist.
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: site.name,
-  url: site.url,
-  logo: absoluteUrl("/brand/siwom-symbol.png"),
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      url: site.url,
+      logo: absoluteUrl("/brand/siwom-symbol.png"),
+      description: site.description,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      name: site.name,
+      url: site.url,
+      publisher: { "@id": `${site.url}/#organization` },
+      inLanguage: "en-IN",
+    },
+  ],
 };
 
 const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;

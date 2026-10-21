@@ -1,7 +1,6 @@
 import { getImageProps } from "next/image";
 import { preload } from "react-dom";
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { ArrowDownRight } from "lucide-react";
 import { contactHref } from "@/data/navigation";
 import { Button } from "@/components/ui/Button";
 
@@ -23,26 +22,37 @@ export function Hero() {
       <div className="mx-auto w-full max-w-content gutter-x pt-36 pb-12 md:pt-48 md:pb-16">
         <div className="flex max-w-[60rem] flex-col items-start gap-7">
           <p className="hero-rise flex items-center gap-3 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">
-            <span aria-hidden className="h-px w-8 bg-accent" /> Global reach. Local expertise.
+            <span aria-hidden className="h-px w-8 bg-accent" /> SIWOM Stream · Shipment coordination software
           </p>
           <h1 id="hero-title" className="hero-heading global-hero-heading font-display font-medium text-text">
-            <span className="hero-rise block">Global Freight.</span>
-            <span className="hero-rise hero-delay-1 block">Local Connections.</span>
-            <span className="hero-rise hero-delay-1 block text-accent-text">One Intelligent Network.</span>
+            {/* Lines flow together on phones (three lines max) and split from 768 px. */}
+            <span className="hero-rise md:block">Coordinate every shipment, </span>
+            <span className="hero-rise hero-delay-1 text-accent-text md:block">from port to delivery.</span>
           </h1>
           <p className="hero-rise hero-delay-1 max-w-[40rem] text-body-l text-text-muted">
-            We’re building the platform that connects global supply chains across logistics, space, robotics and automotive: international suppliers, Indian manufacturers and buyers, and the logistics partners who move it all, across ocean, air and land.
+            SIWOM Stream gives freight forwarders, transporters and warehouse teams one shared record of every shipment:
+            where it is, which vehicle has it, which documents are due and what is late. It is built to replace the
+            calls, chat groups and spreadsheets that coordination runs on today.
           </p>
           <div className="hero-rise hero-delay-2 flex flex-wrap gap-3 pt-2">
-            <Button href="/logistics-os" prefetch={false} size="lg" icon="arrow" trackAs="hero_explore_logistics">Explore the platform</Button>
-            <Button href={contactHref({ interest: "partnership" })} size="lg" variant="secondary" trackAs="hero_partner">Partner with SIWOM</Button>
+            <Button href={contactHref({ interest: "logistics-os", pilot: true })} size="lg" icon="arrow" trackAs="hero_discuss_pilot">
+              Discuss a pilot
+            </Button>
+            <Button href="#demo" size="lg" variant="secondary" trackAs="hero_try_demo">
+              Try the demo
+            </Button>
           </div>
         </div>
       </div>
-      <div className="mx-auto grid w-full max-w-content grid-cols-1 gap-6 border-t border-border/70 gutter-x py-7 sm:grid-cols-3 sm:gap-8">
-        <p className="flex items-center gap-3 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted"><span className="size-2 rounded-full bg-accent" aria-hidden /> In development · Built from India</p>
-        <Link prefetch={false} href="/safety-ai" className="group flex items-center justify-between gap-4 text-small text-text">Safety First. Intelligence Everywhere.<ArrowUpRight aria-hidden className="size-5 text-accent-text" /></Link>
-        <a href="#logistics-title" className="hidden items-center justify-end gap-4 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted sm:flex">Discover what we’re building<ArrowDownRight aria-hidden className="size-5" /></a>
+      <div className="mx-auto grid w-full max-w-content grid-cols-1 gap-4 border-t border-border/70 gutter-x py-7 sm:grid-cols-3 sm:gap-8">
+        <p className="flex items-center gap-3 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">
+          <span className="size-2 rounded-full bg-accent" aria-hidden /> In development · Built in India
+        </p>
+        <p className="text-small text-text">Looking for logistics companies to pilot it</p>
+        <a href="#how-it-works" className="hidden items-center justify-end gap-4 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted hover:text-text sm:flex">
+          How it works
+          <ArrowDownRight aria-hidden className="size-5" />
+        </a>
       </div>
     </section>
   );

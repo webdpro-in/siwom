@@ -139,10 +139,18 @@ for (const width of [390, 1440]) {
 {
   const { context, page } = await newPage(1440);
   await page.goto(base + "/", { waitUntil: "networkidle" });
-  await page.locator('[data-track="home_discuss_safety"]').click();
+  await page.locator('[data-track="hero_discuss_pilot"]').click();
+  await page.waitForURL(/\/contact\?interest=logistics-os&pilot=1/);
+  await page.waitForSelector('input[name="interest"]');
+  check(
+    "homepage pilot CTA pre-selects Logistics OS and pilot",
+    (await page.locator('input[name="interest"][value="logistics-os"]').isChecked()) && (await page.locator("#contact-pilot").isChecked()),
+  );
+  await page.goto(base + "/safety-ai", { waitUntil: "networkidle" });
+  await page.locator('[data-track="hero_Discuss Safety AI"]').click();
   await page.waitForURL(/\/contact\?interest=safety-ai/);
   await page.waitForSelector('input[name="interest"]');
-  check("Safety CTA pre-selects Safety AI", await page.locator('input[name="interest"][value="safety-ai"]').isChecked());
+  check("Safety AI CTA pre-selects Safety AI", await page.locator('input[name="interest"][value="safety-ai"]').isChecked());
   await page.goto(base + "/contact?interest=logistics-os&pilot=1", { waitUntil: "networkidle" });
   check(
     "?interest=logistics-os&pilot=1 prefill",

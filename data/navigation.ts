@@ -4,56 +4,57 @@ export type NavItem = {
   description: string;
 };
 
-/** Primary navigation, in order. Labels must match page headings. */
+/**
+ * Primary navigation, in order. The product comes first, then who it is for,
+ * then the research tracks. Labels must match page headings.
+ */
 export const mainNav: NavItem[] = [
   {
     label: "Logistics OS",
     href: "/logistics-os",
-    description: "Shipments, fleets and dispatch in one view",
-  },
-  {
-    label: "Global Trade",
-    href: "/global-trade",
-    description: "Space, robotics and mobility supply chains",
-  },
-  {
-    label: "Safety AI",
-    href: "/safety-ai",
-    description: "Hazard flagging and inspection, with people accountable",
-  },
-  {
-    label: "Technology",
-    href: "/technology",
-    description: "Platform, architecture and research areas",
+    description: "SIWOM Stream: shipments, vehicles and delays in one place",
   },
   {
     label: "Industries",
     href: "/industries",
-    description: "Ports, freight, space, green energy and robotics",
+    description: "Ports, freight, warehousing and manufacturing",
   },
   {
-    label: "Our Vision",
-    href: "/vision",
-    description: "Autonomy, mobility and industrial intelligence",
+    label: "Global Trade",
+    href: "/global-trade",
+    description: "Research: logistics for space and advanced-technology cargo",
+  },
+  {
+    label: "Safety AI",
+    href: "/safety-ai",
+    description: "Research: hazard flagging with people accountable",
+  },
+  {
+    label: "Technology",
+    href: "/technology",
+    description: "How the platform works and what we are researching",
   },
   {
     label: "About",
     href: "/about",
-    description: "Mission, principles and how we work",
+    description: "Who we are and how we work",
   },
 ];
 
 export const footerNav = {
-  products: [
+  product: [
     { label: "Logistics OS", href: "/logistics-os" },
+    { label: "Try the demo", href: "/logistics-os#demo" },
+    { label: "Industries", href: "/industries" },
+  ],
+  research: [
     { label: "Global Trade", href: "/global-trade" },
     { label: "Safety AI", href: "/safety-ai" },
+    { label: "Our Vision", href: "/vision" },
   ],
   company: [
-    { label: "Technology", href: "/technology" },
-    { label: "Industries", href: "/industries" },
-    { label: "Our Vision", href: "/vision" },
     { label: "About", href: "/about" },
+    { label: "Technology", href: "/technology" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [
