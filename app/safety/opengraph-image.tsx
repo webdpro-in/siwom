@@ -5,5 +5,5 @@ export const size = ogSize;
 export const contentType = ogContentType;
 
 export default function Image() {
-  return renderOg({ eyebrow: "SIWOM Safety", title: "Hazard flags, reviewed by people.", status: "Research" });
+  return renderOg({ eyebrow: "SIWOM Safety", title: "Hazard flags, reviewed by people." });
 }

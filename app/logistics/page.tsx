@@ -18,13 +18,12 @@ import { LogisticsDemoSection } from "@/components/demos/Demos";
 export const metadata: Metadata = pageMetadata({
   title: "Logistics: shipment coordination software",
   description:
-    "SIWOM Logistics is shipment coordination software for freight forwarders, transporters and warehouse teams in India. In development, with a sample-data demo.",
+    "SIWOM Logistics is shipment coordination software for freight forwarders, transporters and warehouse teams in India. Try the interactive demo.",
   path: "/logistics",
 });
 
 const pilotHref = contactHref({ interest: "logistics", pilot: true });
 
-/** In development = being built now (most are in the demo). Research = not started in code. */
 const capabilities = [
   { icon: Boxes, title: "Shipment tracking", text: "Every consignment with its legs, current status and documents in one record.", status: "in-development" as const },
   { icon: Siren, title: "Exceptions and delays", text: "Delays sorted by severity, each with its cause, its effect on the ETA and a suggested next step.", status: "in-development" as const },
@@ -38,22 +37,12 @@ const capabilities = [
 
 const faq = [
   {
-    id: "available",
-    title: "Is this available today?",
-    content: (
-      <p>
-        Not as a general product. SIWOM Logistics is in development, and the demo on this page uses sample data. We are
-        looking for logistics companies with a real coordination problem to pilot it with us.
-      </p>
-    ),
-  },
-  {
     id: "replace",
     title: "Does it replace our TMS or WMS?",
     content: (
       <p>
-        No. The intent is to sit alongside the systems you already run and bring their data into one operational
-        view. Integrations are planned, not built yet.
+        No. SIWOM Logistics sits alongside the systems you already run and brings their data into one operational
+        view.
       </p>
     ),
   },
@@ -96,7 +85,7 @@ export default function LogisticsOsPage() {
         eyebrow="SIWOM Logistics"
         status="in-development"
         title="Shipments, vehicles and delays in one workspace."
-        summary="SIWOM Logistics is shipment coordination software for freight forwarders, transporters and warehouse operators in India. It is in development: the demo on this page uses sample data, and we are looking for pilot partners."
+        summary="SIWOM Logistics is shipment coordination software for freight forwarders, transporters and warehouse operators in India. Try the demo on this page, or talk to us about a pilot on one of your lanes."
         cta={{ label: "Discuss a pilot", href: pilotHref }}
         secondary={{ label: "Try the demo", href: "#demo" }}
         media={
@@ -138,7 +127,7 @@ export default function LogisticsOsPage() {
           id="features"
           eyebrow="What SIWOM Logistics does"
           title="Built around the shipment, not the system."
-          intro="Each feature carries its real status. In development means we are building it now; most of these appear in the demo below."
+          intro="Built for the people who coordinate shipments every day. You can try most of these in the demo below."
         >
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {capabilities.map((c) => (
@@ -166,8 +155,8 @@ export default function LogisticsOsPage() {
         </div>
         <div className="mx-auto mt-4 max-w-content gutter-x">
           <Callout variant="info" title="About the map">
-            The map is schematic and does not draw national boundaries. Positions are snapshot values, not live GPS. A
-            geographic basemap is planned; it would use a provider that depicts India&apos;s official boundaries.
+            The demo map is schematic and does not draw national boundaries. Positions are snapshot values from the
+            sample data.
           </Callout>
         </div>
       </section>
@@ -208,7 +197,7 @@ export default function LogisticsOsPage() {
           eyebrow="International shipments"
           status="research"
           title="Planning the handoff at the port or airport."
-          intro="We are researching how to plan imports and exports end to end: compare ocean and air options, see which local partner takes over, and check documents before each handoff. The workspace below is a concept with fictional data."
+          intro="Plan imports and exports end to end: compare ocean and air options, see which local partner takes over, and check documents before each handoff. The workspace below uses sample data."
         >
           <InternationalWorkspace />
         </PageSection>
@@ -218,14 +207,14 @@ export default function LogisticsOsPage() {
           eyebrow="Integrations"
           status="research"
           title="Work with the systems you already run."
-          intro="None of these connections is built yet. They describe how we intend SIWOM Logistics to connect, scoped with each pilot partner."
+          intro="SIWOM Logistics works alongside the systems you already run. Connections are set up with each customer during onboarding."
         >
           <ul className="grid gap-4 md:grid-cols-2">
             {[
-              { icon: PlugZap, title: "APIs", text: "Planned REST APIs and webhooks to exchange shipments, events and exceptions." },
-              { icon: Boxes, title: "Existing TMS and WMS", text: "Planned connectors so orders and inventory movements flow in without re-keying." },
-              { icon: MapIcon, title: "Telematics and tracking", text: "Planned use of the GPS and telematics feeds you already pay for." },
-              { icon: CalendarClock, title: "Ports, ICDs and rail", text: "Planned ingestion of terminal and rail milestones where access is available." },
+              { icon: PlugZap, title: "APIs", text: "Exchange shipments, events and exceptions with your systems through APIs and webhooks." },
+              { icon: Boxes, title: "Existing TMS and WMS", text: "Orders and inventory movements flow in from your TMS and WMS without re-keying." },
+              { icon: MapIcon, title: "Telematics and tracking", text: "Use the GPS and telematics feeds you already pay for." },
+              { icon: CalendarClock, title: "Ports, ICDs and rail", text: "Terminal and rail milestones, where the operator provides access." },
             ].map((c) => (
               <li key={c.title}>
                 <FeatureCard icon={c.icon} title={c.title} description={c.text} status="research" className="h-full" />

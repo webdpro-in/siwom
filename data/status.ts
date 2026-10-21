@@ -25,3 +25,10 @@ export const statusMeta: Record<Status, { label: string; meaning: string }> = {
 };
 
 export const statusOrder: Status[] = ["in-development", "research", "vision", "demo"];
+
+/**
+ * Product-status badges (In development, Research, Long-term vision) are
+ * hidden across the public site by the owner's decision. "Demo data" always
+ * shows, because demo records are fictional. Set to true to show them again.
+ */
+export const showProductStatus = false;

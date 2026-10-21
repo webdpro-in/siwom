@@ -23,12 +23,12 @@ import { Figure } from "@/components/ui/Figure";
 import { StatusPill } from "@/components/ui/StatusPill";
 import { Stepper } from "@/components/ui/Stepper";
 import { PhotoTile, flowIcons, sectorIcons } from "@/components/trade/TradeParts";
-import { ShipmentWorkspace } from "@/components/globe/ShipmentWorkspace";
+import { ShipmentWorkspaceLazy } from "@/components/globe/ShipmentWorkspaceLazy";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Global Trade research: space and technology cargo",
+  title: "Global Trade: space and technology cargo",
   description:
-    "Research, not a live service: planning and handing off space and advanced-technology cargo, and helping Indian manufacturers source and export it.",
+    "Plan and hand off space and advanced-technology cargo, and help Indian manufacturers source components, materials and machinery and reach buyers abroad.",
   path: "/global-trade",
 });
 
@@ -49,12 +49,12 @@ const otherSectors = sectors.filter((s) => s.group !== "space");
 
 const faq = [
   {
-    id: "live",
-    title: "Is SIWOM Global Trade available today?",
+    id: "start",
+    title: "How do we start?",
     content: (
       <p>
-        No. It is in research. There is no live supplier directory, marketplace or quotation service yet. We are
-        talking to manufacturers, buyers and logistics companies to decide what to build first.
+        Tell us about one shipment or one component you buy or sell abroad. We map the route, handling and documents
+        with you, then agree how SIWOM can help.
       </p>
     ),
   },
@@ -73,8 +73,8 @@ const faq = [
     title: "Can you find an Indian supplier for a part we import?",
     content: (
       <p>
-        Not as a service yet. Tell us what you import and why you want an alternative. Requests like these shape which
-        categories we research first. Any supplier would still need to be qualified by you.
+        Tell us what you import and why you want an alternative. Requests like these shape which
+        categories we prioritise. Any supplier would still need to be qualified by you.
       </p>
     ),
   },
@@ -108,7 +108,7 @@ export default function GlobalTradePage() {
         eyebrow="SIWOM Global Trade"
         status="research"
         title="Logistics for space and technology cargo."
-        summary="SIWOM Global Trade, our research into technology supply chains, is not a live service. We are studying how to plan and hand off cargo such as satellites and rocket parts, and how to help Indian manufacturers source and export components, materials and machinery."
+        summary="SIWOM Global Trade plans and coordinates the movement of high-value technology cargo, such as satellites and rocket parts, and helps Indian manufacturers source and export components, materials and machinery."
         cta={{ label: "Discuss space logistics", href: contactHref({ interest: "space" }) }}
         secondary={{ label: "Discuss global trade", href: contactHref({ interest: "global-trade" }) }}
         media={
@@ -239,7 +239,7 @@ export default function GlobalTradePage() {
               Each journey runs from pickup in the origin country, through the port or airport, to delivery inland.
               Select a shipment to see its route on the globe and every leg of its journey.
             </p>
-            <ShipmentWorkspace product="SIWOM Global Trade" />
+            <ShipmentWorkspaceLazy product="SIWOM Global Trade" />
           </div>
         </PageSection>
 
@@ -263,7 +263,7 @@ export default function GlobalTradePage() {
           id="sectors"
           eyebrow="04 — Robotics, mobility and energy"
           title="The industries that follow space."
-          intro="The same research applies to robotics, electric and autonomous vehicles, drones, future air taxis and green energy, where supply chains are just as international."
+          intro="The same approach applies to robotics, electric and autonomous vehicles, drones, air taxis and green energy, where supply chains are just as international."
         >
           <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[tradePhotos.robotics, tradePhotos.electricMobility, tradePhotos.evtol, tradePhotos.solar].map((photo) => (

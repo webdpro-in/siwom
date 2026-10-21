@@ -4,7 +4,7 @@ import { cn } from "@/lib/cn";
 type Item = { label: string; planned?: boolean };
 type Column = { title: string; items: Item[] };
 
-/** Solid border: in development. Dashed border: planned. */
+/** The four layers of the SIWOM platform, from data sources to people. */
 export const architecture: Column[] = [
   {
     title: "Data sources",
@@ -97,11 +97,10 @@ export function ArchitectureDiagram({ className, headingLevel: H = "h3" }: { cla
                     key={item.label}
                     className={cn(
                       "rounded-control border px-3 py-2.5 text-small",
-                      item.planned ? "border-dashed border-border-control text-text-muted" : "border-border-strong bg-surface-2 text-text",
+                      "border-border-strong bg-surface-2 text-text",
                     )}
                   >
                     {item.label}
-                    {item.planned ? <span className="sr-only"> (planned)</span> : <span className="sr-only"> (in development)</span>}
                   </li>
                 ))}
               </ul>
@@ -109,16 +108,6 @@ export function ArchitectureDiagram({ className, headingLevel: H = "h3" }: { cla
             {i < architecture.length - 1 ? <Connector index={i} /> : null}
           </Fragment>
         ))}
-      </div>
-      <div className="mt-6 flex flex-wrap items-center gap-6 text-small text-text-muted">
-        <span className="inline-flex items-center gap-2">
-          <span aria-hidden className="h-4 w-8 rounded-xs border border-border-strong bg-surface-2" />
-          In development
-        </span>
-        <span className="inline-flex items-center gap-2">
-          <span aria-hidden className="h-4 w-8 rounded-xs border border-dashed border-border-control" />
-          Planned
-        </span>
       </div>
     </div>
   );

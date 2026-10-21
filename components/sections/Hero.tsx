@@ -45,9 +45,9 @@ export function Hero() {
       </div>
       <div className="mx-auto grid w-full max-w-content grid-cols-1 gap-4 border-t border-border/70 gutter-x py-7 sm:grid-cols-3 sm:gap-8">
         <p className="flex items-center gap-3 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">
-          <span className="size-2 rounded-full bg-accent" aria-hidden /> In development · Built in India
+          <span className="size-2 rounded-full bg-accent" aria-hidden /> Built in India
         </p>
-        <p className="text-small text-text">Looking for logistics companies to pilot it</p>
+        <p className="text-small text-text">Pilots open for logistics companies</p>
         <a href="#how-it-works" className="hidden items-center justify-end gap-4 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted hover:text-text sm:flex">
           How it works
           <ArrowDownRight aria-hidden className="size-5" />

@@ -9,7 +9,6 @@ import { divisions } from "@/data/divisions";
 import { PageHero } from "@/components/layout/PageHero";
 import { NextBlock } from "@/components/layout/NextBlock";
 import { CheckList, PageSection, Prose } from "@/components/layout/PageSection";
-import { StatusLegend } from "@/components/layout/StatusLegend";
 import { Callout } from "@/components/ui/Callout";
 import { Eyebrow } from "@/components/ui/Container";
 import { Figure } from "@/components/ui/Figure";
@@ -19,7 +18,7 @@ import { RoadmapStepper } from "@/components/sections/RoadmapSection";
 export const metadata: Metadata = pageMetadata({
   title: "Our Vision",
   description:
-    "SIWOM's long-term vision: robotics and autonomous systems, future electric mobility and industrial intelligence, built step by step from a logistics-first start.",
+    "Where SIWOM is headed: robotics and autonomous systems, electric mobility and industrial intelligence, built step by step from a logistics-first start.",
   path: "/vision",
 });
 
@@ -30,7 +29,7 @@ const visions = [
     title: "Robots that work safely alongside people.",
     image: autonomyWide,
     alt: "Industrial robotic arms inside a guarded manufacturing cell.",
-    body: "SIWOM Autonomy is our long-term research direction for warehouse robots and AMRs, robotic facility inspection, machine perception, robot fleet coordination, sensor integration and digital twins for ports, warehouses, factories and logistics hubs.",
+    body: "SIWOM Autonomy covers warehouse robots and AMRs, robotic facility inspection, machine perception, robot fleet coordination, sensor integration and digital twins for ports, warehouses, factories and logistics hubs.",
     points: [
       "Starts with integrations and controlled pilots with partners who operate the equipment",
       "People and robots separated by design, under each site's safety processes",
@@ -43,11 +42,11 @@ const visions = [
     title: "Future electric mobility, engineered properly.",
     image: mobilityWide,
     alt: "Electric vehicle connected to a charging plug.",
-    body: "SIWOM Mobility is our long-term ambition: electric passenger and commercial vehicles, vehicle software, connected systems, diagnostics, predictive maintenance and, later, driver-assistance research.",
+    body: "SIWOM Mobility covers electric passenger and commercial vehicles, vehicle software, connected systems, diagnostics, predictive maintenance and driver assistance.",
     points: [
       "Any vehicle needs dedicated engineering, prototyping, testing and safety validation",
       "It also needs regulatory approval and manufacturing capability, which SIWOM does not have today",
-      "Software and diagnostics research can begin long before any vehicle exists",
+      "Software and diagnostics come first, connected to logistics operations",
     ],
   },
   {
@@ -56,7 +55,7 @@ const visions = [
     title: "Digital twins that earn their keep.",
     image: intelligenceWide,
     alt: "Server hardware and cabling inside a data centre.",
-    body: "SIWOM Industrial Intelligence is research into digital twins, simulation, sensor networks and predictive maintenance, used only where the data supports it.",
+    body: "SIWOM Industrial Intelligence brings digital twins, simulation, sensor networks and predictive maintenance, used where the data supports it.",
     points: [
       "Start small: one yard, one warehouse, one asset class",
       "Sensors chosen for the question, not the other way round",
@@ -85,9 +84,6 @@ export default function VisionPage() {
         }
       />
 
-      <div className="mx-auto max-w-content gutter-x pt-4">
-        <StatusLegend />
-      </div>
 
       <div className="mx-auto max-w-content gutter-x pt-12 md:pt-20">
         <PageSection id="mission" eyebrow="Mission" title="Make industrial work safer and more connected.">

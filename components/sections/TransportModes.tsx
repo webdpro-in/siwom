@@ -27,8 +27,8 @@ export function TransportModes() {
         ))}
       </ul>
       <p className="mt-4 text-small text-text-muted">
-        Representative photographs; SIWOM does not own or operate these assets. Connections to carrier, terminal and rail
-        systems are planned per pilot; the demo uses sample data.
+        Representative photographs; SIWOM does not own or operate these assets. Carrier, terminal and rail systems are
+        connected for each customer as part of onboarding.
       </p>
     </>
   );

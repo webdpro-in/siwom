@@ -30,7 +30,7 @@ export default function TermsPage() {
           title: "Status labels, demos and photography",
           body: (
             <>
-              <p>Products and roadmap items are labelled In development, Research or Long-term vision. These labels describe intent, not availability.</p>
+              <p>Product descriptions on this site explain what SIWOM offers. Specific features, timelines and terms are agreed in writing with each customer.</p>
               <ul>
                 <li>Demos use illustrative data and are not connected to live operations.</li>
                 <li>Detections shown in the Safety demo are samples, not measured performance.</li>

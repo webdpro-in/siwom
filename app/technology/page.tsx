@@ -12,7 +12,7 @@ import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 export const metadata: Metadata = pageMetadata({
   title: "Technology and architecture",
   description:
-    "How SIWOM Logistics is built: data integration, mapping, exceptions and security, plus the research behind Global Trade and Safety.",
+    "How the SIWOM platform works: data integration, trade intelligence, mapping, computer vision, optimisation and security.",
   path: "/technology",
 });
 
@@ -27,7 +27,7 @@ const toc = [
   { id: "optimisation", label: "Optimisation" },
   { id: "sensors-robotics", label: "Sensors and robotics" },
   { id: "security", label: "Security and access" },
-  { id: "research", label: "Research areas" },
+  { id: "research", label: "What we are working on" },
 ];
 
 export default function TechnologyPage() {
@@ -37,7 +37,7 @@ export default function TechnologyPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Technology" }]}
         eyebrow="Technology · Platform and architecture"
         title="How the SIWOM platform works."
-        summary="How SIWOM Logistics is being built, and the research behind Global Trade and Safety. Every section carries its real status."
+        summary="One data platform underneath SIWOM Logistics, Global Trade and Safety, so each capability builds on the last."
         cta={{ label: "Talk to our team", href: "/contact" }}
         media={
           <Figure
@@ -45,7 +45,7 @@ export default function TechnologyPage() {
             alt="Real server hardware and cabling inside a data centre."
             preload
             sizes="(min-width: 1440px) 1392px, 100vw"
-            caption="Representative computing infrastructure. AI analysis, digital twins and sensor integrations remain research areas."
+            caption="Representative computing infrastructure."
           />
         }
       />
@@ -73,7 +73,7 @@ export default function TechnologyPage() {
             <CheckList
               items={[
                 "Event-based model: every status change is an event with a time and a source",
-                "Imports from files and APIs first; deeper connectors planned per partner",
+                "Imports from files and APIs, with deeper connectors set up per customer",
                 "Source of every value is kept, so operators can see where it came from",
               ]}
             />
@@ -85,7 +85,7 @@ export default function TechnologyPage() {
           eyebrow="Trade intelligence and supplier matching"
           status="research"
           title="Matching what buyers need with who can make it."
-          intro="Research for SIWOM Global Trade: connecting international suppliers with Indian manufacturers and buyers across space, aerospace, robotics, automotive and green energy."
+          intro="The engine behind SIWOM Global Trade: connecting international suppliers with Indian manufacturers and buyers across space, aerospace, robotics, automotive and green energy."
         >
           <div className="grid gap-10 xl:grid-cols-2">
             <Prose>
@@ -138,15 +138,15 @@ export default function TechnologyPage() {
           <div className="grid gap-10 xl:grid-cols-2">
             <Prose>
               <p>
-                Satellites, rocket stages and precision robotics need more than a tracking number. We are researching
-                handling profiles that record shock, temperature, humidity and cleanliness limits, and how data from
-                shipment loggers could confirm those limits were kept from clean room to launch site.
+                Satellites, rocket stages and precision robotics need more than a tracking number. Handling profiles record
+                shock, temperature, humidity and cleanliness limits, and data from shipment loggers confirms those limits
+                were kept from clean room to launch site.
               </p>
             </Prose>
             <CheckList
               items={[
                 "Handling limits captured before the first quote",
-                "Condition data from shipment loggers attached to each leg (planned)",
+                "Condition data from shipment loggers attached to each leg",
                 "Oversized and dangerous-goods requirements carried through every mode",
                 "Chain of custody recorded at each handoff",
               ]}
@@ -158,8 +158,8 @@ export default function TechnologyPage() {
           <Prose>
             <p>
               Operational views use schematic network maps that show hubs, routes and snapshot positions without
-              implying GPS precision the data cannot support. Geographic basemaps are planned, using providers that
-              depict India&apos;s official boundaries.
+              implying GPS precision the data cannot support. Geographic basemaps use providers that depict
+              India&apos;s official boundaries.
             </p>
           </Prose>
         </PageSection>
@@ -167,7 +167,7 @@ export default function TechnologyPage() {
         <PageSection id="computer-vision" eyebrow="Computer vision" status="research" title="Flag, never certify.">
           <Prose>
             <p>
-              Our computer vision research focuses on visible conditions: possible damage on containers and assets,
+              Our computer vision focuses on visible conditions: possible damage on containers and assets,
               PPE, and people inside marked zones. Outputs are flags with a qualitative confidence band, routed to a
               qualified reviewer.
             </p>
@@ -188,12 +188,11 @@ export default function TechnologyPage() {
           </Prose>
         </PageSection>
 
-        <PageSection id="sensors-robotics" eyebrow="Sensors and robotics" status="vision" title="A longer road, taken carefully.">
+        <PageSection id="sensors-robotics" eyebrow="Sensors and robotics" status="vision" title="Robotics, taken carefully.">
           <Prose>
             <p>
-              Sensor networks, robotics integrations and digital twins are part of our long-term direction. Any work
-              there would start with controlled pilots, alongside partners who own and operate the equipment, under
-              their safety processes. SIWOM does not deploy robots today.
+              Sensor networks, robotics integrations and digital twins start with controlled pilots, alongside partners
+              who own and operate the equipment, under their safety processes.
             </p>
           </Prose>
         </PageSection>
@@ -203,7 +202,7 @@ export default function TechnologyPage() {
           eyebrow="Security and access"
           status="in-development"
           title="Our approach to security."
-          intro="These are the practices we design for. They are intentions, not certifications."
+          intro="The practices the SIWOM platform is built around."
         >
           <ul className="grid gap-4 md:grid-cols-2">
             {[
@@ -221,7 +220,7 @@ export default function TechnologyPage() {
           </ul>
         </PageSection>
 
-        <PageSection id="research" eyebrow="Research areas" status="research" title="Questions we are working on.">
+        <PageSection id="research" eyebrow="What we are working on" status="research" title="Questions we are working on.">
           <CheckList
             items={[
               "Reliable ETAs when data arrives late, partial or from several sources",

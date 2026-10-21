@@ -21,7 +21,7 @@ export const site = {
   tagline: "Shipment coordination software for logistics companies.",
   principle: "Safety First. Intelligence Everywhere.",
   description:
-    "SIWOM is building SIWOM Logistics, shipment coordination software for Indian logistics companies: shipments, vehicles, documents and delays in one shared view, from port or airport to final delivery. In development; pilot partners welcome.",
+    "SIWOM is building SIWOM Logistics, shipment coordination software for Indian logistics companies: shipments, vehicles, documents and delays in one shared view, from port or airport to final delivery. Built in India.",
   url: rawSiteUrl.replace(/\/$/, ""),
   locale: "en_IN",
   /**

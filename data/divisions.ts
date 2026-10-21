@@ -26,18 +26,18 @@ export const divisions: Record<DivisionId, Division> = {
     status: "in-development",
     href: "/logistics",
     summary:
-      "Shipment coordination software in development for logistics companies: shipments, vehicles, documents and delays in one shared record, from port or airport to delivery.",
+      "Shipment coordination software for logistics companies: shipments, vehicles, documents and delays in one shared record, from port or airport to delivery.",
   },
   trade: {
     id: "trade",
     product: "SIWOM Global Trade",
     short: "Global Trade",
-    firstMention: "SIWOM Global Trade, our research into technology supply chains",
+    firstMention: "SIWOM Global Trade",
     area: "Global industrial technology trade",
     status: "research",
     href: "/global-trade",
     summary:
-      "Research into connecting international suppliers with Indian manufacturers and buyers across space, aerospace, robotics, automotive and green energy, with the logistics planned from the start.",
+      "Connecting international suppliers with Indian manufacturers and buyers across space, aerospace, robotics, automotive and green energy, with the logistics planned from the start.",
   },
   safety: {
     id: "safety",
@@ -68,13 +68,13 @@ export const divisions: Record<DivisionId, Division> = {
     area: "Future electric vehicles",
     status: "vision",
     href: "/vision#mobility",
-    summary: "Future electric vehicles, connected mobility, vehicle intelligence and, later, driver-assistance research.",
+    summary: "Electric vehicles, connected mobility, vehicle intelligence and driver assistance.",
   },
   intelligence: {
     id: "intelligence",
     product: "SIWOM Industrial Intelligence",
     short: "Industrial Intelligence",
-    firstMention: "SIWOM Industrial Intelligence, our digital twin and sensor research",
+    firstMention: "SIWOM Industrial Intelligence",
     area: "Digital twins and sensors",
     status: "research",
     href: "/vision#industrial-intelligence",

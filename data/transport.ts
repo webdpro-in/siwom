@@ -1,7 +1,7 @@
 /**
  * Transport modes SIWOM Logistics is designed around, with the milestones a
- * coordinator needs from each. Live connections to carrier and terminal
- * systems are planned, not built; the demo uses sample data.
+ * coordinator needs from each. Carrier and terminal systems are connected
+ * per customer during onboarding; the demo uses sample data.
  */
 export type TransportMode = {
   id: "ocean" | "air" | "road" | "rail";

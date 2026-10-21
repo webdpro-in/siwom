@@ -5,5 +5,5 @@ export const size = ogSize;
 export const contentType = ogContentType;
 
 export default function Image() {
-  return renderOg({ eyebrow: "SIWOM Global Trade", title: "Logistics for space and technology cargo.", status: "Research" });
+  return renderOg({ eyebrow: "SIWOM Global Trade", title: "Logistics for space and technology cargo." });
 }

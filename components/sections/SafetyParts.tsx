@@ -72,12 +72,12 @@ export const limitations: AccordionItem[] = [
     ),
   },
   {
-    id: "available",
-    title: "Is this available today?",
+    id: "start",
+    title: "How do we get started?",
     content: (
       <p>
-        Not yet. SIWOM Safety is in research. We are looking for industrial partners to explore it with on real sites,
-        under their safety processes.
+        We start with one site and its existing cameras, assess what is feasible, and agree how flags are reviewed under
+        the site&apos;s safety processes.
       </p>
     ),
   },
@@ -87,7 +87,7 @@ export const limitations: AccordionItem[] = [
     content: (
       <p>
         Our approach is to flag conditions, not identify people: no face recognition, footage access limited by role,
-        and retention periods agreed with each site. These are design intentions, not certifications.
+        and retention periods agreed with each site.
       </p>
     ),
   },

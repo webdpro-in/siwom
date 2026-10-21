@@ -14,9 +14,9 @@ import { SafetyDemoSection } from "@/components/demos/Demos";
 import { SafetyDisclaimer, SafetyLimitations, SafetyWorkflow } from "@/components/sections/SafetyParts";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Safety: hazard flagging research",
+  title: "Safety: hazard flagging and inspection",
   description:
-    "SIWOM Safety is research into AI-assisted inspection and hazard flagging for industrial sites. AI flags potential hazards; qualified people review and decide.",
+    "SIWOM Safety brings AI-assisted inspection and hazard flagging to industrial sites. AI flags potential hazards; qualified people review and decide.",
   path: "/safety",
 });
 
@@ -42,9 +42,9 @@ const examples = [
 
 const faq = [
   {
-    id: "buy",
-    title: "Can we buy SIWOM Safety today?",
-    content: <p>No. It is in research. We are looking for partners who want to explore it on real sites, under their existing safety processes.</p>,
+    id: "start",
+    title: "How do we get started?",
+    content: <p>We start with one site and its existing cameras, assess what is feasible, and agree how flags are reviewed under your safety processes.</p>,
   },
   {
     id: "cameras",
@@ -86,7 +86,7 @@ export default function SafetyAiPage() {
         eyebrow="SIWOM Safety"
         status="research"
         title="Hazard flags, reviewed by people."
-        summary="SIWOM Safety is research into camera-assisted inspection and hazard flagging for ports, yards and industrial sites. AI flags possible hazards; a qualified person reviews every flag and decides."
+        summary="SIWOM Safety brings camera-assisted inspection and hazard flagging to ports, yards and industrial sites. AI flags possible hazards; a qualified person reviews every flag and decides."
         cta={{ label: "Discuss Safety", href: contactHref({ interest: "safety" }) }}
         media={
           <Figure
@@ -138,8 +138,8 @@ export default function SafetyAiPage() {
             ))}
           </ul>
           <Callout variant="safety" title="Feasibility first" className="mt-6">
-            Each of these is a research question, not a capability. Whether it works on a given site depends on camera
-            quality, sensor coverage, lighting, weather and validation on that site&apos;s data.
+            What works on a given site depends on camera quality, sensor coverage, lighting, weather and validation on
+            that site&apos;s data. We assess every site before setting up detection.
           </Callout>
         </PageSection>
 
@@ -148,7 +148,7 @@ export default function SafetyAiPage() {
             <Prose>
               <p>
                 A possible missing helmet or a person near an active lifting zone matters only if the right person hears
-                about it in time. The concept is simple: a flag with the frame, location, camera and time goes to a
+                about it in time. The idea is simple: a flag with the frame, location, camera and time goes to a
                 reviewer, who decides what happens next.
               </p>
             </Prose>
@@ -222,7 +222,7 @@ export default function SafetyAiPage() {
               through the site&apos;s procedures.
             </Callout>
             <Callout variant="warning" title="Validated before relied on">
-              Any deployment would be validated on the site&apos;s own data, with false-alarm and miss rates shared openly
+              Every deployment is validated on the site&apos;s own data, with false-alarm and miss rates shared openly
               with the safety team.
             </Callout>
           </div>
@@ -236,7 +236,7 @@ export default function SafetyAiPage() {
 
       <NextBlock
         title="Technology"
-        description="How the platform, data integration and computer vision research fit together."
+        description="How the platform, data integration and computer vision fit together."
         href="/technology"
       />
     </>

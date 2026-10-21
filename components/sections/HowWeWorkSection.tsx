@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 /** Commitments a buyer can check us against. No customer logos until they exist. */
 const commitments = [
-  { Icon: ListChecks, title: "Honest status", text: "Every feature is labelled in development, research or long-term vision. Nothing planned is shown as shipped." },
+  { Icon: ListChecks, title: "Clear scope", text: "What will be delivered, by when and how it is measured is agreed before work starts." },
   { Icon: Gauge, title: "Small, measured pilots", text: "One lane, hub or exception type, with the measure of success agreed before we start." },
   { Icon: UserCheck, title: "People decide", text: "Suggestions are only suggestions. Your team confirms every dispatch and every action." },
   { Icon: Blocks, title: "Works with what you run", text: "Designed to sit alongside your TMS, WMS and spreadsheets, not to replace them." },
@@ -32,8 +32,8 @@ export function HowWeWorkSection() {
               <SectionHeader
                 id="how-we-work-title"
                 eyebrow="06 — How we work"
-                title="An early-stage company, run carefully."
-                intro="SIWOM is a software company being built in India. We have no customers to announce yet, so here is what you can hold us to."
+                title="How we work with you."
+                intro="SIWOM is a software company built in India. These are the commitments you can hold us to."
               />
             </div>
             <ul className="grid gap-x-8 gap-y-6 sm:grid-cols-2">

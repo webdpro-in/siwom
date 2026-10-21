@@ -5,5 +5,5 @@ export const size = ogSize;
 export const contentType = ogContentType;
 
 export default function Image() {
-  return renderOg({ eyebrow: "Our Vision", title: "Where SIWOM is headed.", status: "Long-term vision" });
+  return renderOg({ eyebrow: "Our Vision", title: "Where SIWOM is headed." });
 }

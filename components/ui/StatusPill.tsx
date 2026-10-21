@@ -3,7 +3,7 @@
 import { useId, useLayoutEffect, useRef, useState } from "react";
 import { Info } from "lucide-react";
 import { cn } from "@/lib/cn";
-import { statusMeta, type Status } from "@/data/status";
+import { showProductStatus, statusMeta, type Status } from "@/data/status";
 
 const styles: Record<Status, string> = {
   "in-development": "border-accent text-accent-text",
@@ -51,6 +51,9 @@ export function StatusPill({ status, className, interactive = true }: StatusPill
     const tipWidth = tipRef.current?.offsetWidth ?? 256;
     setAlignEnd(rect.left + tipWidth > window.innerWidth - 16);
   }, [open]);
+
+  // Product-status badges are switched off sitewide (data/status.ts); demo-data labels always show.
+  if (!showProductStatus && status !== "demo") return null;
 
   const pillClasses = cn(
     "inline-flex h-6 shrink-0 items-center gap-1.5 rounded-full border px-2.5 font-mono text-pill uppercase tracking-pill whitespace-nowrap",

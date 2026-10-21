@@ -106,3 +106,14 @@ This covers the website itself. SIWOM's products are separately labelled In deve
 | Header contrast fix in both themes | Implemented | |
 | Shipment globe on Global Trade: shipment list, routes, port labels, journey legs, pause, keyboard rotation | Mocked | Fictional shipments between real ports; snapshot positions, not live tracking |
 | Live vessel, flight or container tracking | Planned | Not built; no AIS or carrier data is connected |
+
+## Professional presentation (21 October 2026)
+
+The status badges are hidden sitewide (`showProductStatus = false` in `data/status.ts`) and status wording was removed from the copy. This table still records the true implementation state for the team:
+
+| Feature | Status |
+| --- | --- |
+| Shipment globe on the homepage (section 02) and on Global Trade | Mocked (sample shipments) |
+| Integrations: APIs, webhooks, TMS/WMS, telematics, terminal and rail milestones | Planned; described on the site without a "planned" label |
+| Handling profiles and shipment-logger condition data | Planned; described on the site without a "planned" label |
+| Global Trade supplier matching and Safety AI detection | Planned; no model or supplier data is live |

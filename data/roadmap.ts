@@ -30,9 +30,9 @@ export const roadmap: RoadmapStage[] = [
   },
   {
     title: "Future mobility",
-    items: ["EV research", "Prototyping", "Testing", "Safety validation", "Regulatory approval"],
+    items: ["Vehicle software", "Prototyping", "Testing", "Safety validation", "Regulatory approval"],
     status: "vision",
   },
 ];
 
-export const roadmapNote = "This is our intended direction, not a schedule or a promise of launch dates.";
+export const roadmapNote = "The order in which we are building the SIWOM platform.";

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { StatusPill } from "@/components/ui/StatusPill";
 import { LogisticsDemoSection } from "@/components/demos/Demos";
+import { ShipmentWorkspaceLazy } from "@/components/globe/ShipmentWorkspaceLazy";
 
 /** Only what the demo below actually shows. */
 const callouts = [
@@ -22,7 +23,7 @@ export function LogisticsSection() {
             eyebrow="02 — What SIWOM Logistics does"
             badge={<StatusPill status="in-development" />}
             title="One shared record for every shipment."
-            intro="SIWOM Logistics brings shipments, vehicles, documents and exceptions into one workspace. Try it below with sample data: filter the list, open a delayed shipment, acknowledge an exception or assign a vehicle."
+            intro="SIWOM Logistics brings shipments, vehicles, documents and exceptions into one workspace, from pickup in the origin country to final delivery. Select a shipment below to follow its route."
           />
           <Button href="/logistics" variant="secondary" icon="arrow" className="shrink-0" trackAs="home_logistics_os">
             See all features
@@ -41,6 +42,15 @@ export function LogisticsSection() {
         </ul>
       </div>
       <div className="mx-auto mt-10 max-w-wide gutter-x">
+        <ShipmentWorkspaceLazy product="SIWOM Logistics" view="International shipments" />
+      </div>
+      <div className="mx-auto mt-16 max-w-content gutter-x">
+        <h3 className="text-h3 text-text">Dispatch and exceptions</h3>
+        <p className="mt-2 max-w-reading text-body text-text-muted">
+          Filter shipments, open a delayed one, acknowledge an exception or assign a vehicle.
+        </p>
+      </div>
+      <div className="mx-auto mt-6 max-w-wide gutter-x">
         <LogisticsDemoSection idBase="home-lgx" />
       </div>
     </section>

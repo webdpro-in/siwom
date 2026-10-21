@@ -12,8 +12,8 @@ import robotics from "@/public/images/robotics.webp";
 import electricMobility from "@/public/images/electric-mobility.webp";
 
 /*
- * Global industrial technology trade. Everything here describes what SIWOM is
- * researching and designing for. There is no live supplier directory,
+ * Global industrial technology trade. Describes what SIWOM Global Trade
+ * covers. There is no public supplier directory,
  * marketplace, brokerage or trade volume, and nothing here implies one.
  */
 

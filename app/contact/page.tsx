@@ -9,7 +9,7 @@ import { ContactFormLazy as ContactForm } from "@/components/contact/ContactForm
 
 export const metadata: Metadata = pageMetadata({
   title: "Contact: discuss a pilot",
-  description: "Talk to SIWOM about a logistics or safety pilot, a partnership or research collaboration. Tell us about your operation and the problem you want to solve.",
+  description: "Talk to SIWOM about a logistics or safety pilot, a partnership or global trade. Tell us about your operation and the problem you want to solve.",
   path: "/contact",
 });
 

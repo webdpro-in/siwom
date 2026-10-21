@@ -49,7 +49,7 @@ export function Footer() {
             </Link>
             <p className="max-w-xs text-body text-text-muted">
               Shipment coordination software for logistics companies.{" "}
-              <span className="text-text">In development, built in India.</span>
+              <span className="text-text">Built in India.</span>
             </p>
             <p className="text-small text-text-muted">
               <a href="/contact" className="underline underline-offset-4 hover:text-text">
@@ -69,9 +69,8 @@ export function Footer() {
               </ul>
             ) : null}
           </div>
-          <nav aria-label="Footer" className="col-span-4 grid grid-cols-2 gap-8 sm:grid-cols-4 md:col-span-8 lg:col-span-7 lg:col-start-6">
-            <FooterColumn title="Product" links={footerNav.product} />
-            <FooterColumn title="Research" links={footerNav.research} />
+          <nav aria-label="Footer" className="col-span-4 grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-8 lg:col-span-6 lg:col-start-7">
+            <FooterColumn title="Solutions" links={footerNav.solutions} />
             <FooterColumn title="Company" links={footerNav.company} />
             <FooterColumn title="Legal" links={footerNav.legal} />
           </nav>

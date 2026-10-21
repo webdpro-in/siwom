@@ -45,7 +45,7 @@ export const industries: Industry[] = [
     couldHelp: [
       "One view of shipments moving through berth, yard, gate and inland legs",
       "Early flags when a berth window or rail cut-off is at risk",
-      "Safety research for lifting zones and vehicle–pedestrian conflicts",
+      "Safety flags for lifting zones and vehicle–pedestrian conflicts",
     ],
     product: { name: "Logistics", href: "/logistics", status: "in-development" },
     onHomepage: true,
@@ -77,7 +77,7 @@ export const industries: Industry[] = [
     couldHelp: [
       "Inbound and outbound movements linked to the shipments they belong to",
       "Dock and dispatch timelines in the same view as the fleet",
-      "Integration with existing WMS through APIs (planned)",
+      "Integration with your existing WMS through APIs",
     ],
     product: { name: "Logistics", href: "/logistics", status: "in-development" },
     onHomepage: true,
@@ -108,7 +108,7 @@ export const industries: Industry[] = [
       "Inspections are often on paper, inconsistent between shifts and hard to audit. Hazards noticed on camera may never reach the right person.",
     couldHelp: [
       "Consistent inspection records with photos and corrective actions",
-      "AI-assisted flags for visible damage, PPE and restricted zones (research)",
+      "AI-assisted flags for visible damage, PPE and restricted zones",
       "Human review and escalation, with an audit trail",
     ],
     product: { name: "Safety", href: "/safety", status: "research" },
@@ -127,7 +127,7 @@ export const industries: Industry[] = [
     couldHelp: [
       "One plan per move, with shock, humidity and cleanliness limits recorded before anyone quotes",
       "Document and licence checklists that travel with the shipment through every handoff",
-      "Connecting Indian space suppliers with buyers abroad, and international suppliers with Indian makers (research)",
+      "Connecting Indian space suppliers with buyers abroad, and international suppliers with Indian makers",
     ],
     moves: ["Satellites and subsystems", "Rocket stages and engines", "Space robotics", "Aircraft parts and spares"],
     product: { name: "Global Trade", href: "/global-trade#space", status: "research" },
@@ -146,7 +146,7 @@ export const industries: Industry[] = [
     couldHelp: [
       "Project cargo planning for oversized loads such as wind blades, nacelles and transformers",
       "Dangerous-goods requirements for battery storage kept with every shipment",
-      "Finding domestic manufacturers for components imported today (research)",
+      "Finding domestic manufacturers for components imported today",
     ],
     moves: ["Solar modules and inverters", "Wind blades and nacelles", "Battery storage", "Electrolysers"],
     product: { name: "Global Trade", href: "/global-trade#sectors", status: "research" },
@@ -164,7 +164,7 @@ export const industries: Industry[] = [
     couldHelp: [
       "Machinery imports coordinated from the supplier's factory to the installation site",
       "Spares visibility, so a stopped line gets its part sooner",
-      "Connecting Indian integrators and component makers with global buyers (research)",
+      "Connecting Indian integrators and component makers with global buyers",
     ],
     moves: ["Robot arms and controllers", "AMRs and conveyors", "Space robotics parts", "Spares and end effectors"],
     product: { name: "Global Trade", href: "/global-trade#sectors", status: "research" },
@@ -182,8 +182,8 @@ export const industries: Industry[] = [
       "Electric cars, autonomous vehicles, drones and air taxis depend on battery cells, motors, sensors and electronics sourced across borders, under rules that differ by country and change often. Air taxis are still in testing and certification.",
     couldHelp: [
       "Battery and electronics shipments planned with dangerous-goods and classification needs up front",
-      "Discovering Indian suppliers for imported vehicle and drone components (research)",
-      "Long-term research into vehicle software and diagnostics; any vehicle needs dedicated engineering, testing and approval",
+      "Discovering Indian suppliers for imported vehicle and drone components",
+      "Vehicle software and diagnostics connected to logistics operations",
     ],
     moves: ["Battery cells and packs", "Motors and inverters", "Lidar, radar and cameras", "Drone airframes"],
     product: { name: "Global Trade", href: "/global-trade#sectors", status: "research" },

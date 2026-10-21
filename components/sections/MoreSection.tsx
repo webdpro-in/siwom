@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import safetyTeam from "@/public/images/safety-team.webp";
 import type { Status } from "@/data/status";
 import { tradePhotos, type Photo } from "@/data/trade";
-import { StatusLegend } from "@/components/layout/StatusLegend";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { StatusPill } from "@/components/ui/StatusPill";
 
@@ -14,7 +13,7 @@ const tracks: { title: string; status: Status; href: string; linkLabel: string; 
     status: "research",
     href: "/global-trade",
     linkLabel: "Read about Global Trade",
-    text: "How to plan and hand off high-value technology cargo, such as satellites and rocket parts, and help Indian manufacturers source and export it.",
+    text: "Plan and hand off high-value technology cargo, such as satellites and rocket parts, and help Indian manufacturers source and export it.",
     photo: tradePhotos.coreStageBarge,
   },
   {
@@ -33,26 +32,25 @@ const tracks: { title: string; status: Status; href: string; linkLabel: string; 
     title: "Robotics and electric mobility",
     status: "vision",
     href: "/vision",
-    linkLabel: "Read our long-term vision",
-    text: "Long-term ambitions in warehouse robotics and vehicle software. No build has started, and any vehicle would need full engineering and approval.",
+    linkLabel: "Read our vision",
+    text: "Where SIWOM is headed next: warehouse robotics and vehicle software, built on the same platform.",
     photo: tradePhotos.robotics,
   },
 ];
 
-export function ResearchSection() {
+export function MoreSection() {
   return (
-    <section aria-labelledby="research-title" className="section-y">
+    <section aria-labelledby="more-title" className="section-y">
       <div className="mx-auto max-w-content gutter-x">
         <div data-reveal>
           <SectionHeader
-            id="research-title"
-            eyebrow="05 — What we are researching"
+            id="more-title"
+            eyebrow="05 — More from SIWOM"
             title="Beyond shipment coordination."
-            intro="These are research directions, not services you can buy today. Each one is labelled with its real status."
+            intro="The same platform extends to global technology trade and site safety."
           />
         </div>
-        <StatusLegend className="mt-10" />
-        <ul className="mt-6 grid gap-6 md:grid-cols-3">
+        <ul className="mt-10 grid gap-6 md:grid-cols-3">
           {tracks.map((t, i) => (
             <li key={t.href} data-reveal style={{ "--reveal-i": i } as React.CSSProperties}>
               <article className="group relative flex h-full flex-col overflow-hidden rounded-card border border-border bg-surface-1 transition-colors duration-hover hover:border-border-strong">

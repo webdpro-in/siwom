@@ -52,7 +52,7 @@ export default function InternationalWorkspace() {
                     {name:lane.origin,detail:"Supplier documents prepared",done:true},
                     {name:route==="air"?"International air freight":"International ocean freight",detail:route==="air"?"Demo Air Forwarding · sample assignment":"Demo Ocean Network · sample assignment",done:true},
                     {name:terminal,detail:"Document review & terminal handoff · pending",done:false},
-                    {name:lane.destination,detail:"Local logistics partner · final delivery planned",done:false},
+                    {name:lane.destination,detail:"Local logistics partner · final delivery scheduled",done:false},
                   ].map((step,i)=><li key={i} className="relative flex gap-4 pb-6 last:pb-0">{i<3?<span aria-hidden className="absolute top-8 bottom-0 left-3.5 w-px bg-border"/>:null}<span aria-hidden className={cn("relative flex size-7 shrink-0 items-center justify-center rounded-full border text-small",step.done?"border-accent bg-accent text-accent-ink":"border-border-control bg-bg text-text-muted")}>{step.done?<Check className="size-3.5"/>:i+1}</span><div><p className="text-body font-medium text-text">{step.name}</p><p className="mt-1 text-small text-text-muted">{step.detail}</p></div></li>)}</ol>
                   <div className="mt-6 grid grid-cols-2 gap-3 border-t border-border pt-4"><div><p className="text-small text-text-muted">Documents</p><p className="mt-1 text-small text-text">Packing list · demo draft</p></div><div><p className="text-small text-text-muted">Quotation</p><p className="mt-1 text-small text-text">Awaiting provider quote</p></div></div>
                 </div>

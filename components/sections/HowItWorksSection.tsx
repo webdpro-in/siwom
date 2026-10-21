@@ -10,7 +10,7 @@ const steps = [
   },
   {
     title: "Bring in the data you have",
-    description: "Start from the spreadsheets and exports you already keep. Connections to carrier and transporter systems are planned per pilot.",
+    description: "Start from the spreadsheets and exports you already keep, then connect carrier and transporter systems as the rollout grows.",
   },
   {
     title: "Work from one list",
@@ -31,7 +31,7 @@ export function HowItWorksSection() {
             id="how-title"
             eyebrow="03 — How it works"
             title="How a pilot works."
-            intro="SIWOM Logistics is not on general sale yet. We work with a small number of logistics companies, one real problem at a time."
+            intro="We start with one lane, hub or customer, prove the value on a real problem, then expand."
           />
           <Button href={contactHref({ interest: "logistics", pilot: true })} icon="arrow" className="shrink-0" trackAs="home_how_pilot">
             Discuss a pilot

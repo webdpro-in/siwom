@@ -15,7 +15,13 @@ const legStatusText: Record<LegStatus, string> = { done: "Completed", current: "
  * International shipments workspace: list, globe and journey for the selected
  * shipment, from origin pickup to final delivery. Illustrative demo data only.
  */
-export function ShipmentWorkspace({ product = "SIWOM Global Trade" }: { product?: string }) {
+export function ShipmentWorkspace({
+  product = "SIWOM Global Trade",
+  view = "Shipment map",
+}: {
+  product?: string;
+  view?: string;
+}) {
   const reduced = useReducedMotion();
   const [selected, setSelected] = useState(internationalShipments[0].ref);
   const [paused, setPaused] = useState(false);
@@ -27,7 +33,7 @@ export function ShipmentWorkspace({ product = "SIWOM Global Trade" }: { product?
       <DemoBanner />
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-3">
         <p className="text-small font-medium text-text">
-          {product} <span className="text-text-muted">/ Shipment map</span>
+          {product} <span className="text-text-muted">/ {view}</span>
         </p>
         <p className="font-mono text-eyebrow text-text-muted">{SNAPSHOT_LABEL}</p>
       </div>
@@ -156,8 +162,8 @@ export function ShipmentWorkspace({ product = "SIWOM Global Trade" }: { product?
         </section>
       </div>
       <p className="border-t border-border px-4 py-3 text-small text-text-muted">
-        Ports and positions are real; shipments, dates and statuses are fictional. Ocean routes follow approximate sea
-        lanes, and positions are snapshot values, not live tracking.
+        Sample shipments between real ports. Ocean routes follow the main sea lanes through the Suez Canal and the
+        Strait of Malacca.
       </p>
     </div>
   );

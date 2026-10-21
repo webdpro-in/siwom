@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           title: "Who we are",
           body: (
             <p>
-              SIWOM is an early-stage software company based in India. [Legal entity name, registered address and
+              SIWOM is a software company based in India. [Legal entity name, registered address and
               contact details to be added before publication.] You can reach us through the{" "}
               <a href="/contact">contact form</a>.
             </p>

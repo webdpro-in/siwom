@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { IndustriesExplorer } from "./IndustriesExplorer";
 
 export function IndustriesSection() {
-  // Core logistics operations first; space logistics (research) last.
+  // Core logistics operations first; space logistics last.
   const items = industries
     .filter((i) => i.onHomepage)
     .sort((a, b) => Number(a.id === "space") - Number(b.id === "space"))

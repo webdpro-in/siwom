@@ -6,7 +6,7 @@ export type NavItem = {
 
 /**
  * Primary navigation, in order. The product comes first, then who it is for,
- * then the research tracks. Labels must match page headings.
+ * then the other solutions. Labels must match page headings.
  */
 export const mainNav: NavItem[] = [
   {
@@ -22,17 +22,17 @@ export const mainNav: NavItem[] = [
   {
     label: "Global Trade",
     href: "/global-trade",
-    description: "Research: logistics for space and advanced-technology cargo",
+    description: "Space and advanced-technology cargo, imports and exports",
   },
   {
     label: "Safety",
     href: "/safety",
-    description: "Research: hazard flagging with people accountable",
+    description: "Hazard flagging with people accountable",
   },
   {
     label: "Technology",
     href: "/technology",
-    description: "How the platform works and what we are researching",
+    description: "How the platform works",
   },
   {
     label: "About",
@@ -42,19 +42,17 @@ export const mainNav: NavItem[] = [
 ];
 
 export const footerNav = {
-  product: [
+  solutions: [
     { label: "Logistics", href: "/logistics" },
-    { label: "Try the demo", href: "/logistics#demo" },
-    { label: "Industries", href: "/industries" },
-  ],
-  research: [
     { label: "Global Trade", href: "/global-trade" },
     { label: "Safety", href: "/safety" },
-    { label: "Our Vision", href: "/vision" },
+    { label: "Try the demo", href: "/logistics#demo" },
   ],
   company: [
     { label: "About", href: "/about" },
+    { label: "Industries", href: "/industries" },
     { label: "Technology", href: "/technology" },
+    { label: "Our Vision", href: "/vision" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [

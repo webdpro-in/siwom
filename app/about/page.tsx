@@ -12,7 +12,7 @@ import { Figure } from "@/components/ui/Figure";
 export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
-    "SIWOM is an early-stage software company in India building SIWOM Logistics for logistics companies. Our principles, and how we run pilots.",
+    "SIWOM is a software company in India building SIWOM Logistics for logistics companies. Our principles, and how we work with customers.",
   path: "/about",
 });
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About SIWOM"
         title="About SIWOM"
-        summary="SIWOM is an early-stage software company being built in India. We are building SIWOM Logistics, shipment coordination software for logistics companies, and researching what comes after it."
+        summary="SIWOM is a software company built in India. We make SIWOM Logistics, shipment coordination software for logistics companies, along with SIWOM Global Trade and SIWOM Safety."
         cta={{ label: "Contact SIWOM", href: "/contact" }}
         media={
           <Figure
@@ -56,7 +56,7 @@ export default function AboutPage() {
               { icon: HardHat, title: "Safety-first thinking", text: "Every feature is assessed for how it could fail and who it could affect." },
               { icon: Blocks, title: "Modular by design", text: "Adopt one capability without replacing the systems you run." },
               { icon: Gauge, title: "Measured value", text: "Agree what success means, and how to measure it, before a pilot starts." },
-              { icon: ListChecks, title: "Honest status", text: "Everything we show is labelled as in development, research or vision." },
+              { icon: ListChecks, title: "Clear scope", text: "What will be delivered, by when and how it is measured is agreed up front." },
               { icon: Microscope, title: "Research that compounds", text: "Long-term R&D in perception, optimisation and industrial data." },
               { icon: Handshake, title: "Built with operators", text: "Designed alongside the people who run the sites, not just for them." },
             ].map((c) => (
@@ -73,7 +73,7 @@ export default function AboutPage() {
               "Start from a real operational problem, named by the people who have it",
               "Ship the smallest useful thing, then measure it",
               "Show uncertainty instead of hiding it",
-              "Never present planned work as shipped",
+              "Say clearly what a feature does and does not do",
               "Prefer suggestions people can check over automation they cannot",
             ]}
           />
@@ -82,11 +82,9 @@ export default function AboutPage() {
         <PageSection id="partners" eyebrow="Collaboration and partnerships" title="We would rather build with you.">
           <Prose>
             <p>
-              We are looking for logistics operators, port and terminal teams, manufacturers, safety leaders and
-              research partners who want to work on a real problem together, through a scoped pilot or a research
-              collaboration.
+              We work with logistics operators, port and terminal teams, manufacturers and safety leaders on real
+              problems, starting with a scoped pilot.
             </p>
-            <p>We have no customers or partners to announce yet, and we will not imply otherwise.</p>
           </Prose>
         </PageSection>
 

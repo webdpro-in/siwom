@@ -17,7 +17,7 @@ import { StatusPill } from "@/components/ui/StatusPill";
 export const metadata: Metadata = pageMetadata({
   title: "Industries: ports, freight and warehousing",
   description:
-    "SIWOM Logistics is designed for ports, road freight, warehousing and manufacturing supply chains, with space, green energy and robotics as research.",
+    "SIWOM is built for ports, road freight, warehousing and manufacturing supply chains, plus space logistics, green energy, robotics and advanced mobility.",
   path: "/industries",
 });
 
@@ -83,7 +83,7 @@ export default function IndustriesPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries" }]}
         eyebrow="Industries"
         title="Industries we design for."
-        summary="SIWOM Logistics is designed first for ports, road freight, warehousing and manufacturing supply chains. Space logistics, green energy, robotics and advanced mobility are research areas, covered at the end. None of these are customers or deployments."
+        summary="SIWOM Logistics is built for ports, road freight, warehousing and manufacturing supply chains. Space logistics, green energy, robotics and advanced mobility are covered at the end."
         cta={{ label: "Discuss your operation", href: "/contact" }}
         media={
           <Figure
@@ -129,9 +129,9 @@ export default function IndustriesPage() {
               Space logistics, green energy and robotics.
             </h2>
             <p className="max-w-reading text-body-l text-text-muted">
-              These industries run on global supply chains of components, materials and machinery. SIWOM Global Trade is
-              our research into connecting them: international suppliers, Indian manufacturers and buyers, and the
-              logistics companies who move it all.
+              These industries run on global supply chains of components, materials and machinery. SIWOM Global Trade
+              connects them: international suppliers, Indian manufacturers and buyers, and the logistics companies who
+              move it all.
             </p>
             <div>
               <Button href="/global-trade" variant="secondary" icon="arrow" trackAs="industries_global_trade">

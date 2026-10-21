@@ -195,3 +195,13 @@ The copy across the site was rewritten around one defensible offer, because the 
   - It is labelled "Illustrative demo data — not connected to live operations".
   - Code: `components/globe/`; data: `data/demo/international.ts`. Regenerate the land dots with `node scripts/generate-globe.mjs`.
 - Everything else keeps its previous design.
+
+## Professional presentation (21 October 2026)
+
+At the owner's request the site no longer shows product-status wording ("in development", "research", "long-term vision", "not available yet"):
+
+- **Badges**: the In development, Research and Long-term vision badges are hidden sitewide by one switch, `showProductStatus` in `data/status.ts`. Set it to `true` to bring them back. "Demo data" labels always show.
+- **Copy**: status phrases were rewritten in plain, confident language across the homepage, Logistics, Global Trade, Safety, Technology, Industries, About, Vision, legal pages and social cards.
+- **Still stated, because they are true and protect customers**: demo data is labelled "Illustrative demo data — not connected to live operations"; people review every safety flag; SIWOM does not broker goods or issue export licences.
+- **Homepage section 02** ("What SIWOM Logistics does") now leads with the globe shipment workspace (international shipments), followed by the dispatch and exceptions demo. The globe also stays on Global Trade (`#journeys`). Both load when within one viewport (`components/globe/ShipmentWorkspaceLazy.tsx`).
+- **Owner to confirm**: the Logistics page now describes integrations (APIs and webhooks, TMS/WMS, telematics) and the Technology page describes handling profiles and logger data without a "planned" label. Be ready to deliver these, or adjust the wording, before a customer relies on them.
