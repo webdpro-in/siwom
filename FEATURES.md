@@ -97,3 +97,12 @@ This covers the website itself. SIWOM's products are separately labelled In deve
 | Unique titles; meta descriptions of 160 characters or fewer; Organization and WebSite JSON-LD; OG cards rewritten | Implemented | |
 | Production URL from `NEXT_PUBLIC_SITE_URL`, else Vercel's production domain; preview deployments `noindex` and disallowed in robots.txt | Implemented | Verified with a simulated `VERCEL_ENV=preview` build |
 | Hosting and production domain | Planned | No SIWOM project exists on the connected Vercel account; see QA-REPORT.md |
+
+## Naming and globe update (21 October 2026)
+
+| Change | Status | Notes |
+| --- | --- | --- |
+| "Logistics OS" → "Logistics" (SIWOM Logistics); "Safety AI" → "Safety"; routes `/logistics`, `/safety` with 308 redirects from the old URLs | Implemented | Contact form also maps old `?interest=` values |
+| Header contrast fix in both themes | Implemented | |
+| Shipment globe on Global Trade: shipment list, routes, port labels, journey legs, pause, keyboard rotation | Mocked | Fictional shipments between real ports; snapshot positions, not live tracking |
+| Live vessel, flight or container tracking | Planned | Not built; no AIS or carrier data is connected |

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 /**
- * Homepage narrative: problem → what SIWOM Stream does (with the demo) → how a
+ * Homepage narrative: problem → what SIWOM Logistics does (with the demo) → how a
  * pilot works → who it is for → research tracks → how we work → next step.
  */
 export default function HomePage() {

@@ -23,6 +23,7 @@ import { Figure } from "@/components/ui/Figure";
 import { StatusPill } from "@/components/ui/StatusPill";
 import { Stepper } from "@/components/ui/Stepper";
 import { PhotoTile, flowIcons, sectorIcons } from "@/components/trade/TradeParts";
+import { ShipmentWorkspace } from "@/components/globe/ShipmentWorkspace";
 
 export const metadata: Metadata = pageMetadata({
   title: "Global Trade research: space and technology cargo",
@@ -34,6 +35,7 @@ export const metadata: Metadata = pageMetadata({
 const jump = [
   { id: "space", label: "Space" },
   { id: "flows", label: "Import and export" },
+  { id: "journeys", label: "Shipment map" },
   { id: "what-moves", label: "What moves" },
   { id: "sectors", label: "Robotics, mobility and energy" },
   { id: "logistics-companies", label: "For logistics companies" },
@@ -230,6 +232,15 @@ export default function GlobalTradePage() {
               );
             })}
           </ul>
+
+          <div id="journeys" className="mt-14 flex flex-col gap-4">
+            <h3 className="text-h3 text-text">Follow an import or export from origin to delivery.</h3>
+            <p className="max-w-reading text-body text-text-muted">
+              Each journey runs from pickup in the origin country, through the port or airport, to delivery inland.
+              Select a shipment to see its route on the globe and every leg of its journey.
+            </p>
+            <ShipmentWorkspace product="SIWOM Global Trade" />
+          </div>
         </PageSection>
 
         <PageSection

@@ -17,7 +17,7 @@ import { StatusPill } from "@/components/ui/StatusPill";
 export const metadata: Metadata = pageMetadata({
   title: "Industries: ports, freight and warehousing",
   description:
-    "SIWOM Stream is designed for ports, road freight, warehousing and manufacturing supply chains, with space, green energy and robotics as research.",
+    "SIWOM Logistics is designed for ports, road freight, warehousing and manufacturing supply chains, with space, green energy and robotics as research.",
   path: "/industries",
 });
 
@@ -83,7 +83,7 @@ export default function IndustriesPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries" }]}
         eyebrow="Industries"
         title="Industries we design for."
-        summary="SIWOM Stream is designed first for ports, road freight, warehousing and manufacturing supply chains. Space logistics, green energy, robotics and advanced mobility are research areas, covered at the end. None of these are customers or deployments."
+        summary="SIWOM Logistics is designed first for ports, road freight, warehousing and manufacturing supply chains. Space logistics, green energy, robotics and advanced mobility are research areas, covered at the end. None of these are customers or deployments."
         cta={{ label: "Discuss your operation", href: "/contact" }}
         media={
           <Figure

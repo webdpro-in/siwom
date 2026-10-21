@@ -158,8 +158,8 @@ export function InteractiveSamples() {
             legend="Area of interest"
             required
             options={[
-              { value: "logistics-os", label: "Logistics OS" },
-              { value: "safety-ai", label: "Safety AI" },
+              { value: "logistics", label: "Logistics" },
+              { value: "safety", label: "Safety" },
               { value: "other", label: "Other" },
             ]}
           />

@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 };
 
 const links = [
-  { label: "Logistics OS", href: "/logistics-os" },
-  { label: "Safety AI", href: "/safety-ai" },
+  { label: "Logistics", href: "/logistics" },
+  { label: "Safety", href: "/safety" },
   { label: "Contact", href: "/contact" },
 ];
 

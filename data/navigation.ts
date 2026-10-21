@@ -10,9 +10,9 @@ export type NavItem = {
  */
 export const mainNav: NavItem[] = [
   {
-    label: "Logistics OS",
-    href: "/logistics-os",
-    description: "SIWOM Stream: shipments, vehicles and delays in one place",
+    label: "Logistics",
+    href: "/logistics",
+    description: "SIWOM Logistics: shipments, vehicles and delays in one place",
   },
   {
     label: "Industries",
@@ -25,8 +25,8 @@ export const mainNav: NavItem[] = [
     description: "Research: logistics for space and advanced-technology cargo",
   },
   {
-    label: "Safety AI",
-    href: "/safety-ai",
+    label: "Safety",
+    href: "/safety",
     description: "Research: hazard flagging with people accountable",
   },
   {
@@ -43,13 +43,13 @@ export const mainNav: NavItem[] = [
 
 export const footerNav = {
   product: [
-    { label: "Logistics OS", href: "/logistics-os" },
-    { label: "Try the demo", href: "/logistics-os#demo" },
+    { label: "Logistics", href: "/logistics" },
+    { label: "Try the demo", href: "/logistics#demo" },
     { label: "Industries", href: "/industries" },
   ],
   research: [
     { label: "Global Trade", href: "/global-trade" },
-    { label: "Safety AI", href: "/safety-ai" },
+    { label: "Safety", href: "/safety" },
     { label: "Our Vision", href: "/vision" },
   ],
   company: [
@@ -65,10 +65,10 @@ export const footerNav = {
 
 /** Values accepted by the contact form's ?interest= parameter. */
 export const interestOptions = [
-  { value: "logistics-os", label: "Logistics OS" },
+  { value: "logistics", label: "Logistics" },
   { value: "global-trade", label: "Global trade" },
   { value: "space", label: "Space logistics" },
-  { value: "safety-ai", label: "Safety AI" },
+  { value: "safety", label: "Safety" },
   { value: "robotics", label: "Robotics" },
   { value: "mobility", label: "Mobility" },
   { value: "partnership", label: "Partnership" },

@@ -1,5 +1,5 @@
 /**
- * Transport modes SIWOM Stream is designed around, with the milestones a
+ * Transport modes SIWOM Logistics is designed around, with the milestones a
  * coordinator needs from each. Live connections to carrier and terminal
  * systems are planned, not built; the demo uses sample data.
  */

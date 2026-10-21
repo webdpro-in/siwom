@@ -183,3 +183,15 @@ The copy across the site was rewritten around one defensible offer, because the 
 **Navigation**: Logistics OS · Industries · Global Trade · Safety AI · Technology · About, with "Talk to SIWOM". Our Vision moved to the footer, which is grouped as Product, Research, Company and Legal.
 
 **Logistics OS page**: eight deduplicated features, each with a real status. The demo now comes right after the features. A compact ocean/air/road/rail milestones section replaced the five-mode transport encyclopaedia (pipelines removed). The international workspace is labelled Research.
+
+## Naming and the Global Trade globe (21 October 2026)
+
+- **Renames**: "Logistics OS" is now **Logistics**, with the product called **SIWOM Logistics** (formerly SIWOM Stream). "Safety AI" is now **Safety** (SIWOM Safety). Routes moved from `/logistics-os` to `/logistics` and from `/safety-ai` to `/safety`. The old URLs redirect permanently (308, `next.config.ts`), and old `?interest=logistics-os` / `?interest=safety-ai` links still pre-fill the contact form.
+- **Header**: always uses the page background with full-contrast text and logo in both themes. The earlier white-on-light header over the photo hero was a bug.
+- **Shipment globe** (Global Trade page only, `#journeys`): an interactive dotted globe drawn on a 2D canvas. There is no WebGL or 3D library; the renderer and land data load lazily after hydration.
+  - It shows five fictional international shipments between real ports (Rotterdam, Jebel Ali, Nhava Sheva, Mundra, Chennai, Colombo, Singapore, Los Angeles) and Frankfurt airport. Each journey runs from origin pickup to inland delivery.
+  - Ocean legs follow approximate sea lanes through Suez and Malacca; air legs arc; road and rail use distinct dash patterns.
+  - Interactions: select a shipment, drag or use the arrow keys to rotate, and pause the motion. Reduced motion stops all animation.
+  - It is labelled "Illustrative demo data — not connected to live operations".
+  - Code: `components/globe/`; data: `data/demo/international.ts`. Regenerate the land dots with `node scripts/generate-globe.mjs`.
+- Everything else keeps its previous design.

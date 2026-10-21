@@ -33,7 +33,7 @@ export default function InternationalWorkspace() {
   return (
     <section aria-label="International logistics workspace demo" className="overflow-hidden rounded-panel border border-border-strong bg-surface-1">
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border bg-surface-2 px-5 py-4 md:px-7">
-        <span className="flex items-center gap-3"><Globe2 aria-hidden className="size-5 text-accent-text"/><span className="font-display text-body font-medium text-text">SIWOM Stream <span className="text-text-muted">/ International workspace</span></span></span>
+        <span className="flex items-center gap-3"><Globe2 aria-hidden className="size-5 text-accent-text"/><span className="font-display text-body font-medium text-text">SIWOM Logistics <span className="text-text-muted">/ International workspace</span></span></span>
         <button onClick={reset} className="inline-flex min-h-11 items-center gap-2 text-small text-text-muted hover:text-text"><RotateCcw aria-hidden className="size-4"/>Reset planning demo</button>
       </div>
       <div className="flex flex-col gap-2 border-b border-border px-5 py-4 text-small md:px-7"><p className="font-mono text-eyebrow uppercase tracking-eyebrow text-accent-text">Demo data · Interactive product concept</p><p className="text-text-muted">Fictional providers and shipment records. No live tracking, actual quotations or connected AI. Recommendations below are written examples.</p></div>

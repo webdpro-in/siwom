@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 import { transportModes } from "@/data/transport";
 
-/** The milestones SIWOM Stream is designed to follow for each transport mode. */
+/** The milestones SIWOM Logistics is designed to follow for each transport mode. */
 export function TransportModes() {
   return (
     <>

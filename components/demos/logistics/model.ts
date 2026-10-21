@@ -1,5 +1,5 @@
 /*
- * Pure state model for the Logistics OS demo. No React here, so the same
+ * Pure state model for the Logistics demo. No React here, so the same
  * initial state renders the server poster and the interactive client demo.
  */
 import type { SortState } from "@/components/ui/DataTable";

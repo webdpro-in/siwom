@@ -15,7 +15,7 @@ import AxeBuilder from "@axe-core/playwright";
 
 const args = process.argv.slice(2);
 const base = args[args.indexOf("--base") + 1] || "http://localhost:3100";
-const pages = ["/", "/logistics-os", "/global-trade", "/safety-ai", "/technology", "/industries", "/vision", "/about", "/contact", "/privacy", "/terms", "/styleguide", "/missing-page"];
+const pages = ["/", "/logistics", "/global-trade", "/safety", "/technology", "/industries", "/vision", "/about", "/contact", "/privacy", "/terms", "/styleguide", "/missing-page"];
 
 const results = [];
 const check = (name, ok, detail = "") => {
@@ -140,21 +140,21 @@ for (const width of [390, 1440]) {
   const { context, page } = await newPage(1440);
   await page.goto(base + "/", { waitUntil: "networkidle" });
   await page.locator('[data-track="hero_discuss_pilot"]').click();
-  await page.waitForURL(/\/contact\?interest=logistics-os&pilot=1/);
+  await page.waitForURL(/\/contact\?interest=logistics&pilot=1/);
   await page.waitForSelector('input[name="interest"]');
   check(
-    "homepage pilot CTA pre-selects Logistics OS and pilot",
-    (await page.locator('input[name="interest"][value="logistics-os"]').isChecked()) && (await page.locator("#contact-pilot").isChecked()),
+    "homepage pilot CTA pre-selects Logistics and pilot",
+    (await page.locator('input[name="interest"][value="logistics"]').isChecked()) && (await page.locator("#contact-pilot").isChecked()),
   );
-  await page.goto(base + "/safety-ai", { waitUntil: "networkidle" });
-  await page.locator('[data-track="hero_Discuss Safety AI"]').click();
-  await page.waitForURL(/\/contact\?interest=safety-ai/);
+  await page.goto(base + "/safety", { waitUntil: "networkidle" });
+  await page.locator('[data-track="hero_Discuss Safety"]').click();
+  await page.waitForURL(/\/contact\?interest=safety/);
   await page.waitForSelector('input[name="interest"]');
-  check("Safety AI CTA pre-selects Safety AI", await page.locator('input[name="interest"][value="safety-ai"]').isChecked());
-  await page.goto(base + "/contact?interest=logistics-os&pilot=1", { waitUntil: "networkidle" });
+  check("Safety CTA pre-selects Safety", await page.locator('input[name="interest"][value="safety"]').isChecked());
+  await page.goto(base + "/contact?interest=logistics&pilot=1", { waitUntil: "networkidle" });
   check(
-    "?interest=logistics-os&pilot=1 prefill",
-    (await page.locator('input[name="interest"][value="logistics-os"]').isChecked()) && (await page.locator("#contact-pilot").isChecked()),
+    "?interest=logistics&pilot=1 prefill",
+    (await page.locator('input[name="interest"][value="logistics"]').isChecked()) && (await page.locator("#contact-pilot").isChecked()),
   );
   await context.close();
 }
@@ -162,7 +162,7 @@ for (const width of [390, 1440]) {
 // ---------------------------------------------------------------- Logistics demo
 for (const width of [1440, 390]) {
   const { context, page } = await newPage(width);
-  await page.goto(base + "/logistics-os", { waitUntil: "networkidle" });
+  await page.goto(base + "/logistics", { waitUntil: "networkidle" });
   const demo = page.locator("#demo");
   await demo.scrollIntoViewIfNeeded();
   await page.waitForFunction(() => !document.querySelector("#demo [inert]"), null, { timeout: 15000 });
@@ -208,7 +208,7 @@ for (const width of [1440, 390]) {
 // ---------------------------------------------------------------- Safety demo
 for (const width of [1440, 390]) {
   const { context, page } = await newPage(width);
-  await page.goto(base + "/safety-ai", { waitUntil: "networkidle" });
+  await page.goto(base + "/safety", { waitUntil: "networkidle" });
   const demo = page.locator("#demo");
   await demo.scrollIntoViewIfNeeded();
   await page.waitForFunction(() => !document.querySelector("#demo [inert]"), null, { timeout: 15000 });
@@ -242,7 +242,7 @@ for (const width of [1440, 390]) {
   await page.locator("#contact-company").fill("Example Freight Co.");
   await page.locator("#contact-email").fill("asha@example.com");
   await page.locator("#contact-industry").selectOption("ports");
-  await page.locator('input[name="interest"][value="logistics-os"]').check();
+  await page.locator('input[name="interest"][value="logistics"]').check();
   await page.locator("#contact-message").fill("We run a container freight station near Nhava Sheva and want to test exception alerts.");
   await page.locator("#contact-consent").check();
   await page.waitForTimeout(3100);
@@ -264,7 +264,7 @@ for (const width of [1440, 390]) {
     company: "Example Freight Co.",
     email: "asha@example.com",
     industry: "ports",
-    interest: "logistics-os",
+    interest: "logistics",
     pilot: false,
     message: "Testing the honeypot and time checks on the server.",
     consent: true,
@@ -284,6 +284,45 @@ for (const width of [1440, 390]) {
   }
   check("rate limit: 6th message in an hour gets 429", last === 429, `status ${last}`);
   await context.close();
+}
+
+// ---------------------------------------------------------------- shipment globe (Global Trade)
+for (const width of [1440, 390]) {
+  const { context, page } = await newPage(width);
+  await page.goto(base + "/global-trade#journeys", { waitUntil: "networkidle" });
+  await page.locator("#journeys").scrollIntoViewIfNeeded();
+  await page.waitForTimeout(1200);
+  const globe = page.locator('[aria-roledescription="globe"]');
+  const painted = await page.evaluate(() => {
+    const c = document.querySelector('[aria-roledescription="globe"] canvas');
+    if (!c || !c.width) return false;
+    const d = c.getContext("2d").getImageData(0, 0, c.width, c.height).data;
+    let ink = 0;
+    for (let i = 3; i < d.length; i += 16) if (d[i] > 0) ink++;
+    return ink > 1000;
+  });
+  check(`globe renders @${width}`, painted);
+  check(`globe carries the demo-data banner @${width}`, await page.locator("#journeys").getByText(/Illustrative demo data/i).isVisible());
+  await page.getByRole("button", { name: /INT-24-0425/ }).click();
+  await page.waitForTimeout(600);
+  check(`selecting a shipment updates the journey @${width}`, await page.getByRole("heading", { name: "INT-24-0425" }).isVisible());
+  check(`globe label names the selected route @${width}`, (await globe.getAttribute("aria-label"))?.includes("INT-24-0425") ?? false);
+  await globe.focus();
+  const before = await page.evaluate(() => document.querySelector('[aria-roledescription="globe"] canvas').toDataURL().length);
+  await page.keyboard.press("ArrowLeft");
+  await page.waitForTimeout(1500);
+  const after = await page.evaluate(() => document.querySelector('[aria-roledescription="globe"] canvas').toDataURL().length);
+  check(`arrow keys rotate the globe @${width}`, before !== after);
+  check(`no console errors on Global Trade @${width}`, page.consoleErrors.length === 0, page.consoleErrors.slice(0, 3).join(" | "));
+  await context.close();
+}
+
+// ---------------------------------------------------------------- renamed routes
+{
+  const r1 = await fetch(base + "/logistics-os", { redirect: "manual" });
+  const r2 = await fetch(base + "/safety-ai", { redirect: "manual" });
+  check("old /logistics-os redirects permanently", r1.status === 308 && r1.headers.get("location")?.endsWith("/logistics"));
+  check("old /safety-ai redirects permanently", r2.status === 308 && r2.headers.get("location")?.endsWith("/safety"));
 }
 
 // ---------------------------------------------------------------- reduced motion

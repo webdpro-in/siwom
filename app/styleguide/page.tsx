@@ -44,7 +44,7 @@ const colours = [
 
 const type = [
   ["Display", "text-display", "Coordinate every shipment."],
-  ["H1", "text-h1", "SIWOM Stream, our Logistics OS"],
+  ["H1", "text-h1", "SIWOM Logistics"],
   ["H2", "text-h2", "Every movement. One operational picture."],
   ["H3", "text-h3", "Exceptions and delay management"],
   ["Body L", "text-body-l", "Bring shipments, fleets and dispatches into one operational view."],
@@ -104,7 +104,7 @@ export default function StyleguidePage() {
           ))}
           <div className="grid gap-2 md:grid-cols-[8rem_1fr] md:items-baseline">
             <span className="font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">Eyebrow</span>
-            <p className="font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">03 — Safety AI</p>
+            <p className="font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">03 — Safety</p>
           </div>
           <div className="grid gap-2 md:grid-cols-[8rem_1fr] md:items-baseline">
             <span className="font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">Data</span>
@@ -169,17 +169,17 @@ export default function StyleguidePage() {
 
       <Section id="headers" title="Section header">
         <SectionHeader
-          eyebrow="03 — Safety AI"
+          eyebrow="03 — Safety"
           badge={<StatusPill status="research" />}
           title="Safety isn't an add-on. It's the foundation."
           intro="SIWOM is exploring AI-assisted safety monitoring that helps teams identify potential hazards."
-          action={<Button href="/contact?interest=safety-ai" icon="arrow">Discuss Safety AI</Button>}
+          action={<Button href="/contact?interest=safety" icon="arrow">Discuss Safety</Button>}
         />
       </Section>
 
       <Section id="cards" title="Cards and stats">
         <div className="grid gap-6 md:grid-cols-3">
-          <FeatureCard icon={Route} title="Visibility" description="Shipments, fleets and hubs in one operational view." status="in-development" href="/logistics-os" linkLabel="Explore Logistics OS" />
+          <FeatureCard icon={Route} title="Visibility" description="Shipments, fleets and hubs in one operational view." status="in-development" href="/logistics" linkLabel="Explore Logistics" />
           <FeatureCard icon={ShieldCheck} title="Human review" description="Every flag goes to a qualified person who decides what happens next." />
           <FeatureCard icon={Boxes} title="Not linked" description="A static card with no link and no status." />
         </div>
@@ -226,7 +226,7 @@ export default function StyleguidePage() {
       </Section>
 
       <Section id="nav" title="Breadcrumbs and loading">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Safety AI" }]} />
+        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Safety" }]} />
         <div className="mt-6 flex flex-col gap-2">
           <Skeleton className="h-6 w-1/2" />
           <Skeleton className="h-4 w-3/4" />

@@ -45,9 +45,9 @@ export const industries: Industry[] = [
     couldHelp: [
       "One view of shipments moving through berth, yard, gate and inland legs",
       "Early flags when a berth window or rail cut-off is at risk",
-      "Safety AI research for lifting zones and vehicle–pedestrian conflicts",
+      "Safety research for lifting zones and vehicle–pedestrian conflicts",
     ],
-    product: { name: "Logistics OS", href: "/logistics-os", status: "in-development" },
+    product: { name: "Logistics", href: "/logistics", status: "in-development" },
     onHomepage: true,
   },
   {
@@ -63,7 +63,7 @@ export const industries: Industry[] = [
       "Exceptions such as unplanned halts, e-way bill validity and duty hours, sorted by severity",
       "Suggested next steps, with the dispatcher always deciding",
     ],
-    product: { name: "Logistics OS", href: "/logistics-os", status: "in-development" },
+    product: { name: "Logistics", href: "/logistics", status: "in-development" },
     onHomepage: true,
   },
   {
@@ -79,7 +79,7 @@ export const industries: Industry[] = [
       "Dock and dispatch timelines in the same view as the fleet",
       "Integration with existing WMS through APIs (planned)",
     ],
-    product: { name: "Logistics OS", href: "/logistics-os", status: "in-development" },
+    product: { name: "Logistics", href: "/logistics", status: "in-development" },
     onHomepage: true,
   },
   {
@@ -95,7 +95,7 @@ export const industries: Industry[] = [
       "Outbound dispatch planning against plant schedules",
       "Exception alerts routed to the people who can act",
     ],
-    product: { name: "Logistics OS", href: "/logistics-os", status: "in-development" },
+    product: { name: "Logistics", href: "/logistics", status: "in-development" },
     onHomepage: true,
   },
   {
@@ -111,7 +111,7 @@ export const industries: Industry[] = [
       "AI-assisted flags for visible damage, PPE and restricted zones (research)",
       "Human review and escalation, with an audit trail",
     ],
-    product: { name: "Safety AI", href: "/safety-ai", status: "research" },
+    product: { name: "Safety", href: "/safety", status: "research" },
     onHomepage: false,
   },
   {

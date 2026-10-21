@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const isDev = process.env.NODE_ENV === "development";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
-const https = siteUrl.startsWith("https://");
+// Vercel always serves over HTTPS, including when NEXT_PUBLIC_SITE_URL is not set.
+const https = siteUrl.startsWith("https://") || process.env.VERCEL === "1";
 const turnstile = Boolean(process.env.TURNSTILE_SITE_KEY);
 const plausible = Boolean(process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN);
 
@@ -56,6 +57,13 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
+  },
+  // Product pages were renamed (Logistics OS → Logistics, Safety AI → Safety).
+  async redirects() {
+    return [
+      { source: "/logistics-os", destination: "/logistics", permanent: true },
+      { source: "/safety-ai", destination: "/safety", permanent: true },
+    ];
   },
 };
 

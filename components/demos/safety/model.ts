@@ -1,4 +1,4 @@
-/* Pure state model for the Safety AI inspection demo. */
+/* Pure state model for the Safety inspection demo. */
 import { initialLog, scenarios, type LogEntry, type ReviewStatus, type ScenarioId } from "@/data/demo/detections";
 
 export type ReviewAction = "confirmed" | "dismissed" | "escalated";

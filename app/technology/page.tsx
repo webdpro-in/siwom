@@ -12,7 +12,7 @@ import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 export const metadata: Metadata = pageMetadata({
   title: "Technology and architecture",
   description:
-    "How SIWOM Stream is built: data integration, mapping, exceptions and security, plus the research behind Global Trade and Safety AI.",
+    "How SIWOM Logistics is built: data integration, mapping, exceptions and security, plus the research behind Global Trade and Safety.",
   path: "/technology",
 });
 
@@ -37,7 +37,7 @@ export default function TechnologyPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Technology" }]}
         eyebrow="Technology · Platform and architecture"
         title="How the SIWOM platform works."
-        summary="How SIWOM Stream is being built, and the research behind Global Trade and Safety AI. Every section carries its real status."
+        summary="How SIWOM Logistics is being built, and the research behind Global Trade and Safety. Every section carries its real status."
         cta={{ label: "Talk to our team", href: "/contact" }}
         media={
           <Figure

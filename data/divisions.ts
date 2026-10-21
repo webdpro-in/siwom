@@ -8,7 +8,7 @@ export type Division = {
   product: string;
   /** Short name used in navigation and after first mention. */
   short: string;
-  /** First-mention pair, e.g. "SIWOM Stream, our Logistics OS". */
+  /** First-mention pair, e.g. "SIWOM Logistics". */
   firstMention: string;
   area: string;
   status: Status;
@@ -19,12 +19,12 @@ export type Division = {
 export const divisions: Record<DivisionId, Division> = {
   stream: {
     id: "stream",
-    product: "SIWOM Stream",
-    short: "Logistics OS",
-    firstMention: "SIWOM Stream, our Logistics OS",
+    product: "SIWOM Logistics",
+    short: "Logistics",
+    firstMention: "SIWOM Logistics",
     area: "Shipment coordination",
     status: "in-development",
-    href: "/logistics-os",
+    href: "/logistics",
     summary:
       "Shipment coordination software in development for logistics companies: shipments, vehicles, documents and delays in one shared record, from port or airport to delivery.",
   },
@@ -42,11 +42,11 @@ export const divisions: Record<DivisionId, Division> = {
   safety: {
     id: "safety",
     product: "SIWOM Safety",
-    short: "Safety AI",
-    firstMention: "SIWOM Safety, our Safety AI",
+    short: "Safety",
+    firstMention: "SIWOM Safety",
     area: "AI safety and inspection",
     status: "research",
-    href: "/safety-ai",
+    href: "/safety",
     summary:
       "Helps people spot potential hazards earlier, inspect assets more consistently and decide with better information.",
   },

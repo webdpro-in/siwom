@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn";
 import { Eyebrow } from "./Container";
 
 type SectionHeaderProps = {
-  /** Numbered kicker, e.g. "03 — Safety AI". Rendered uppercase mono. */
+  /** Numbered kicker, e.g. "03 — Safety". Rendered uppercase mono. */
   eyebrow?: string;
   title: ReactNode;
   intro?: ReactNode;

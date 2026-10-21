@@ -5,5 +5,5 @@ export const size = ogSize;
 export const contentType = ogContentType;
 
 export default function Image() {
-  return renderOg({ eyebrow: "SIWOM Stream \u00b7 Shipment coordination software", title: "Coordinate every shipment, from port to delivery.", status: "In development" });
+  return renderOg({ eyebrow: "SIWOM Logistics \u00b7 Shipment coordination software", title: "Coordinate every shipment, from port to delivery.", status: "In development" });
 }

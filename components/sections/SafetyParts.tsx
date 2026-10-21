@@ -3,7 +3,7 @@ import { Accordion, type AccordionItem } from "@/components/ui/Accordion";
 import { Callout } from "@/components/ui/Callout";
 import { Stepper, type Step } from "@/components/ui/Stepper";
 
-/** Shared Safety AI content used on the homepage and on /safety-ai. */
+/** Shared Safety content used on the homepage and on /safety. */
 
 export function SafetyDisclaimer({ className }: { className?: string }) {
   return (

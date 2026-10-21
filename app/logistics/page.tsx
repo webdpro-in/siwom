@@ -16,13 +16,13 @@ import { Stepper } from "@/components/ui/Stepper";
 import { LogisticsDemoSection } from "@/components/demos/Demos";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Logistics OS: shipment coordination software",
+  title: "Logistics: shipment coordination software",
   description:
-    "SIWOM Stream is shipment coordination software for freight forwarders, transporters and warehouse teams in India. In development, with a sample-data demo.",
-  path: "/logistics-os",
+    "SIWOM Logistics is shipment coordination software for freight forwarders, transporters and warehouse teams in India. In development, with a sample-data demo.",
+  path: "/logistics",
 });
 
-const pilotHref = contactHref({ interest: "logistics-os", pilot: true });
+const pilotHref = contactHref({ interest: "logistics", pilot: true });
 
 /** In development = being built now (most are in the demo). Research = not started in code. */
 const capabilities = [
@@ -42,7 +42,7 @@ const faq = [
     title: "Is this available today?",
     content: (
       <p>
-        Not as a general product. SIWOM Stream is in development, and the demo on this page uses sample data. We are
+        Not as a general product. SIWOM Logistics is in development, and the demo on this page uses sample data. We are
         looking for logistics companies with a real coordination problem to pilot it with us.
       </p>
     ),
@@ -92,11 +92,11 @@ export default function LogisticsOsPage() {
   return (
     <>
       <PageHero
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Logistics OS" }]}
-        eyebrow="SIWOM Stream · Logistics OS"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Logistics" }]}
+        eyebrow="SIWOM Logistics"
         status="in-development"
         title="Shipments, vehicles and delays in one workspace."
-        summary="SIWOM Stream, our Logistics OS, is shipment coordination software for freight forwarders, transporters and warehouse operators in India. It is in development: the demo on this page uses sample data, and we are looking for pilot partners."
+        summary="SIWOM Logistics is shipment coordination software for freight forwarders, transporters and warehouse operators in India. It is in development: the demo on this page uses sample data, and we are looking for pilot partners."
         cta={{ label: "Discuss a pilot", href: pilotHref }}
         secondary={{ label: "Try the demo", href: "#demo" }}
         media={
@@ -136,7 +136,7 @@ export default function LogisticsOsPage() {
 
         <PageSection
           id="features"
-          eyebrow="What SIWOM Stream does"
+          eyebrow="What SIWOM Logistics does"
           title="Built around the shipment, not the system."
           intro="Each feature carries its real status. In development means we are building it now; most of these appear in the demo below."
         >
@@ -154,7 +154,7 @@ export default function LogisticsOsPage() {
         <div className="mx-auto mb-8 flex max-w-content flex-col gap-4 gutter-x">
           <p className="font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">Interactive demo</p>
           <h2 id="demo-title" className="max-w-headline text-h2 text-text">
-            Try SIWOM Stream with sample data.
+            Try SIWOM Logistics with sample data.
           </h2>
           <p className="max-w-reading text-body-l text-text-muted">
             Filter by status or mode, open a delayed shipment, acknowledge an exception and assign a vehicle. Nothing here
@@ -177,7 +177,7 @@ export default function LogisticsOsPage() {
           id="modes"
           eyebrow="Transport modes"
           title="Ocean, air, road and rail in one plan."
-          intro="The milestones SIWOM Stream is designed to follow for each mode, so the next partner knows what is coming."
+          intro="The milestones SIWOM Logistics is designed to follow for each mode, so the next partner knows what is coming."
         >
           <TransportModes />
         </PageSection>
@@ -218,7 +218,7 @@ export default function LogisticsOsPage() {
           eyebrow="Integrations"
           status="research"
           title="Work with the systems you already run."
-          intro="None of these connections is built yet. They describe how we intend SIWOM Stream to connect, scoped with each pilot partner."
+          intro="None of these connections is built yet. They describe how we intend SIWOM Logistics to connect, scoped with each pilot partner."
         >
           <ul className="grid gap-4 md:grid-cols-2">
             {[
@@ -241,7 +241,7 @@ export default function LogisticsOsPage() {
 
       <NextBlock
         title="Industries"
-        description="The operations SIWOM Stream is designed for: ports, road freight, warehousing and manufacturing supply chains."
+        description="The operations SIWOM Logistics is designed for: ports, road freight, warehousing and manufacturing supply chains."
         href="/industries"
       />
     </>

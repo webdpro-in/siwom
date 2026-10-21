@@ -16,7 +16,10 @@ export const metadata: Metadata = pageMetadata({
 /** Reads ?interest= and ?pilot=1 so the visitor never re-states what they clicked. */
 async function PrefilledForm({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
-  const raw = typeof params.interest === "string" ? params.interest : undefined;
+  // Older links used ?interest=logistics-os and ?interest=safety-ai.
+  const legacy: Record<string, string> = { "logistics-os": "logistics", "safety-ai": "safety" };
+  const given = typeof params.interest === "string" ? params.interest : undefined;
+  const raw = given ? (legacy[given] ?? given) : undefined;
   const interest = interestOptions.some((o) => o.value === raw) ? (raw as Interest) : undefined;
   const pilot = params.pilot === "1" || params.pilot === "true";
   return <ContactForm defaultInterest={interest} defaultPilot={pilot} turnstileSiteKey={process.env.TURNSTILE_SITE_KEY || undefined} />;
@@ -97,7 +100,7 @@ export default function ContactPage({ searchParams }: PageProps<"/contact">) {
         </div>
       </div>
 
-      <NextBlock title="Logistics OS" description="While you are here, try the Logistics OS demo with illustrative Indian routes and exceptions." href="/logistics-os" />
+      <NextBlock title="Logistics" description="While you are here, try the Logistics demo with illustrative Indian routes and exceptions." href="/logistics" />
     </>
   );
 }

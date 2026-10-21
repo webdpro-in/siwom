@@ -19,12 +19,12 @@ export function LogisticsSection() {
         <div data-reveal className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             id="logistics-title"
-            eyebrow="02 — What SIWOM Stream does"
+            eyebrow="02 — What SIWOM Logistics does"
             badge={<StatusPill status="in-development" />}
             title="One shared record for every shipment."
-            intro="SIWOM Stream, our Logistics OS, brings shipments, vehicles, documents and exceptions into one workspace. Try it below with sample data: filter the list, open a delayed shipment, acknowledge an exception or assign a vehicle."
+            intro="SIWOM Logistics brings shipments, vehicles, documents and exceptions into one workspace. Try it below with sample data: filter the list, open a delayed shipment, acknowledge an exception or assign a vehicle."
           />
-          <Button href="/logistics-os" variant="secondary" icon="arrow" className="shrink-0" trackAs="home_logistics_os">
+          <Button href="/logistics" variant="secondary" icon="arrow" className="shrink-0" trackAs="home_logistics_os">
             See all features
           </Button>
         </div>

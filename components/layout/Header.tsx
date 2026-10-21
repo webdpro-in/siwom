@@ -17,8 +17,9 @@ function isActive(pathname: string, href: string) {
 }
 
 /**
- * Fixed header: 72 px, compacting to 60 px after 24 px of scroll. Transparent
- * at the top; after scrolling, surface-1 at 85% with a 12 px backdrop blur.
+ * Fixed header: 72 px, compacting to 60 px after 24 px of scroll. Always uses
+ * the page background with a 12 px backdrop blur, so the logo and navigation
+ * keep full contrast in both themes; a bottom border appears after scrolling.
  * Never hides on scroll.
  */
 export function Header() {
@@ -43,13 +44,10 @@ export function Header() {
   return (
     <>
       <header
-        data-photo-header={pathname === "/" && !scrolled || undefined}
         data-scrolled={scrolled || undefined}
         className={cn(
-          "site-header fixed inset-x-0 top-0 z-40 border-b transition-[height,background-color,border-color] duration-ui ease-standard",
-          scrolled
-            ? "h-(--header-h-compact) border-border bg-surface-1/85 backdrop-blur-header"
-            : "h-(--header-h) border-border/60 bg-bg/95",
+          "site-header fixed inset-x-0 top-0 z-40 border-b bg-bg/90 backdrop-blur-header transition-[height,border-color] duration-ui ease-standard",
+          scrolled ? "h-(--header-h-compact) border-border" : "h-(--header-h) border-transparent",
         )}
       >
         <div className="mx-auto flex h-full max-w-wide items-center justify-between gap-3 gutter-x">

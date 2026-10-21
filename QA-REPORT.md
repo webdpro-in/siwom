@@ -147,3 +147,15 @@ Production build on macOS with Google Chrome 155, after the homepage, navigation
 | Visual review | ✅ Homepage at 1440 and 390 px (dark); Logistics OS (dark); Global Trade, About and footer (light) |
 
 Not performed: a manual screen-reader pass, and verification of a live deployment (there is no hosting for SIWOM yet).
+
+## Addendum — naming, header and globe (21 October 2026)
+
+| Check | Result |
+| --- | --- |
+| `tsc --noEmit`, ESLint, `next build` | ✅ Clean |
+| `npm run qa` | ✅ 149 / 149 checks pass. New checks: the globe renders at 390 and 1440 px, carries the demo-data banner, selecting a shipment updates the journey and the globe's accessible name, arrow keys rotate it, and the page has no console errors. Old `/logistics-os` and `/safety-ai` return 308 to the new routes. |
+| `npm run qa:responsive` | ✅ No issues: 11 pages × 7 widths, keyboard tab-through |
+| `npm run qa:tokens` | ✅ No hard-coded colours (the globe reads its colours from the theme tokens) |
+| First-load JS | ✅ `/` 164.3 KB, `/global-trade` 166.4 KB gzipped, both under 170 KB. The globe renderer and land data (12.6 KB gzipped) load after hydration. |
+| Lighthouse mobile (simulated / applied throttling) | `/` 95 / 99 (simulated LCP 2.9 s), `/global-trade` 93 / 99 (LCP 3.2 s). 100 for Accessibility, Best Practices and SEO; CLS 0–0.001. |
+| Visual review | ✅ Homepage header in light and dark themes; globe in light and dark at 1440 and 390 px; all five routes and their labels |

@@ -110,7 +110,7 @@ function Panel({
 }
 
 /**
- * The whole Logistics OS demo as a pure function of state. Rendered on the
+ * The whole Logistics demo as a pure function of state. Rendered on the
  * server (no actions) as the poster, and on the client with actions wired.
  */
 export function LogisticsView({
@@ -366,7 +366,7 @@ export function LogisticsView({
       <div className="flex">
         {/* Left rail (desktop) */}
         <nav aria-label="Demo views" className="hidden w-48 shrink-0 flex-col gap-1 border-r border-border bg-surface-1 p-3 lg:flex">
-          <p className="px-2 pb-2 pt-1 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">Logistics OS</p>
+          <p className="px-2 pb-2 pt-1 font-mono text-eyebrow uppercase tracking-eyebrow text-text-muted">Logistics</p>
           {railItems.map(({ id, label, Icon }) => (
             <button
               key={id}

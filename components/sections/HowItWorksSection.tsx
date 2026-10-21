@@ -31,13 +31,13 @@ export function HowItWorksSection() {
             id="how-title"
             eyebrow="03 — How it works"
             title="How a pilot works."
-            intro="SIWOM Stream is not on general sale yet. We work with a small number of logistics companies, one real problem at a time."
+            intro="SIWOM Logistics is not on general sale yet. We work with a small number of logistics companies, one real problem at a time."
           />
-          <Button href={contactHref({ interest: "logistics-os", pilot: true })} icon="arrow" className="shrink-0" trackAs="home_how_pilot">
+          <Button href={contactHref({ interest: "logistics", pilot: true })} icon="arrow" className="shrink-0" trackAs="home_how_pilot">
             Discuss a pilot
           </Button>
         </div>
-        <Stepper label="How a SIWOM Stream pilot works" steps={steps} />
+        <Stepper label="How a SIWOM Logistics pilot works" steps={steps} />
       </div>
     </section>
   );

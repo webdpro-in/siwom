@@ -11,7 +11,7 @@ import { chromium } from "playwright-core";
 
 const args = process.argv.slice(2);
 const base = args.includes("--base") ? args[args.indexOf("--base") + 1] : "http://localhost:3100";
-const pages = ["/", "/logistics-os", "/global-trade", "/safety-ai", "/technology", "/industries", "/vision", "/about", "/contact", "/privacy", "/terms"];
+const pages = ["/", "/logistics", "/global-trade", "/safety", "/technology", "/industries", "/vision", "/about", "/contact", "/privacy", "/terms"];
 const widths = [360, 390, 768, 1024, 1280, 1440, 1920];
 let failures = 0;
 const fail = (msg) => {

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // First-load JS for a route: gzipped size of every script the HTML references.
-// Usage: node scripts/qa/js-budget.mjs --base http://localhost:3100 / /logistics-os
+// Usage: node scripts/qa/js-budget.mjs --base http://localhost:3100 / /logistics
 import zlib from "node:zlib";
 
 const args = process.argv.slice(2);

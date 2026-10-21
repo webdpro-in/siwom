@@ -471,7 +471,7 @@
   .theme-moon { display: none; }
   :root[data-theme="light"] .theme-moon { display: block; }
   :root[data-theme="light"] .theme-sun { display: none; }
-  .photo-surface, .site-header[data-photo-header] {
+  .photo-surface {
     --color-text: #ffffff;
     --color-text-muted: #d3d9dd;
     --color-accent-text: #c8f169;
@@ -481,7 +481,6 @@
     --color-surface-2: #18202a;
     color: var(--color-text);
   }
-  .site-header[data-photo-header] { background: rgb(10 13 18 / 0.5); backdrop-filter: blur(12px); }
   .hero-photo-overlay { background: linear-gradient(90deg, rgb(10 13 18 / .91), rgb(10 13 18 / .54) 48%, rgb(10 13 18 / .12)), linear-gradient(0deg, rgb(10 13 18 / .85), transparent 50%); }
   .hero-heading { font-size: clamp(3.5rem, 2.1rem + 5.1vw, 7rem); line-height: 1.01; letter-spacing: -.055em; }
   .hero-photo { object-position: 62% center; }

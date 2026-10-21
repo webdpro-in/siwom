@@ -4,9 +4,9 @@ import { absoluteUrl } from "@/lib/site";
 /** Public routes only; /styleguide is intentionally excluded (noindex). */
 const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { path: "/", priority: 1, changeFrequency: "monthly" },
-  { path: "/logistics-os", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/logistics", priority: 0.9, changeFrequency: "monthly" },
   { path: "/global-trade", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/safety-ai", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/safety", priority: 0.9, changeFrequency: "monthly" },
   { path: "/technology", priority: 0.7, changeFrequency: "monthly" },
   { path: "/industries", priority: 0.7, changeFrequency: "monthly" },
   { path: "/vision", priority: 0.7, changeFrequency: "monthly" },

@@ -9,7 +9,7 @@ try {
   const context = await browser.newContext({ viewport: {width,height:900}, colorScheme:theme, reducedMotion:'reduce' });
   const page = await context.newPage();
   const errors=[]; page.on('pageerror',error=>errors.push(error.message));
-  for (const path of ['/','/logistics-os','/safety-ai','/contact','/industries','/about','/vision','/technology','/privacy','/terms','/styleguide','/missing-page']) {
+  for (const path of ['/','/logistics','/safety','/contact','/industries','/about','/vision','/technology','/privacy','/terms','/styleguide','/missing-page']) {
    await page.goto(base+path,{waitUntil:'networkidle'});
    await page.evaluate(async()=>{for(let y=0;y<document.body.scrollHeight;y+=700){window.scrollTo(0,y);await new Promise(r=>setTimeout(r,20));}window.scrollTo(0,0);});
    await page.waitForTimeout(200);
@@ -20,7 +20,7 @@ try {
    const broken=await page.locator('img').evaluateAll(imgs=>imgs.filter(i=>i.getClientRects().length&&i.complete&&i.naturalWidth===0).map(i=>i.src));
    check(`images ${theme}, ${path}, ${width}`,broken.length===0);
   }
-  await page.goto(base+'/logistics-os#transport',{waitUntil:'networkidle'});
+  await page.goto(base+'/logistics#transport',{waitUntil:'networkidle'});
   const list=page.getByRole('tablist',{name:'Explore transport modes'});
   for(const mode of ['Water','Air','Road','Rail','Pipeline']) {
    await list.getByRole('tab',{name:mode,exact:true}).click();

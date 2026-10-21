@@ -21,7 +21,7 @@ export function CtaSection() {
           Stream can help, and scope a small pilot if it can.
         </p>
         <div className="flex flex-wrap justify-center gap-3 pt-2">
-          <Button href={contactHref({ interest: "logistics-os", pilot: true })} size="lg" icon="arrow" trackAs="cta_pilot">
+          <Button href={contactHref({ interest: "logistics", pilot: true })} size="lg" icon="arrow" trackAs="cta_pilot">
             Discuss a pilot
           </Button>
           <Button href="/contact" size="lg" variant="secondary" trackAs="cta_contact">

@@ -12,7 +12,7 @@ import { Figure } from "@/components/ui/Figure";
 export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
-    "SIWOM is an early-stage software company in India building SIWOM Stream for logistics companies. Our principles, and how we run pilots.",
+    "SIWOM is an early-stage software company in India building SIWOM Logistics for logistics companies. Our principles, and how we run pilots.",
   path: "/about",
 });
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About SIWOM"
         title="About SIWOM"
-        summary="SIWOM is an early-stage software company being built in India. We are building SIWOM Stream, shipment coordination software for logistics companies, and researching what comes after it."
+        summary="SIWOM is an early-stage software company being built in India. We are building SIWOM Logistics, shipment coordination software for logistics companies, and researching what comes after it."
         cta={{ label: "Contact SIWOM", href: "/contact" }}
         media={
           <Figure

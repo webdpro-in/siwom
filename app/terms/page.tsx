@@ -33,7 +33,7 @@ export default function TermsPage() {
               <p>Products and roadmap items are labelled In development, Research or Long-term vision. These labels describe intent, not availability.</p>
               <ul>
                 <li>Demos use illustrative data and are not connected to live operations.</li>
-                <li>Detections shown in the Safety AI demo are samples, not measured performance.</li>
+                <li>Detections shown in the Safety demo are samples, not measured performance.</li>
                 <li>Industry photographs are representative. They do not establish SIWOM ownership, partnerships, deployments or endorsements.</li>
               </ul>
               <p>Nothing on this site is an offer, a commitment to deliver a product, or a promise of launch dates.</p>

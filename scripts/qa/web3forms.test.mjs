@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { submitEnquiry, WEB3FORMS_ACCESS_KEY } from '../../lib/web3forms.ts';
-const data = { name: 'SIWOM Test', email: 'test@example.com', company: 'Test', interest: 'logistics-os', message: 'Automated test; no external request.' };
+const data = { name: 'SIWOM Test', email: 'test@example.com', company: 'Test', interest: 'logistics', message: 'Automated test; no external request.' };
 test('sends supplied key and required fields; accepts only confirmed success', async () => {
   const ok = await submitEnquiry(data, async (url, options) => {
     assert.equal(url, 'https://api.web3forms.com/submit');

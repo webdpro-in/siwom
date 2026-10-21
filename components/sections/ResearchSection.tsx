@@ -18,10 +18,10 @@ const tracks: { title: string; status: Status; href: string; linkLabel: string; 
     photo: tradePhotos.coreStageBarge,
   },
   {
-    title: "Safety AI",
+    title: "Safety",
     status: "research",
-    href: "/safety-ai",
-    linkLabel: "Read about Safety AI",
+    href: "/safety",
+    linkLabel: "Read about Safety",
     text: "Camera-assisted flags for possible hazards at ports and yards, always reviewed by a qualified person before anyone acts.",
     photo: {
       src: safetyTeam,

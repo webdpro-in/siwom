@@ -14,10 +14,10 @@ import { SafetyDemoSection } from "@/components/demos/Demos";
 import { SafetyDisclaimer, SafetyLimitations, SafetyWorkflow } from "@/components/sections/SafetyParts";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Safety AI: hazard flagging research",
+  title: "Safety: hazard flagging research",
   description:
-    "SIWOM Safety, our Safety AI, is research into AI-assisted inspection and hazard flagging for industrial sites. AI flags potential hazards; qualified people review and decide.",
-  path: "/safety-ai",
+    "SIWOM Safety is research into AI-assisted inspection and hazard flagging for industrial sites. AI flags potential hazards; qualified people review and decide.",
+  path: "/safety",
 });
 
 const toc = [
@@ -82,12 +82,12 @@ export default function SafetyAiPage() {
   return (
     <>
       <PageHero
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Safety AI" }]}
-        eyebrow="SIWOM Safety · Safety AI"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Safety" }]}
+        eyebrow="SIWOM Safety"
         status="research"
         title="Hazard flags, reviewed by people."
-        summary="SIWOM Safety, our Safety AI, is research into camera-assisted inspection and hazard flagging for ports, yards and industrial sites. AI flags possible hazards; a qualified person reviews every flag and decides."
-        cta={{ label: "Discuss Safety AI", href: contactHref({ interest: "safety-ai" }) }}
+        summary="SIWOM Safety is research into camera-assisted inspection and hazard flagging for ports, yards and industrial sites. AI flags possible hazards; a qualified person reviews every flag and decides."
+        cta={{ label: "Discuss Safety", href: contactHref({ interest: "safety" }) }}
         media={
           <Figure
             src={zoneImg}
